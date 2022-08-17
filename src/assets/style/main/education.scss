@@ -1,0 +1,24 @@
+@import "../base";
+
+.ant-timeline.ant-timeline-label .ant-timeline-item-label {
+    color: $font-brown;
+    font-weight: bold;
+}
+h3 {
+    font-weight: bold;
+}
+
+@include laptop {
+    .ant-timeline.ant-timeline-label {
+        .ant-timeline-item-label {
+            width: calc(50% - 150px);
+        }
+        .ant-timeline-item-tail, .ant-timeline-item-head {
+            left: calc(50% - 120px);
+        }
+        .ant-timeline-item-left .ant-timeline-item-content {
+            left: calc(50% - 120px);
+            width: calc(50% - 100px);
+        }
+    }
+}

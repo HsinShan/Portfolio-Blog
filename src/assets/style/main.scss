@@ -1,0 +1,25 @@
+@import "./base";
+
+.block {
+    padding: 30px 50px;
+    text-align: center;
+    img {
+        margin: 20px;
+    }
+    h3 {
+        color: $font-brown-light;
+    }
+    .tags {
+        margin: 10px;
+        span {
+            padding: 10px;
+            text-decoration: underline;
+            color: $font-brown-light;
+        }
+    }
+
+}
+
+.block2 {
+    background-color: $page-background;
+}
