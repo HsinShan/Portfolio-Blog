@@ -1,0 +1,18 @@
+// color variables
+$background-brown: #b29059;
+$background-gray: #131834;
+$page-background: #f5f2eb;
+$light-gray: #e3e3e6;
+$font-brown: #a37e39;
+$light-brown: #f3f0f7;
+// RWD breakpoint setting
+@mixin pad {
+  @media (max-width: 920px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
