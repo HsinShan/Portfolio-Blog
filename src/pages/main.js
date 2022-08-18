@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../components/main/title";
-import Education from "../components/main/education";
+import Experience from "../components/main/experience";
 import Language from "../components/main/language";
 import "../assets/style/main/index.scss";
 
@@ -11,8 +11,8 @@ const Main = () => {
         <Title />
       </div>
       <div className="block block2">
-        <h1>Education & Work Experience</h1>
-        <Education />
+        <h1>經歷</h1>
+        <Experience />
       </div>
       <div className="block">
         <Language />

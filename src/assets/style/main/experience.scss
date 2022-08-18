@@ -1,7 +1,18 @@
 @import "../base";
 
-.education {
+.experience {
     padding: 10px 0;
+
+    .title {
+        font-size: 20px;
+        color: $font-brown;
+        font-weight: bold;
+        width: 150px;
+        margin: 0px auto 40px;
+        border-radius: 10px; 
+        border: 3px solid #f0d3c3;
+    }
+
 }
 .ant-timeline.ant-timeline-label .ant-timeline-item-label {
     color: $font-brown;
