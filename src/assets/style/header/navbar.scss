@@ -1,1 +1,28 @@
 @import "../base";
+
+.ant-menu-horizontal {
+    border-bottom: none;
+    font-weight: bold;
+    color: $gray-light;
+
+    > .ant-menu-item a:hover {
+        color: $font-brown-light;
+    }
+
+    > .ant-menu-item a:hover {
+        color: $font-brown-light;
+    }
+
+    > .ant-menu-item-selected a {
+        color: $font-brown-light;
+    }
+    
+    &:not(.ant-menu-dark) {
+        > .ant-menu-item:hover::after {
+            border-bottom: 2px solid $font-brown-light;
+        }
+        > .ant-menu-item-selected::after {
+        border-bottom: 2px solid $font-brown-light;
+        }
+    }
+}
