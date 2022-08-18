@@ -1,0 +1,18 @@
+@import "../base";
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    .ant-card {
+        width: 30%;
+        border-radius: 5px;
+
+        .skill {
+            text-align: left;
+            font-weight: bold;
+            margin: 2px 0;
+        }
+    }
+}
