@@ -1,22 +1,23 @@
 @import "../base";
+.main {
+    .block {
+        padding: 30px 50px;
+        text-align: center;
+        background-color: $page-background;
+        img {
+            margin: 20px;
+        }
+        h1 {
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        h3 {
+            color: $font-brown-light;
+        }
 
-.block {
-    padding: 30px 50px;
-    text-align: center;
-    background-color: $page-background;
-    img {
-        margin: 20px;
-    }
-    h1 {
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-    h3 {
-        color: $font-brown-light;
     }
 
-}
-
-.block2 {
-    background-color: white;
+    .block2 {
+        background-color: white;
+    }
 }

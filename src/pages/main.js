@@ -6,7 +6,7 @@ import "../assets/style/main/index.scss";
 
 const Main = () => {
   return (
-    <div>
+    <div className="main">
       <div class="block">
         <Title />
       </div>
