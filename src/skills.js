@@ -6,22 +6,16 @@ const SKILLS = [
       "Feature Engineering",
       "Machine Learning",
       "Statistical Modeling",
-    ],
-  },
-  {
-    title: "Programming Skills",
-    skill: [
       "Python (Jupyter)",
-      "SQL (Mysql)",
-      "Git",
-      "Javascript(React/Vue)",
-      "HTML",
-      "CSS",
     ],
   },
   {
-    title: "MS Office",
-    skill: ["Word", "Excel", "PowerPoint"],
+    title: "Frontend Development",
+    skill: ["Javascript", "React", "Vue", "HTML", "CSS"],
+  },
+  {
+    title: "Others",
+    skill: ["SQL (Mysql)", "Git", "MS Office"],
   },
 ];
 
