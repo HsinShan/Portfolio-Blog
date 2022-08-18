@@ -15,6 +15,13 @@ const Title = () => {
         <span># Machine Learning</span>
         <span># Data Analysis</span>
       </div>
+      <div className="about">
+        <p>
+          主要專注於<span>資料科學</span>領域
+        </p>
+        <p>相關專案經驗 → 資料前處理、機器學習、資料分析、統計模型</p>
+        <p>1 年多的軟體前端開發經驗</p>
+      </div>
       <p>
         Email: <span className="email">shirleyhsieh825@gmail.com</span>
       </p>
