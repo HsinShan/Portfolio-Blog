@@ -5,7 +5,7 @@ import _ from "lodash";
 import usePathname from "../../hooks/usePathname";
 import "../../assets/style/header/navbar.scss";
 
-const LINKS = ["/", "/i"];
+const LINKS = ["/", "/Portfolio"];
 const NAVS = ["介紹", "作品集"];
 
 const Navbar = () => {
