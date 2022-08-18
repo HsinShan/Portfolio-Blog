@@ -1,1 +1,12 @@
 @import "../base";
+
+.portfolio {
+    padding: 60px 20px;
+    background-color: $page-background;
+
+    .page-title {
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}

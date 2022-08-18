@@ -1,0 +1,55 @@
+@import "../base";
+
+.project {
+    // border-radius: 3px;
+    // border: 1px solid $gray-light;
+    // box-shadow: 3px 2px 5px $gray-light;
+    // padding: 20px;
+
+    img {
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    > div {
+        margin: 20px 0;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: $font-brown;
+        padding-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: $font-brown;
+    }
+
+    .period {
+        color: $gray-light;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .result {
+        font-weight: bold;
+        color: $gray-light;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: center;
+        span {
+            margin:0 5px;
+            color: $gray-light;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 12px;
+        }
+    }
+}
