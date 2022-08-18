@@ -4,6 +4,11 @@
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 1px 5px 10px #999;
+    z-index: 3;
 
     h1 {
         color: $font-brown;
