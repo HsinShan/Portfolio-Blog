@@ -10,10 +10,10 @@
     box-shadow: 1px 5px 10px #999;
     z-index: 3;
 
-    h1 {
+    .logo {
         color: $font-brown;
         font-weight: bold;
         font-family: 'Times New Roman', Times, serif;
-        margin: 0;
+        font-size: 28px;
     }
 }

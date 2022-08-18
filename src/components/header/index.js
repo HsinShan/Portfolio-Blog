@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./navbar";
 import "../../assets/style/header/index.scss";
 
 const Header = () => {
   return (
     <div className="header">
-      <h1>Shirley's Blog</h1>
+      <Link to="/" className="logo">
+        Shirley's Blog
+      </Link>
       <Navbar />
     </div>
   );
