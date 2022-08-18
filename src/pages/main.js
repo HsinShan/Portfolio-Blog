@@ -1,7 +1,7 @@
 import React from "react";
 import Education from "../components/main/education";
 import meImg from "../assets/images/me.png";
-import "../assets/style/main.scss";
+import "../assets/style/main/index.scss";
 
 const Main = () => {
   return (
@@ -11,7 +11,7 @@ const Main = () => {
           <img src={meImg} alt="Shirley Hsieh" width="180" />
         </center>
         <h1> Shirley Hsieh </h1>
-        <h3>Data Scientist/Data Analyst</h3>
+        <h3>Data Scientist / Data Analyst</h3>
         <div className="tags">
           <span>Data Science</span>
           <span>Machine Learning</span>
