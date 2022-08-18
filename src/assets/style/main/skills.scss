@@ -8,11 +8,39 @@
     .ant-card {
         width: 30%;
         border-radius: 5px;
+        box-shadow: 4px 4px 5px $gray-light;
+        
 
+        &-head {
+           min-height: 0px;
+           border-bottom: 2px solid #f0f0f0;
+
+           &-title {
+            color: $font-brown;
+            padding: 8px 0;
+            font-weight: bold;
+            }
+           
+        }
+
+        &-body {
+            color: $font-brown;
+            padding: 12px 24px;
+        }
+        
         .skill {
             text-align: left;
             font-weight: bold;
             margin: 2px 0;
+        }
+    }
+
+    @include mobile {
+        display: block;
+
+        .ant-card {
+            width: 95%;
+            margin: 20px auto;
         }
     }
 }
