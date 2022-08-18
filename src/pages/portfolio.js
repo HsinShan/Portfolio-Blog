@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "../components/portfolio/project";
 import "../assets/style/portfolio/index.scss";
-import PROJECTS from "../projects";
+import PROJECTS from "../constants/PROJECTS";
 
 const Portfolio = () => {
   return (

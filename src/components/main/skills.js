@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "antd";
-import SKILLS from "../../skills";
+import SKILLS from "../../constants/SKILLS";
 import "../../assets/style/main/skills.scss";
 
 const Skills = () => {
