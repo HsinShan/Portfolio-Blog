@@ -17,4 +17,9 @@
     .email {
         text-decoration: underline;
     }
+    .link {
+        a:hover img{
+            transform: scale(1.2);
+        }
+    }
 }
