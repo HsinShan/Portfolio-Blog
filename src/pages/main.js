@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../components/main/title";
 import Education from "../components/main/education";
+import Language from "../components/main/language";
 import "../assets/style/main/index.scss";
 
 const Main = () => {
@@ -14,12 +15,7 @@ const Main = () => {
         <Education />
       </div>
       <div className="block">
-        <h1>Language</h1>
-        <h3>TOEIC: 875</h3>
-        <p>Date: 2021.09.26</p>
-        <p>
-          Transcript : <a href="https://reurl.cc/RrDOZD">LINK</a>
-        </p>
+        <Language />
       </div>
     </div>
   );
