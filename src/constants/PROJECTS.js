@@ -1,6 +1,6 @@
 const PROJECTS = [
   {
-    title: "辨識高價值顧客:探討顧客線上行為的影響及長短期記憶模型之應用",
+    title: "辨識高價值顧客:探討顧客線上行為的影響及 LSTM 之應用",
     subtitle: "碩士論文",
     period: "2021~2022",
     image: "https://i.imgur.com/bgtC3nu.png",
