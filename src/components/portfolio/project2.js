@@ -1,0 +1,31 @@
+import React from "react";
+import { Button } from "antd";
+import "../../assets/style/portfolio/project2.scss";
+
+const Project2 = ({ project }) => {
+  if (project.group > 2) return;
+  const { title, subtitle, image, skills, demoURL, codeURL } = project;
+  return (
+    <div className="project2">
+      <img className="image" alt={title} src={image} />
+      <div className="overlay">
+        <div className="subtitle">【{subtitle}】</div>
+        <div className="title">{title}</div>
+        <div className="skills">
+          {skills.map((skill) => (
+            <p>{skill}</p>
+          ))}
+        </div>
+        <div className="link">
+          <Button href={demoURL} target="_blank">
+            DEMO
+          </Button>
+          <Button href={codeURL} target="_blank">
+            Code
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Project2;

@@ -6,7 +6,7 @@ import "../assets/style/portfolio/index.scss";
 const DataPortfolio = () => {
   return (
     <>
-      <Portfolio title="資料科學作品集" projects={PROJECTS} />
+      <Portfolio type={1} title="資料科學作品集" projects={PROJECTS} />
     </>
   );
 };

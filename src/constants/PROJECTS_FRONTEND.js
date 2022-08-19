@@ -1,5 +1,6 @@
 const PROJECTS_FRONTEND = [
   {
+    group: 1,
     title: "HandStory(美甲資訊整合平台) / 前端開發",
     subtitle: "2017.01-2018.06 畢業專案",
     image: "https://i.imgur.com/dqqFzO4.png",
@@ -16,6 +17,7 @@ const PROJECTS_FRONTEND = [
     codeURL: "https://github.com/HsinShan/Handstory/blob/master/README.md",
   },
   {
+    group: 2,
     title: "HappyTravel Club / 旅行社網站",
     subtitle: "自學 自製專案",
     image: "https://i.imgur.com/t4fVzPS.jpg",
@@ -26,6 +28,7 @@ const PROJECTS_FRONTEND = [
       "https://github.com/HsinShan/Portfolio/tree/master/HappyTravel%20Club",
   },
   {
+    group: 2,
     title: "BagStore / 包包電商網站",
     subtitle: "自學 自製專案",
     image: "https://i.imgur.com/ZbPEMPy.jpg",
@@ -35,6 +38,7 @@ const PROJECTS_FRONTEND = [
     codeURL: "https://github.com/HsinShan/Portfolio/tree/master/Bag",
   },
   {
+    group: 2,
     title: "Shirley's Dessert / 甜點店",
     subtitle: "自學 自製專案",
     image: "https://i.imgur.com/6W6VRMy.jpg",
@@ -45,6 +49,7 @@ const PROJECTS_FRONTEND = [
       "https://github.com/HsinShan/Portfolio/tree/master/Shirley's%20Dessert",
   },
   {
+    group: 2,
     title: "Blog",
     subtitle: "自學 自製專案",
     image: "https://i.imgur.com/rqcabiL.png",
@@ -54,6 +59,7 @@ const PROJECTS_FRONTEND = [
     codeURL: "https://github.com/HsinShan/Portfolio/tree/master/blog",
   },
   {
+    group: 3,
     title: "Javascript小遊戲",
     subtitle: "自學 自製專案 : 一天一主題 in five days 挑戰",
     projects: [
