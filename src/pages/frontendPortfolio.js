@@ -1,6 +1,6 @@
 import React from "react";
 import Portfolio from "../components/portfolio";
-import PROJECTS from "../constants/PROJECTS";
+import PROJECTS from "../constants/PROJECTS_DATA";
 import "../assets/style/portfolio/index.scss";
 
 const FrontendPortfolio = () => {
