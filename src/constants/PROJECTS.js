@@ -15,6 +15,7 @@ const PROJECTS = [
       "應多引導顧客有想下單的動作",
     ],
     tags: ["LSTM", "Random Forest", "Time Series", "Customer Behavior", "VIP"],
+    url: "https://github.com/HsinShan/Customer-Value-Prediction",
   },
   {
     title: "共享單車之租賃需求預測與車輛調度規劃",
@@ -35,6 +36,7 @@ const PROJECTS = [
       "Random Forest",
       "Statistical Modeling",
     ],
+    url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/Bike%20Rental%20Demand%20Prediction",
   },
   {
     title: "用AI及社群數據協助投資決策",
@@ -60,6 +62,7 @@ const PROJECTS = [
       "Random Forest",
       "Stock Prediction",
     ],
+    url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/Stock%20Prediction",
   },
   {
     title: "線上購買受到廣告影響的人群分析",
@@ -76,6 +79,7 @@ const PROJECTS = [
       "廣告引流的客群平均加入購物車的次數較多",
     ],
     tags: ["Data EDA", "AD Impact Analysis", "Decision Tree", "Clustering"],
+    url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/AD%20Impact%20Analysis",
   },
   {
     title: "飯店營收預測",
@@ -101,6 +105,7 @@ const PROJECTS = [
       "XGBoost",
       "Revenue Prediction",
     ],
+    url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/Hotel%20Revenue%20Prediction",
   },
   {
     title: "政治人物經營不同社群媒體之策略分析",
@@ -116,6 +121,7 @@ const PROJECTS = [
       "可能因素: 資料區間太短、資料組數挑選太少、人工標註貼文內容有差異",
     ],
     tags: ["HAC", "K-means", "Clustering"],
+    url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/Politician%20FB%20Strategy%20Cluster",
   },
 ];
 
