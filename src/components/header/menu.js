@@ -1,6 +1,7 @@
 import { Drawer } from "antd";
 import React from "react";
 import Navbar from "./navbar";
+import "../../assets/style/header/menu.scss";
 
 const Menu = ({ isVisible, onClose }) => {
   return (
@@ -9,9 +10,10 @@ const Menu = ({ isVisible, onClose }) => {
       closable={false}
       onClose={onClose}
       visible={isVisible}
-      width={150}
+      width={120}
     >
-      <Navbar />
+      <div className="nav-title">導覽列</div>
+      <Navbar onClose={onClose} />
     </Drawer>
   );
 };

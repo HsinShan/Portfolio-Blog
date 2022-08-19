@@ -1,0 +1,17 @@
+@import "../base";
+
+.ant-drawer {
+    &-body {
+        padding: 0px;
+    }
+
+    .nav-title {
+        font-size: 20px;
+        font-weight: bold;
+        height: 45px;
+        border-bottom: 1px dashed $gray-light;
+        color: $font-brown-light;
+        text-align: center;
+        line-height: 42px;
+    }
+}

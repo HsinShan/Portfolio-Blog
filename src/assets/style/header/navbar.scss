@@ -9,28 +9,31 @@
         margin-right: 5px;
     }
 
-    > .ant-menu-item a:hover {
-        color: $font-brown-light;
-    }
 
-    > .ant-menu-item a:hover {
-        color: $font-brown-light;
+    > .ant-menu-item {
+        margin-top: 0px;
+
+        &:not(:last-child) {
+            margin-bottom: 0px;
+        }
+        
+        a:hover {
+            color: $font-brown-light;
+        }
     }
 
     > .ant-menu-item-selected a {
-        color: $font-brown-light;
+        color: white;
     }
     
     &:not(.ant-menu-dark) {
-        > .ant-menu-item:hover::after {
-            border-bottom: 2px solid $font-brown-light;
-        }
-        > .ant-menu-item-selected::after {
-        border-bottom: 2px solid $font-brown-light;
+        > .ant-menu-item:hover {
+            background-color: white;
+            border: 1px solid $font-brown-light;
         }
     }
 }
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: white;
-    border: 1px solid $page-background-dark;
+    background-color: $font-brown-light;
+    color: white;
 }

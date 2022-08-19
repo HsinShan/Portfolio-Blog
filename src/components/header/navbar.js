@@ -19,9 +19,9 @@ const NAVS = [
     icon: <FolderOpenOutlined />,
   },
 ];
-const Navbar = () => {
+const Navbar = ({ onClose }) => {
   const menuItems = NAVS.map((item, i) => (
-    <Menu.Item key={i}>
+    <Menu.Item key={i} onClick={onClose}>
       <Link to={item.link} className="link">
         {item.icon}
         {item.nav}
