@@ -4,7 +4,7 @@ import Detail from "./detail";
 import "../../assets/style/portfolio/project.scss";
 
 const Project = ({ project }) => {
-  const { title, subtitle, image, results, period, tags } = project;
+  const { title, subtitle, image, period, tags } = project;
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
