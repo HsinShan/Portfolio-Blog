@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "antd";
 import { Link } from "react-router-dom";
-import Navbar from "./navbar";
+
+import Menu from "./menu";
 import Logo from "../../assets/images/logo.png";
 import "../../assets/style/header/index.scss";
 
 const Header = () => {
+  const [visible, setVisible] = useState(false);
+
+  const showDrawer = () => {
+    setVisible(true);
+  };
+
+  const onClose = () => {
+    setVisible(false);
+  };
+
   return (
     <div className="header">
       <Link to="/" className="logo">
         <img src={Logo} alt="logo" className="logo-image" />
         <span className="logo-name">Shirley's Blog</span>
       </Link>
-      <Navbar />
+      <Button type="primary" onClick={showDrawer}>
+        Open
+      </Button>
+      <Menu isVisible={visible} onClose={onClose} />
     </div>
   );
 };

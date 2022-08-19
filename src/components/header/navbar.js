@@ -23,7 +23,7 @@ const Navbar = () => {
   if (pathname && activeIndex === -1) selectedKeys = [];
 
   return (
-    <Menu mode="horizontal" selectedKeys={selectedKeys}>
+    <Menu mode="vertical" selectedKeys={selectedKeys}>
       {menuItems}
     </Menu>
   );

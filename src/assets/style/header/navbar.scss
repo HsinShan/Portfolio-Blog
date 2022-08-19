@@ -1,6 +1,6 @@
 @import "../base";
 
-.ant-menu-horizontal {
+.ant-menu-vertical {
     border-bottom: none;
     font-weight: bold;
     color: $gray-light;
@@ -25,4 +25,8 @@
         border-bottom: 2px solid $font-brown-light;
         }
     }
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: white;
+    border: 1px solid $page-background-dark;
 }
