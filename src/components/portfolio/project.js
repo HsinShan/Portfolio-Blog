@@ -23,18 +23,12 @@ const Project = ({ project }) => {
     <div className="project">
       <Card
         hoverable
-        cover={<img alt={title} src={image} onClick={showModal} />}
+        cover={<img alt={title} src={image} />}
+        onClick={showModal}
       >
         <div className="subtitle">【{subtitle}】</div>
         <div className="title">{title}</div>
         <div className="period">{period}</div>
-        <div className="result">
-          <ul>
-            {results.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
         <div className="tags">
           {tags.map((tag) => (
             <span># {tag}</span>

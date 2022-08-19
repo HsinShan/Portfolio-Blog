@@ -6,13 +6,12 @@
         width: calc(50% - 18px);
 
         .ant-card {
-            min-height: 600px;
             border-radius: 5px;
+            min-height: 550px;
         }
         
         img {
-        height: 300px;
-
+            height: 300px;
         }
     }
     
@@ -55,6 +54,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 10px 0;
         span {
             margin:0 5px;
             color: $gray-light;
