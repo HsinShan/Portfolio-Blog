@@ -1,5 +1,6 @@
 import Main from "../pages/main";
-import Portfolio from "../pages/portfolio";
+import DataPortfolio from "../pages/dataPortfolio";
+import FrontendPortfolio from "../pages/frontendPortfolio";
 
 const routes = [
   {
@@ -8,8 +9,13 @@ const routes = [
     exact: true,
   },
   {
-    path: "/Portfolio",
-    component: Portfolio,
+    path: "/portfolio-data",
+    component: DataPortfolio,
+    exact: true,
+  },
+  {
+    path: "/portfolio-frontend",
+    component: FrontendPortfolio,
     exact: true,
   },
 ];

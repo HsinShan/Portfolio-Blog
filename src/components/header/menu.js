@@ -10,7 +10,7 @@ const Menu = ({ isVisible, onClose }) => {
       closable={false}
       onClose={onClose}
       visible={isVisible}
-      width={120}
+      width={130}
     >
       <div className="nav-title">導覽列</div>
       <Navbar onClose={onClose} />

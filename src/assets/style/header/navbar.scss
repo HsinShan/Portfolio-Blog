@@ -10,7 +10,7 @@
     }
 
 
-    > .ant-menu-item {
+    .ant-menu-item {
         margin-top: 0px;
 
         &:not(:last-child) {
@@ -22,18 +22,39 @@
         }
     }
 
-    > .ant-menu-item-selected a {
+    .ant-menu-item-selected a {
         color: white;
     }
     
     &:not(.ant-menu-dark) {
-        > .ant-menu-item:hover {
+        .ant-menu-item:hover {
             background-color: white;
-            border: 1px solid $font-brown-light;
+            transform: scale(1.1); 
         }
     }
 }
+
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background-color: $font-brown-light;
     color: white;
+}
+
+.ant-menu-item-group {
+    &-title {
+        color: black;
+
+        > span:last-child {
+            margin-left: 10px;
+        }
+    }
+
+    &-list {
+        font-size: 12px;
+
+        .ant-menu-item {
+            margin-left: 16px;
+            padding-left: 16px;
+        }
+    }
+
 }

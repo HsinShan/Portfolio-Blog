@@ -2,7 +2,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Main from "./pages/main";
 import Header from "./components/header";
-import Portfolio from "./pages/portfolio";
+import DataPortfolio from "./pages/dataPortflio";
+import FrontendPortfolio from "./pages/frontendPortfolio";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/portfolio-data" element={<DataPortfolio />} />
+          <Route path="/portfolio-frontend" element={<FrontendPortfolio />} />
         </Routes>
       </div>
     </div>
