@@ -3,6 +3,7 @@
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 20px;
     position: fixed;
     width: 100%;
@@ -23,5 +24,16 @@
             
         }
         
+    }
+
+    .menu-btn {
+        background-color: $font-brown-light;
+        color: white;
+
+        &:hover {
+            background-color: white;
+            color: $font-brown-light;
+            border: 1px solid $font-brown-light;
+        }
     }
 }

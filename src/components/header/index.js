@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import Menu from "./menu";
 import Logo from "../../assets/images/logo.png";
+import { BarsOutlined } from "@ant-design/icons";
 import "../../assets/style/header/index.scss";
 
 const Header = () => {
@@ -23,8 +24,8 @@ const Header = () => {
         <img src={Logo} alt="logo" className="logo-image" />
         <span className="logo-name">Shirley's Blog</span>
       </Link>
-      <Button type="primary" onClick={showDrawer}>
-        Open
+      <Button onClick={showDrawer} className="menu-btn">
+        <BarsOutlined />
       </Button>
       <Menu isVisible={visible} onClose={onClose} />
     </div>

@@ -5,6 +5,10 @@
     font-weight: bold;
     color: $gray-light;
 
+    .anticon {
+        margin-right: 5px;
+    }
+
     > .ant-menu-item a:hover {
         color: $font-brown-light;
     }
