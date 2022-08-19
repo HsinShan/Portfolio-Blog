@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Card } from "antd";
 import Detail from "./detail";
 import "../../assets/style/portfolio/project.scss";
 
@@ -21,11 +20,8 @@ const Project = ({ project }) => {
 
   return (
     <div className="project">
-      <Card
-        hoverable
-        cover={<img alt={title} src={image} />}
-        onClick={showModal}
-      >
+      <img className="image" alt={title} src={image} />
+      <div className="overlay" onClick={showModal}>
         <div className="subtitle">【{subtitle}】</div>
         <div className="title">{title}</div>
         <div className="period">{period}</div>
@@ -34,7 +30,7 @@ const Project = ({ project }) => {
             <span># {tag}</span>
           ))}
         </div>
-      </Card>
+      </div>
       <Detail
         isVisible={isModalVisible}
         handleOk={handleOk}
