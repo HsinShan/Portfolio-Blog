@@ -2,8 +2,14 @@
 
 .project {
     position: relative;
-    width: calc(50% - 50px);
-    margin: 20px;
+    width: 96%;
+    margin: 20px auto;
+
+
+    @include laptop {
+        width: calc(50% - 50px);
+        margin: 20px;
+    }
 
     &:hover .overlay {
         opacity: 1;

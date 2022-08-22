@@ -34,13 +34,14 @@
         font-size: 18px;
         text-align: center; 
         margin-top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     
     .link {
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         
         .ant-btn {
             margin: 2px;
