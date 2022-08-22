@@ -1,0 +1,25 @@
+@import "../base";
+
+.title {
+    .tags {
+        margin: 10px;
+        span {
+            padding: 10px;
+            text-decoration: underline;
+            color: $gray-light;
+            font-weight: bold;
+        }
+    }
+    .about {
+        padding: 10px;
+        font-weight: bold;
+    }
+    .email {
+        text-decoration: underline;
+    }
+    .link {
+        a:hover img{
+            transform: scale(1.2);
+        }
+    }
+}

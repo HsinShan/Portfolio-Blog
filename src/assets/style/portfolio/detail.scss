@@ -1,0 +1,48 @@
+@import "../base";
+
+.detail {
+    .ant-modal-title {
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .period {
+        color: $gray-light;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .result {
+        font-weight: bold;
+        color: $gray-light;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        span {
+            margin:0 5px;
+            color: $gray-light;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 12px;
+        }
+    }
+
+    .url {
+        background-color: $font-brown;
+        color: white;
+    }
+
+    .ant-btn:not([disabled]):hover {
+        background-color: white;
+        border: 1px solid $font-brown;
+        color: $font-brown;
+    }
+}
