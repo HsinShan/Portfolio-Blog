@@ -7,7 +7,7 @@ const PROJECTS = [
     description:
       "使用 91APP 提供的店家網站資料，進行<span class='highlight'>顧客價值</span>的研究<br/>提出 2 種行為資料前處理方式 + 5 個實驗模型 <br/>期望找出未來一年的高價值顧客<br/><h3>研究架構</h3><img src='https://i.imgur.com/VOs8izP.png' alt='Thesis Structure'/>'",
     results:
-      "1. 模型最佳表現 : <span class='highlight'>0.95 (F1 & AUC)</span><br/>2. <span class='highlight'>顧客的活躍度</span>是關鍵<br/>3. 應多引導顧客有想下單的動作<br/><h3>管理意涵</h3><img src='https://i.imgur.com/bpBTKXU.png' alt='Thesis result'/>",
+      "1. 模型最佳表現 : <span class='highlight'>0.95 (F1 & AUC)</span><br/>2. <span class='highlight'>顧客的活躍度</span>是關鍵<br/>3. 應多引導顧客有想下單的動作<br/><h3>行銷策略</h3><img src='https://i.imgur.com/xjzDHg8.png' alt='Thesis result'/>",
     tags: [
       "LSTM",
       "Random Forest",
@@ -46,7 +46,7 @@ const PROJECTS = [
     description:
       "社群數據資料庫中挑選出看漲及看跌的一批 YAHOO 股市新聞文章<br/>提取出關鍵字並建構文本向量空間</br>使用 5 種不同分類演算法建立預測模型",
     results:
-      "1. 以 <span class='highlight'>TF*DF 卡方指標</span>提取看漲看跌各 700 個關鍵字<br/><img src='https://i.imgur.com/paObsOb.png' alt='keywords'/><br/>2. 最佳模型預測準確度: <span class='highlight'>77%</span> (Naive Bayes)",
+      "1. 以 <span class='highlight'>TF*DF 卡方指標</span>提取看漲看跌各 700 個關鍵字<br/><img src='https://i.imgur.com/paObsOb.png' alt='keywords' class='img-min'/><br/>2. 最佳模型預測準確度: <span class='highlight'>77%</span> (Naive Bayes)",
     tags: [
       "Text Mining",
       "N-gram",

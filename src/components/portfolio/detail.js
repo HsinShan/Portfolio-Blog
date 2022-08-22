@@ -12,6 +12,8 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
       visible={isVisible}
       onOk={handleOk}
       onCancel={handleCancel}
+      style={{ minWidth: "350px" }}
+      width="65%"
       footer={[
         <Button
           key="link"
