@@ -2,8 +2,15 @@
 
 .project2 {
     position: relative;
-    width: calc(50% - 50px);
-    margin: 20px;
+    width: 90%;
+    margin: 20px auto;
+    
+    @include laptop {
+        width: calc(50% - 50px);
+        margin: 20px;
+        
+    }
+    
 
     &:hover .overlay {
         opacity: 1;
@@ -52,6 +59,9 @@
     .link {
         display: flex;
         justify-content: center;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
 
         .ant-btn {
             margin: 10px;
