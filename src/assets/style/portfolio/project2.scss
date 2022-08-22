@@ -1,8 +1,7 @@
 @import "../base";
 
 .project2 {
-    position: relative;
-    width: 90%;
+    width: 96%;
     margin: 20px auto;
     
     @include laptop {
@@ -10,30 +9,13 @@
         margin: 20px;
         
     }
-    
-
-    &:hover .overlay {
-        opacity: 1;
-    }
-
-    .image {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
       
     .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: $gray-light;
         padding-top: 50px;
+
+        @include mobile {
+            padding: 10px 4px;
+        }
     }
     
     .title {

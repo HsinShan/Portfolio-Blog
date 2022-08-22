@@ -1,11 +1,12 @@
 import React from "react";
 import { Button } from "antd";
 import "../../assets/style/portfolio/project2.scss";
+import "../../assets/style/portfolio/overlay.scss";
 
 const Project2 = ({ project }) => {
   const { title, subtitle, image, skills, demoURL, codeURL } = project;
   return (
-    <div className="project2">
+    <div className="project project2">
       <img className="image" alt={title} src={image} />
       <div className="overlay">
         <div className="subtitle">【{subtitle}】</div>

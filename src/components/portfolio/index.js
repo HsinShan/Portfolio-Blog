@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "./project";
+import Project1 from "./project1";
 import Project2 from "./project2";
 import Project3 from "./project3";
 import "../../assets/style/portfolio/index.scss";
@@ -10,7 +10,7 @@ const Portfolio = ({ type, title, projects }) => {
       <h1 className="page-title">{title}</h1>
       <div className="projects">
         {projects.map((project) => {
-          if (type === 1) return <Project project={project} />;
+          if (type === 1) return <Project1 project={project} />;
           else {
             if (project.group === 1) {
               return <Project2 project={project} />;
