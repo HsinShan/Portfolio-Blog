@@ -3,7 +3,7 @@
 .project2 {
     width: 96%;
     margin: 20px auto;
-    
+
     @include laptop {
         width: calc(50% - 50px);
         margin: 20px;
@@ -41,9 +41,13 @@
     .link {
         display: flex;
         justify-content: center;
-        position: absolute;
-        bottom: 10px;
-        width: 100%;
+
+        @include laptop {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+       
 
         .ant-btn {
             margin: 10px;
