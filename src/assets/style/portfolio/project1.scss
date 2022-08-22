@@ -15,6 +15,12 @@
         @include mobile {
             padding: 10px 4px;
         }
+
+        .tags {
+            position: absolute;
+            bottom: 20px;
+            width:100%;
+        }
     }
 
     .title {
@@ -42,9 +48,6 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        position: absolute;
-        bottom: 20px;
-        width:100%;
 
         span {
             margin:2px 8px;

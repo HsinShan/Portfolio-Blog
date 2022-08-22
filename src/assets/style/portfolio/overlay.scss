@@ -27,4 +27,15 @@
         cursor: pointer;
     }
     
+    .normal {
+        background-color: $gray-light;
+        padding: 30px 10px;
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+
+        }
+    }
 }
