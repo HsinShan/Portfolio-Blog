@@ -17,9 +17,38 @@
         text-align: right;
     }
 
-    .result {
+    
+
+    .description, .results {
         font-weight: bold;
         color: $gray-light;
+
+        img {
+            width: 100%;
+            margin: 8px auto;
+        }
+
+        h3 {
+            border-top: 1px dotted $gray-dark;
+            margin: 10px auto;
+            padding-top: 8px;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: $font-highlight;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    
+        .bold {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
     }
 
     .tags {

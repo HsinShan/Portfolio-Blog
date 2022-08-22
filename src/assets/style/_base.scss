@@ -5,6 +5,7 @@ $font-brown-light: #7d625a;;
 $font-brown: #4c3a19;
 $gray-light: #525251;
 $gray-dark: #282828;
+$font-highlight: #bf5125;
 // RWD breakpoint setting
 @mixin laptop {
   @media (min-width: 921px) {

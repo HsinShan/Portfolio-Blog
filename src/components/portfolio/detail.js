@@ -31,15 +31,11 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
       <div className="period">{period}</div>
       <div className="description">
         <h3>簡介</h3>
-        {description.map((item) => (
-          <p>{item}</p>
-        ))}
+        <div dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       <div className="results">
         <h3>結論</h3>
-        {results.map((item) => (
-          <p>{item}</p>
-        ))}
+        <div dangerouslySetInnerHTML={{ __html: results }} />
       </div>
       <div className="tags">
         {tags.map((item) => (
