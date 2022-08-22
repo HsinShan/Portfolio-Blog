@@ -1,10 +1,12 @@
 import React from "react";
 import { Modal, Button } from "antd";
+import useDeviceDetect from "../../hooks/useDeviceDetect";
 import "../../assets/style/portfolio/detail.scss";
 
 const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
   const { title, subtitle, description, results, period, tags, url } = project;
-
+  const device = useDeviceDetect();
+  const width = device === "laptop" ? "65%" : "95%";
   return (
     <Modal
       title={subtitle}
@@ -12,6 +14,7 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
       visible={isVisible}
       onOk={handleOk}
       onCancel={handleCancel}
+      width={width}
       footer={[
         <Button
           key="link"
@@ -31,15 +34,11 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
       <div className="period">{period}</div>
       <div className="description">
         <h3>簡介</h3>
-        {description.map((item) => (
-          <p>{item}</p>
-        ))}
+        <div dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       <div className="results">
         <h3>結論</h3>
-        {results.map((item) => (
-          <p>{item}</p>
-        ))}
+        <div dangerouslySetInnerHTML={{ __html: results }} />
       </div>
       <div className="tags">
         {tags.map((item) => (

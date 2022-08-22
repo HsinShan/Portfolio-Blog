@@ -9,7 +9,7 @@ const Education = () => {
         <Timeline.Item label="2020.09-2022.07" color="red">
           <h3>資訊管理學碩士學位 | 國立臺灣大學</h3>
           <p>畢業 GPA : 3.98</p>
-          <p>積極修習資料科學相關課程，具備實作專案</p>
+          <p>積極修習資料科學相關課程，具備相關專案實作經驗</p>
           <p>碩士論文研究顧客的線上行為對顧客價值的影響</p>
         </Timeline.Item>
         <Timeline.Item label="2015.09-2019.06" color="red">

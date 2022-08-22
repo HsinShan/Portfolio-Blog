@@ -1,43 +1,24 @@
 @import "../base";
 
 .project3 {
-    position: relative;
-    width: 90%;
-    margin: 10px auto;
-
-    @include laptop {
-        width: calc(20% - 20px);
-        margin: 10px;
-    }
+    width: calc(20% - 20px);
+    margin: 10px;
 
     @include pad {
         width: calc(50% - 20px);
-        margin: 10px;
-    }
-   
-
-    &:hover .overlay {
-        opacity: 1;
     }
 
-    .image {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
+    @include mobile {
+        width: 96%;
+        margin: 10px auto;
+    }
       
     .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: $gray-light;
-        padding-top: 24px;
+        padding: 24px 10px 10px;
+
+        @include mobile {
+            padding: 10px 4px;
+        }
     }
     
     .title {
