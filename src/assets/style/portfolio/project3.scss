@@ -6,7 +6,7 @@
     margin: 10px auto;
 
     @include laptop {
-        width: calc(20% - 10px);
+        width: calc(20% - 20px);
         margin: 10px;
     }
 
