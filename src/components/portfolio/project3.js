@@ -1,30 +1,24 @@
 import React from "react";
 import { Button } from "antd";
-import "../../assets/style/portfolio/project2.scss";
+import "../../assets/style/portfolio/project3.scss";
 
-const Project2 = ({ project }) => {
-  const { title, subtitle, image, skills, demoURL, codeURL } = project;
+const Project3 = ({ project }) => {
+  const { title, image, demoURL, codeURL } = project;
   return (
-    <div className="project2">
+    <div className="project3">
       <img className="image" alt={title} src={image} />
       <div className="overlay">
-        <div className="subtitle">【{subtitle}】</div>
         <div className="title">{title}</div>
-        <div className="skills">
-          {skills.map((skill) => (
-            <p>{skill}</p>
-          ))}
-        </div>
         <div className="link">
           <Button href={demoURL} target="_blank">
             DEMO
           </Button>
           <Button href={codeURL} target="_blank">
-            Code
+            CODE
           </Button>
         </div>
       </div>
     </div>
   );
 };
-export default Project2;
+export default Project3;

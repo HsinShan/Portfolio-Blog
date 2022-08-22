@@ -18,4 +18,13 @@
         }
 
     }
+
+    .js-block {
+        padding: 20px;
+        text-align: center;
+
+        &-projects {
+            display: flex;
+        }
+    }
 }

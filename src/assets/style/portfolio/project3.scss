@@ -1,0 +1,56 @@
+@import "../base";
+
+.project3 {
+    position: relative;
+    width: calc(20% - 10px);
+    margin: 20px;
+
+    &:hover .overlay {
+        opacity: 1;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: $gray-light;
+        padding-top: 24px;
+    }
+    
+    .title {
+        color: white;
+        font-size: 18px;
+        text-align: center; 
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    
+    .link {
+        display: flex;
+        justify-content: space-around;
+        
+        .ant-btn {
+            margin: 2px;
+
+            &:hover {
+                color: $font-brown;
+                font-weight: bold;
+                border-color: #999;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
