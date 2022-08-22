@@ -1,10 +1,12 @@
 import React from "react";
 import { Modal, Button } from "antd";
+import useDeviceDetect from "../../hooks/useDeviceDetect";
 import "../../assets/style/portfolio/detail.scss";
 
 const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
   const { title, subtitle, description, results, period, tags, url } = project;
-
+  const device = useDeviceDetect();
+  const width = device === "laptop" ? "65%" : "95%";
   return (
     <Modal
       title={subtitle}
@@ -12,8 +14,7 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
       visible={isVisible}
       onOk={handleOk}
       onCancel={handleCancel}
-      style={{ minWidth: "350px" }}
-      width="65%"
+      width={width}
       footer={[
         <Button
           key="link"
