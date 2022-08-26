@@ -13,10 +13,20 @@ const Portfolio = ({ type, title, projects }) => {
           if (type === 1) return <Project1 project={project} />;
           else {
             if (project.group === 1) {
-              return <Project2 project={project} />;
+              return (
+                <div className="category">
+                  <h2 className="project-title">{project.category}</h2>
+                  <div className="category-projects">
+                    {project.projects.map((p) => (
+                      <Project2 project={p} />
+                    ))}
+                  </div>
+                </div>
+              );
             } else {
               return (
                 <div className="js-block">
+                  <h2 className="project-title">{project.category}</h2>
                   <h3>{project.title}</h3>
                   <h4>{project.subtitle}</h4>
                   <div className="js-block-projects">
