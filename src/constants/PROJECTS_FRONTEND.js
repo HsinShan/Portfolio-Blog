@@ -13,8 +13,11 @@ const PROJECTS_FRONTEND = [
           "Run with: Docker",
         ],
         description: [],
-        demoURL: "https://github.com/HsinShan/MeetLangLang-Frontend",
-        codeURL: "https://github.com/HsinShan/MeetLangLang-Backend",
+        links: {
+          DOCS: "https://drive.google.com/file/d/1xZilQ0e7YO33zzZDANWatRMndg9ShUdi/view?usp=sharing",
+          CODE1: "https://github.com/HsinShan/MeetLangLang-Frontend",
+          CODE2: "https://github.com/HsinShan/MeetLangLang-Backend",
+        },
       },
       {
         title: "每日股市資訊",
@@ -22,8 +25,9 @@ const PROJECTS_FRONTEND = [
         image: "https://i.imgur.com/VEvRqaQ.png",
         skills: ["Frontend: React + Sass", "Backend: Ruby on Rails"],
         description: [],
-        demoURL: "https://github.com/HsinShan/ror-practice/tree/dev/shirley",
-        codeURL: "https://github.com/HsinShan/ror-practice/tree/dev/shirley",
+        links: {
+          CODE: "https://github.com/HsinShan/ror-practice/tree/dev/shirley",
+        },
       },
     ],
   },
@@ -37,8 +41,10 @@ const PROJECTS_FRONTEND = [
         image: "https://i.imgur.com/uTzjXOk.png",
         skills: ["Vue.js+Firebase"],
         description: [],
-        demoURL: "https://crud-table-cb119.firebaseapp.com/",
-        codeURL: "https://github.com/HsinShan/crud-table",
+        links: {
+          DEMO: "https://crud-table-cb119.firebaseapp.com/",
+          CODE: "https://github.com/HsinShan/crud-table",
+        },
       },
       {
         title: "飯店管理系統",
@@ -46,8 +52,9 @@ const PROJECTS_FRONTEND = [
         image: "https://i.imgur.com/KdjeaRP.png",
         skills: ["Vue.js"],
         description: [],
-        demoURL: "https://codepen.io/ShirleyHsieh/pen/bJPboe",
-        codeURL: "https://codepen.io/ShirleyHsieh/pen/bJPboe",
+        links: {
+          CODEPEN: "https://codepen.io/ShirleyHsieh/pen/bJPboe",
+        },
       },
       {
         title: "Blog",
@@ -55,8 +62,9 @@ const PROJECTS_FRONTEND = [
         image: "https://i.imgur.com/rqcabiL.png",
         skills: ["Vue.js+Firebase"],
         description: [],
-        demoURL: "https://github.com/HsinShan/Portfolio/tree/master/blog",
-        codeURL: "https://github.com/HsinShan/Portfolio/tree/master/blog",
+        links: {
+          CODE: "https://github.com/HsinShan/Portfolio/tree/master/blog",
+        },
       },
     ],
   },
@@ -70,8 +78,9 @@ const PROJECTS_FRONTEND = [
         image: "https://i.imgur.com/omf4njD.png",
         skills: ["JS"],
         description: [],
-        demoURL: "https://codepen.io/ShirleyHsieh/pen/LoEvZa",
-        codeURL: "https://codepen.io/ShirleyHsieh/pen/LoEvZa",
+        links: {
+          CODEPEN: "https://codepen.io/ShirleyHsieh/pen/LoEvZa",
+        },
       },
     ],
   },
@@ -92,8 +101,9 @@ const PROJECTS_FRONTEND = [
           "資料庫規劃及建置(mysql)",
           "協助PHP後端開發測試網站及串接前後端",
         ],
-        demoURL: "https://github.com/HsinShan/Handstory/blob/master/README.md",
-        codeURL: "https://github.com/HsinShan/Handstory/blob/master/README.md",
+        links: {
+          CODE: "https://github.com/HsinShan/Handstory/blob/master/README.md",
+        },
       },
     ],
   },
@@ -107,9 +117,10 @@ const PROJECTS_FRONTEND = [
         image: "https://i.imgur.com/t4fVzPS.jpg",
         skills: ["Html+CSS+Javascript+Bootstrap"],
         description: [],
-        demoURL: "https://hsinshan.github.io/Portfolio/HappyTravel%20Club/",
-        codeURL:
-          "https://github.com/HsinShan/Portfolio/tree/master/HappyTravel%20Club",
+        links: {
+          DEMO: "https://hsinshan.github.io/Portfolio/HappyTravel%20Club/",
+          CODE: "https://github.com/HsinShan/Portfolio/tree/master/HappyTravel%20Club",
+        },
       },
       {
         title: "BagStore / 包包電商網站",
@@ -117,8 +128,10 @@ const PROJECTS_FRONTEND = [
         image: "https://i.imgur.com/ZbPEMPy.jpg",
         skills: ["RWD+CSS animation"],
         description: [],
-        demoURL: "https://hsinshan.github.io/Portfolio/Bag/",
-        codeURL: "https://github.com/HsinShan/Portfolio/tree/master/Bag",
+        links: {
+          DEMO: "https://hsinshan.github.io/Portfolio/Bag/",
+          CODE: "https://github.com/HsinShan/Portfolio/tree/master/Bag",
+        },
       },
       {
         title: "Shirley's Dessert / 甜點店",
@@ -126,9 +139,10 @@ const PROJECTS_FRONTEND = [
         image: "https://i.imgur.com/6W6VRMy.jpg",
         skills: ["Bootstrap"],
         description: [],
-        demoURL: "https://hsinshan.github.io/Portfolio/Shirley's%20Dessert/",
-        codeURL:
-          "https://github.com/HsinShan/Portfolio/tree/master/Shirley's%20Dessert",
+        links: {
+          DEMO: "https://hsinshan.github.io/Portfolio/Shirley's%20Dessert/",
+          CODE: "https://github.com/HsinShan/Portfolio/tree/master/Shirley's%20Dessert",
+        },
       },
     ],
   },

@@ -5,7 +5,7 @@ import "../../assets/style/portfolio/project2.scss";
 import "../../assets/style/portfolio/overlay.scss";
 
 const Project2 = ({ project }) => {
-  const { title, subtitle, image, skills, demoURL, codeURL } = project;
+  const { title, subtitle, image, skills, links } = project;
   const device = useDeviceDetect();
   const overlayClass = device === "laptop" ? "overlay" : "normal";
 
@@ -21,12 +21,11 @@ const Project2 = ({ project }) => {
           ))}
         </div>
         <div className="link">
-          <Button href={demoURL} target="_blank">
-            DEMO
-          </Button>
-          <Button href={codeURL} target="_blank">
-            Code
-          </Button>
+          {Object.keys(links).map((key) => (
+            <Button href={links[key]} target="_blank">
+              {key}
+            </Button>
+          ))}
         </div>
       </div>
     </div>
