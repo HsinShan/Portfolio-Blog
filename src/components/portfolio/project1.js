@@ -41,11 +41,15 @@ const Project1 = ({ project }) => {
         <div className="subtitle">【{subtitle}】</div>
         <div className="title">{title}</div>
         <div className="period">{period}</div>
-        <div className="tags">
-          {tags.map((tag) => (
-            <span># {tag}</span>
-          ))}
-        </div>
+
+        {device === "laptop" ? (
+          <div className="tags">
+            {tags.map((tag) => (
+              <span># {tag}</span>
+            ))}
+          </div>
+        ) : null}
+
         {moreBtn()}
       </div>
       <Detail
