@@ -15,6 +15,16 @@ const PROJECTS_FRONTEND = [
   },
   {
     group: 1,
+    title: "每日股市資訊",
+    subtitle: "Rakuten ROR Practice",
+    image: "https://i.imgur.com/VEvRqaQ.png",
+    skills: ["Frontend: React + Sass", "Backend: Ruby on Rails"],
+    description: [],
+    demoURL: "https://github.com/HsinShan/ror-practice/tree/dev/shirley",
+    codeURL: "https://github.com/HsinShan/ror-practice/tree/dev/shirley",
+  },
+  {
+    group: 1,
     title: "Lucky Draw System",
     subtitle: "Vue 自製專案",
     image: "https://i.imgur.com/uTzjXOk.png",
