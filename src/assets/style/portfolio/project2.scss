@@ -7,6 +7,11 @@
     @include laptop {
         width: calc(50% - 50px);
         margin: 20px;
+        min-height: 250px;
+
+        .image {
+            min-height: 250px;
+        }
         
     }
       
@@ -22,19 +27,29 @@
         color: white;
         font-size: 20px;
         text-align: center; 
+
+        @include mobile {
+            font-size: 16px;
+        }
     }
 
     .subtitle {
         color: white;
         font-size: 18px;
         text-align: center; 
+
+        @include mobile {
+            font-size: 14px;
+        }
     }
 
     .skills {
         display: block;
+
         p{
             color: white;
             text-align: center; 
+            margin: 0;
         }
     }
 
