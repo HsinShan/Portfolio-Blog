@@ -10,8 +10,25 @@ const Portfolio = ({ type, title, projects }) => {
       <h1 className="page-title">{title}</h1>
       <div className="projects">
         {projects.map((project) => {
-          if (type === 1) return <Project1 project={project} />;
+          if (type === 1)
+            // Data portfolio
+            return (
+              <div className="category">
+                <h2 className="project-title">{project.category}</h2>
+                <div className="all-tags">
+                  {project.tags.map((tag) => (
+                    <div className="tag">{tag}</div>
+                  ))}
+                </div>
+                <div className="category-projects">
+                  {project.projects.map((p) => (
+                    <Project1 project={p} />
+                  ))}
+                </div>
+              </div>
+            );
           else {
+            // frontend portfolio
             if (project.group === 1) {
               return (
                 <div className="category">
