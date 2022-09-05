@@ -15,7 +15,6 @@ const PROJECTS = [
         tags: [
           "LSTM",
           "Random Forest",
-          "Time Series",
           "Customer Behavior",
           "VIP",
           "Undersampling",
@@ -31,7 +30,7 @@ const PROJECTS = [
       "Statistics",
       "Text Mining",
       "Clustering",
-      "Tree-base Models",
+      "Tree-based Models",
       "Linear Models",
       "SPSS",
     ],
