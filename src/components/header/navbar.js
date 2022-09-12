@@ -59,10 +59,11 @@ const Navbar = ({ onClose }) => {
     ));
   };
 
-  const menuItems = NAVS.map((nav) => {
+  const menuItems = NAVS.map((nav, i) => {
     if (nav.num > 1) {
       return (
         <Menu.ItemGroup
+          key={i}
           mode="vertical"
           title={
             <>
