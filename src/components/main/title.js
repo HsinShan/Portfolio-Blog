@@ -1,4 +1,5 @@
 import React from "react";
+import LoadingImg from "../common/loadingImg";
 import meImg from "../../assets/images/me.png";
 import "../../assets/style/main/title.scss";
 
@@ -6,7 +7,7 @@ const Title = () => {
   return (
     <div className="title">
       <center>
-        <img src={meImg} alt="Shirley Hsieh" width="180" />
+        <LoadingImg src={meImg} width="180"></LoadingImg>
       </center>
       <h1> Shirley Hsieh </h1>
       <h3>Data Scientist / Data Analyst</h3>
