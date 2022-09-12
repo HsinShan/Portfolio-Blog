@@ -29,18 +29,69 @@
         transition: .5s ease;
         background-color: $gray-light;
         cursor: pointer;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .tags span {
+            color: white;
+        }
+
+        .skills p {
+            color: white;
+        }
     }
     
     .normal {
-        background-color: $gray-light;
-        color: $font-brown; 
-        padding: 30px 10px;
+        border: 1px solid $page-background-gray;
+        border-top: 1px dashed $page-background-gray;
+        background-color: white; 
+        padding: 10px;
 
         .btn {
             display: flex;
             justify-content: center;
             margin-top: 16px;
 
+        }
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 8px;
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    .subtitle {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    .link {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;   
+
+        .ant-btn {
+            margin: 2px;
+
+            &:hover {
+                color: $font-brown;
+                font-weight: bold;
+                border-color: $gray-dark;
+                transform: scale(1.1);
+            }
         }
     }
 }

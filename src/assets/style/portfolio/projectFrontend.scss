@@ -22,57 +22,14 @@
             padding: 10px 4px;
         }
     }
-    
-    .title {
-        color: white;
-        font-size: 20px;
-        text-align: center; 
-
-        @include mobile {
-            font-size: 16px;
-        }
-    }
-
-    .subtitle {
-        color: white;
-        font-size: 18px;
-        text-align: center; 
-
-        @include mobile {
-            font-size: 14px;
-        }
-    }
 
     .skills {
         display: block;
+        margin: 8px auto;
 
         p{
-            color: white;
             text-align: center; 
             margin: 0;
-        }
-    }
-
-    .link {
-        display: flex;
-        justify-content: center;
-
-        @include laptop {
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-        }
-       
-
-        .ant-btn {
-            margin: 10px;
-
-            &:hover {
-                color: $font-brown;
-                font-weight: bold;
-                border-color: #999;
-                transform: scale(1.1);
-            }
         }
     }
 }

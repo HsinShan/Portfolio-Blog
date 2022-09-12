@@ -22,28 +22,7 @@
     }
     
     .title {
-        color: white;
         font-size: 18px;
-        text-align: center; 
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
 
-    
-    .link {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        
-        .ant-btn {
-            margin: 2px;
-
-            &:hover {
-                color: $font-brown;
-                font-weight: bold;
-                border-color: #999;
-                transform: scale(1.1);
-            }
-        }
-    }
 }
