@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectData from "./projectData";
-import Project2 from "./project2";
-import Project3 from "./project3";
+import ProjectFrontend from "./projectFrontend";
+import ProjectFrontendTiny from "./projectFrontendTiny";
 import "../../assets/style/portfolio/index.scss";
 
 const Portfolio = ({ type, title, projects }) => {
@@ -35,7 +35,7 @@ const Portfolio = ({ type, title, projects }) => {
                   <h2 className="project-title">{project.category}</h2>
                   <div className="category-projects">
                     {project.projects.map((p) => (
-                      <Project2 project={p} />
+                      <ProjectFrontend project={p} />
                     ))}
                   </div>
                 </div>
@@ -48,7 +48,7 @@ const Portfolio = ({ type, title, projects }) => {
                   <h4>{project.subtitle}</h4>
                   <div className="js-block-projects">
                     {project.projects.map((p) => (
-                      <Project3 project={p} />
+                      <ProjectFrontendTiny project={p} />
                     ))}
                   </div>
                 </div>
