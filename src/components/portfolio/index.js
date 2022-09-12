@@ -1,5 +1,5 @@
 import React from "react";
-import Project1 from "./project1";
+import ProjectData from "./projectData";
 import Project2 from "./project2";
 import Project3 from "./project3";
 import "../../assets/style/portfolio/index.scss";
@@ -22,7 +22,7 @@ const Portfolio = ({ type, title, projects }) => {
                 </div>
                 <div className="category-projects">
                   {project.projects.map((p) => (
-                    <Project1 project={p} />
+                    <ProjectData project={p} />
                   ))}
                 </div>
               </div>
