@@ -11,7 +11,7 @@ const SKILLS = [
   },
   {
     title: "Frontend Development",
-    skill: ["Javascript", "React", "Vue", "HTML", "CSS"],
+    skill: ["Javascript", "React", "Vue", "HTML", "CSS(Sass)"],
   },
   {
     title: "Others",
