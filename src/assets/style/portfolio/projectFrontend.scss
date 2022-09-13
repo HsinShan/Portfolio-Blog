@@ -1,0 +1,35 @@
+@import "../base";
+
+.projectFrontend {
+    width: 96%;
+    margin: 20px auto;
+
+    @include laptop {
+        width: calc(50% - 50px);
+        margin: 20px;
+        min-height: 250px;
+
+        .image {
+            min-height: 250px;
+        }
+        
+    }
+      
+    .overlay {
+        padding-top: 50px;
+
+        @include mobile {
+            padding: 10px 4px;
+        }
+    }
+
+    .skills {
+        display: block;
+        margin: 8px auto;
+
+        p{
+            text-align: center; 
+            margin: 0;
+        }
+    }
+}

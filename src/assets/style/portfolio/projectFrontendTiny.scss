@@ -1,0 +1,28 @@
+@import "../base";
+
+.projectFrontendTiny {
+    width: calc(20% - 20px);
+    margin: 10px;
+
+    @include pad {
+        width: calc(50% - 20px);
+    }
+
+    @include mobile {
+        width: 96%;
+        margin: 10px auto;
+    }
+      
+    .overlay {
+        padding: 24px 10px 10px;
+
+        @include mobile {
+            padding: 10px 4px;
+        }
+    }
+    
+    .title {
+        font-size: 18px;
+    }
+
+}

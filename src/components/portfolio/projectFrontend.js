@@ -1,17 +1,18 @@
 import React from "react";
 import { Button } from "antd";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
-import "../../assets/style/portfolio/project2.scss";
+import LoadingImg from "../common/loadingImg";
+import "../../assets/style/portfolio/projectFrontend.scss";
 import "../../assets/style/portfolio/overlay.scss";
 
-const Project2 = ({ project }) => {
+const ProjectFrontend = ({ project }) => {
   const { title, subtitle, image, skills, links } = project;
   const device = useDeviceDetect();
   const overlayClass = device === "laptop" ? "overlay" : "normal";
 
   return (
-    <div className="project project2">
-      <img className="image" alt={title} src={image} />
+    <div className="project projectFrontend">
+      <LoadingImg alt={title} src={image} />
       <div className={overlayClass}>
         <div className="subtitle">【{subtitle}】</div>
         <div className="title">{title}</div>
@@ -31,4 +32,4 @@ const Project2 = ({ project }) => {
     </div>
   );
 };
-export default Project2;
+export default ProjectFrontend;

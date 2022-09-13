@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Button } from "antd";
 import Detail from "./detail";
+import LoadingImg from "../common/loadingImg";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
-import "../../assets/style/portfolio/project1.scss";
+import "../../assets/style/portfolio/projectData.scss";
 import "../../assets/style/portfolio/overlay.scss";
 
-const Project1 = ({ project }) => {
+const ProjectData = ({ project }) => {
   const { title, subtitle, image, period, tags } = project;
   const [isModalVisible, setIsModalVisible] = useState(false);
   const device = useDeviceDetect();
@@ -32,8 +33,8 @@ const Project1 = ({ project }) => {
   };
 
   return (
-    <div className="project project1">
-      <img className="image" alt={title} src={image} />
+    <div className="project projectData">
+      <LoadingImg alt={title} src={image} />
       <div
         className={overlayClass}
         onClick={device === "laptop" ? showModal : null}
@@ -61,4 +62,4 @@ const Project1 = ({ project }) => {
     </div>
   );
 };
-export default Project1;
+export default ProjectData;

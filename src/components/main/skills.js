@@ -6,10 +6,12 @@ import "../../assets/style/main/skills.scss";
 const Skills = () => {
   return (
     <div className="skills">
-      {SKILLS.map((skill) => (
-        <Card title={skill.title} bordered={false}>
-          {skill.skill.map((item) => (
-            <div className="skill">★ {item}</div>
+      {SKILLS.map((skill, i) => (
+        <Card title={skill.title} bordered={false} key={i}>
+          {skill.skill.map((item, index) => (
+            <li className="skill" key={item + index}>
+              ★ {item}
+            </li>
           ))}
         </Card>
       ))}
