@@ -2,20 +2,22 @@ const SKILLS = [
   {
     title: "Data Science",
     skill: [
-      "EDA",
-      "Feature Engineering",
+      "Data Preprocessing",
       "Machine Learning",
-      "Statistical Modeling",
+      "Data Visualization",
+      "Data Interpretation",
+      "EDA",
+      "Statistics",
       "Python (Jupyter)",
     ],
   },
   {
     title: "Frontend Development",
-    skill: ["Javascript", "React", "Vue", "HTML", "CSS(Sass)"],
+    skill: ["Javascript", "React", "Vue", "HTML", "CSS(Sass)", "Rest API"],
   },
   {
     title: "Others",
-    skill: ["SQL (Mysql)", "Git", "MS Office"],
+    skill: ["SQL (MS SQL)", "Git", "MS Office"],
   },
 ];
 

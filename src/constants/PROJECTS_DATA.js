@@ -1,7 +1,7 @@
 const PROJECTS = [
   {
     category: "碩士論文",
-    tags: ["LSTM", "Customer Behaviors", "Data Imbalance", "Random Forest"],
+    tags: ["LSTM", "Customer Behavior", "Data Imbalance", "Random Forest"],
     projects: [
       {
         title: "辨識高價值顧客:探討顧客線上行為的影響及 LSTM 之應用",
@@ -24,7 +24,7 @@ const PROJECTS = [
     ],
   },
   {
-    category: "研究所課程專案",
+    category: "課程專案 & 自製專案",
     tags: [
       "Rolling Window Prediction",
       "Statistics",
@@ -33,6 +33,8 @@ const PROJECTS = [
       "Tree-based Models",
       "Linear Models",
       "SPSS",
+      "EDA",
+      "Data Visualization",
     ],
     projects: [
       {
@@ -136,6 +138,24 @@ const PROJECTS = [
           "Statistics",
         ],
         url: "https://drive.google.com/file/d/1Tw_u9DVwmb0XxLNjcwvHuIWZxrChPgLz/view?usp=sharing",
+      },
+      {
+        title: "Data Science Job 平均薪資分析及 Dream Job推薦",
+        subtitle: "自製專案",
+        period: "2022.09",
+        image: "https://i.imgur.com/OlMLLe6.png",
+        description:
+          "主要針對 Kaggle 上的 data-scientist-jobs, data-engineer-jobs, data-analyst-jobs 及 business-analyst-jobs 進行分析 <br/> 分析一 : 哪些因素會影響 Data Science Job 的平均薪資?<br/>分析二 : 企業分群 - 透過企業概況欄位分群,將企業分類<br/>→ 透過兩項分析提供企業推薦<br/><br/>P.S. 整體推薦方向是以平均薪資的角度做推薦",
+        results:
+          "<img src='https://i.imgur.com/46DnuEh.png' alt='result1'/><img src='https://i.imgur.com/3hKVGLz.png' alt='result2'/><img src='https://i.imgur.com/uzs83hi.png' alt='result3'/><img src='https://i.imgur.com/6p9ECy7.png' alt='result4'/>",
+        tags: [
+          "EDA",
+          "Data Visualization",
+          "Clustering",
+          "Kmeans",
+          "Statistics",
+        ],
+        url: "https://github.com/HsinShan/Data-Science-Job-Analysis",
       },
     ],
   },

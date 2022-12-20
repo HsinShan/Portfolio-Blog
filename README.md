@@ -1,7 +1,7 @@
 # Shirley' website
 
-[https://shirley-blog.herokuapp.com/](https://shirley-blog.herokuapp.com/)
+[https://shirley-blog.onrender.com/](https://shirley-blog.onrender.com)
 
 ### About this blog
 
-Record all my latest data science projects and previous frontend projects.
+All my latest data science projects and previous frontend projects.
