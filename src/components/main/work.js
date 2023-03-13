@@ -8,13 +8,14 @@ const Work = () => {
       <Timeline mode="left">
         <Timeline.Item label="2022.10-now" color="blue">
           <h3>大數據分析師 | TutorABC</h3>
-          <p class="block-title">【主要職責】客戶售後續約分析</p>
-          <p>1. 找出忠誠客戶群的特質</p>
-          <p>2. 訂定指標產生關懷列表，監控客戶上課狀況</p>
-          <p>3. 分析客戶不續約因素</p>
-          <p class="block-title">【其他專案】Reward Center 效益評估</p>
-          <p>1. 分析 Reward Center 對銷課及續約的影響</p>
-          <p>2. 評估關站對續約營收影響</p>
+          <p class="block-title">【提升續約營收】</p>
+          <p>1. 建立指標有效追蹤客戶上課狀況</p>
+          <p>2. 續約影響因素分析</p>
+          <p class="block-title">【行銷分析項目】</p>
+          <p>1. Reward Center 成效分析</p>
+          <p>2. 廣告代理商預算分配建議</p>
+          <p class="block-title">【其他報表需求】</p>
+          <p>1. 規劃並產出業務稽核固化報表</p>
         </Timeline.Item>
         <Timeline.Item label="2019.11-2020.09" color="blue">
           <h3>前端開發工程師 | 台灣樂天市場</h3>
