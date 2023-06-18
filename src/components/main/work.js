@@ -8,14 +8,23 @@ const Work = () => {
       <Timeline mode="left">
         <Timeline.Item label="2022.10-now" color="blue">
           <h3>大數據分析師 | TutorABC</h3>
-          <p class="block-title">【提升續約營收】</p>
-          <p>1. 建立指標有效追蹤客戶上課狀況</p>
-          <p>2. 續約影響因素分析</p>
-          <p class="block-title">【行銷分析項目】</p>
-          <p>1. Reward Center 成效分析</p>
-          <p>2. 廣告代理商預算分配建議</p>
-          <p class="block-title">【其他報表需求】</p>
-          <p>1. 規劃並產出業務稽核固化報表</p>
+          <p class="block-title">【行銷及運營應用分析專案】</p>
+          <p>
+            1. 業績因果模型 : 使用 PLS
+            建模找出影響業績的內外部因素，提供執行建議
+          </p>
+          <p>
+            2. 顧客再上課預測 : 使用生存分析預測顧客再上課機率，以追蹤客戶黏著度
+          </p>
+          <p>3. 各類行銷及運營成效分析: 廣告代理商成效分析、續約影響因素分析</p>
+          <p class="block-title">【固化報表指標定義及建立 Dashboard】</p>
+          <p>1. 規劃並產出業務稽核固化報表，提升稽核效率及業務透明度</p>
+          <p>
+            2. 製作視覺化的 dashboard
+            以追蹤業績表現，並提供每月業績分析，幫助決策和管理
+          </p>
+          <p class="block-title">【跨部門技術需求】</p>
+          <p>需求訪談並提供解決方案及技術支援</p>
         </Timeline.Item>
         <Timeline.Item label="2019.11-2020.09" color="blue">
           <h3>前端開發工程師 | 台灣樂天市場</h3>
