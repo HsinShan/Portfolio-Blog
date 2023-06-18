@@ -4,20 +4,27 @@ const SKILLS = [
     skill: [
       "Data Preprocessing",
       "Machine Learning",
-      "Data Visualization",
       "Data Interpretation",
-      "EDA",
       "Statistics",
-      "Python (Jupyter)",
+      "Data Visualization",
+      "Metabase (Dashboard)",
     ],
   },
   {
-    title: "Frontend Development",
-    skill: ["Javascript", "React", "Vue", "HTML", "CSS(Sass)", "Rest API"],
+    title: "Project Management",
+    skill: ["需求訪談", "專案規劃", "時程控管"],
   },
   {
-    title: "Others",
-    skill: ["SQL (MS SQL)", "Git", "MS Office"],
+    title: "Programming",
+    skill: [
+      "Python (Jupyter)",
+      "SQL (MS SQL)",
+      "Git",
+      "Javascript",
+      "HTML/CSS",
+      "React/Vue",
+      "Rest API",
+    ],
   },
 ];
 
