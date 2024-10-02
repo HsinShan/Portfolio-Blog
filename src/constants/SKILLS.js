@@ -15,11 +15,13 @@ const SKILLS = [
   {
     title: "Digital Marketing",
     skill: [
-      "GA4/GTM",
-      "BigQuery",
-      "Google Search Console",
+      "Traffic Monitoring",
       "SEO Keyword Research",
       "Vistor/Customer Journey Analysis",
+      "GA4/GTM",
+      "BigQuery",
+      "Tracking Event Planning",
+      "Google Search Console",
     ],
   },
   {
