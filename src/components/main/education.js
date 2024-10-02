@@ -4,18 +4,27 @@ import { Timeline } from "antd";
 const Education = () => {
   return (
     <div className="education">
-      <div className="title">學歷</div>
+      <div className="title">Education</div>
       <Timeline mode="left">
         <Timeline.Item label="2020.09-2022.07" color="red">
-          <h3>資訊管理學碩士學位 | 國立臺灣大學</h3>
-          <p>畢業 GPA : 3.98</p>
-          <p>積極修習資料科學相關課程，具備相關專案實作經驗</p>
-          <p>碩士論文研究顧客的線上行為對顧客價值的影響</p>
+          <h3>Information Management | National Taiwan University</h3>
+          <p class="block-title">Master Thesis</p>
+          <p>
+            Identify Most Valuable Customers: Examine the Influence of Customer
+            Online Behaviors and the Application of LSTM Model
+          </p>
+          <p class="block-title">Project experience</p>
+          <p>
+            Feature engineering, Machine learning, Deep learning, Statistical
+            modeling
+          </p>
         </Timeline.Item>
         <Timeline.Item label="2015.09-2019.06" color="red">
-          <h3>資訊管理學學士學位 | 國立政治大學</h3>
-          <p>畢業專案製作美甲資訊整合系統</p>
-          <p>具備資料庫規劃及建置的經驗</p>
+          <h3>
+            Management of Information Systems | National ChengChi University
+          </h3>
+          <p>Graduation project: A Nail Art Information Integration System</p>
+          <p>Experience in database planning and implementation</p>
         </Timeline.Item>
       </Timeline>
     </div>

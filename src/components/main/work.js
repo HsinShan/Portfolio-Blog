@@ -4,51 +4,86 @@ import { Timeline } from "antd";
 const Work = () => {
   return (
     <div className="work">
-      <div className="title">工作經驗</div>
       <Timeline mode="left">
         <Timeline.Item label="2022.10-now" color="blue">
-          <h3>大數據分析師 | TutorABC</h3>
-          <p class="block-title">【行銷及運營應用分析專案】</p>
+          <h3>Data Analyst | TutorABC</h3>
+          <p class="block-title">Monthly Performance and Campaign Analysis</p>
+          <p>◆ Identify factors contributing to performance fluctuations.</p>
+          <p>◆ Evaluate the effectiveness of various media channels.</p>
           <p>
-            1. 業績因果模型 : 使用 PLS
-            建模找出影響業績的內外部因素，提供執行建議
+            ◆ Produce data reports and communicate insights to stakeholders.
+          </p>
+          <p>◆ Assess the effectiveness of promotional campaigns.</p>
+          <p class="block-title">
+            Digital Marketing Optimization: Traffic, SEO Strategies, and Visitor
+            Journey Analysis
+          </p>
+          <p>◆ Utilize GA4 and GTM to track website and app traffic.</p>
+          <p>
+            ◆ Plan tracking events across all web and app pages to gain insights
+            into user interactions.
           </p>
           <p>
-            2. 顧客再上課預測 : 使用生存分析預測顧客再上課機率，以追蹤客戶黏著度
+            ◆ Export GA4 raw data using BigQuery and combine it with offline
+            data for comprehensive visitor journey analysis.
           </p>
-          <p>3. 各類行銷及運營成效分析: 廣告代理商成效分析、續約影響因素分析</p>
-          <p class="block-title">【固化報表指標定義及建立 Dashboard】</p>
-          <p>1. 規劃並產出業務稽核固化報表，提升稽核效率及業務透明度</p>
           <p>
-            2. 製作視覺化的 dashboard
-            以追蹤業績表現，並提供每月業績分析，幫助決策和管理
+            ◆ Develop SEO strategies through keyword research and regularly
+            monitor SEO performance.
           </p>
-          <p class="block-title">【跨部門技術需求】</p>
-          <p>需求訪談並提供解決方案及技術支援</p>
+          <p>
+            ◆ Export Search Console data and create keyword tracking reports in
+            Looker Studio for marketing colleagues to easily access keyword
+            status.
+          </p>
+          <p class="block-title">Operational Process Enhancement</p>
+          <p>
+            ◆ Define KPIs and establish dashboards for efficient performance
+            tracking.
+          </p>
+          <p>
+            ◆ Provide automated data-driven solutions to optimize daily
+            operational processes in other departments.
+          </p>
+          <p class="block-title">Data Governance</p>
+          <p>
+            ◆ Collaborate with the data engineering team to ensure data accuracy
+            and compliance.
+          </p>
+          <p class="block-title">Cross-Functional Collaboration</p>
+          <p>
+            ◆ Work with marketing, sales, and RD teams to support
+            cross-departmental data requirements and analysis.
+          </p>
+          <p>
+            ◆ Participate in project management to ensure timely project
+            delivery and meet data analysis goals.
+          </p>
         </Timeline.Item>
         <Timeline.Item label="2019.11-2020.09" color="blue">
-          <h3>前端開發工程師 | 台灣樂天市場</h3>
-          <p>主要使用 React，其他技術 ROR、Graphql</p>
-          <p class="block-title">【主要職責】專案開發</p>
-          <p>1. 全新商品評價頁面開發</p>
-          <p>2. 全新店家促銷活動頁面開發</p>
+          <h3>Frontend Engineer | Rakuten</h3>
+          <p>Javascript, React, ROR, Graphql</p>
+          <p>1. New product review page project.</p>
+          <p>2. New Shop Campaign page project.</p>
         </Timeline.Item>
         <Timeline.Item label="2019.03-2019.06" color="blue">
-          <h3>軟體開發實習生 | 研華</h3>
-          <p>主要使用 Vue 搭配 Vuestic 及 echarts</p>
-          <p class="block-title">
-            【主要職責】物聯網軟體前端功能開發，及協助設備導入 Agent
+          <h3>RD intern | Adventech</h3>
+          <p>Vue (Vuestic + echarts)</p>
+          <p>
+            Frontend development of IoT software, and setting up agents on
+            devices.
           </p>
           <p>
-            <a href="http://bit.ly/31lOjID">實習證書</a>
+            <a href="http://bit.ly/31lOjID">Certificate</a>
           </p>
         </Timeline.Item>
         <Timeline.Item label="2018.09-2019.01" color="blue">
-          <h3>系統開發實習生 | 若水國際</h3>
-          <p>主要使用 Vue 搭配 ElementUI 及 Axios </p>
-          <p class="block-title">
-            【主要職責】新 AI 標註平台前端開發及維護現有 AI 標註平台
+          <h3>RD intern | 若水國際</h3>
+          <p>Vue (ElementUI + Axios) </p>
+          <p>
+            1. Assist in frontend development of the new AI annotation platform.
           </p>
+          <p>2. Maintain the existing AI annotation platform.</p>
         </Timeline.Item>
       </Timeline>
     </div>
