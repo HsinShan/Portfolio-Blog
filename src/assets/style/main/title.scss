@@ -11,9 +11,16 @@
         }
     }
     .about {
-        padding: 10px;
-        font-weight: bold;
+        text-align: left;
+        padding: 15px 30px;
+
+        @include laptop {
+        
+            padding: 15px 100px;
+            
+         }
     }
+    
     .email {
         text-decoration: underline;
     }

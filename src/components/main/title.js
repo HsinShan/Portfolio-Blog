@@ -10,21 +10,43 @@ const Title = () => {
         <LoadingImg src={meImg} width="180"></LoadingImg>
       </center>
       <h1> Shirley Hsieh </h1>
-      <h3>Data Scientist / Data Analyst</h3>
+      <h3> Data Analyst / Data Scientist</h3>
+      <p>
+        <b>Data Analyst with Software Engineering Background</b>
+      </p>
       <div className="tags">
-        <span># Data Science</span>
+        <span># Big Data Analytics</span>
+        <span># Data Visualization</span>
+        <span># Digital Marketing</span>
+        <span># Statistical Analysis</span>
         <span># Machine Learning</span>
-        <span># Data Analysis</span>
         <span># Software Development</span>
       </div>
       <div className="about">
         <p>
-          <b>具備網頁開發技能的資料工作者</b>
+          ◆ Proactive learner with a passion for acquiring new skills and
+          staying updated with industry trends.
         </p>
-        <p>◆ 目前在 TutorABC 擔任數據分析師，挖掘數據提供決策建議</p>
-        <p>◆ 碩論研究顧客行為對於顧客價值的影響</p>
-        <p>◆ 相關專案經驗 → 資料前處理、機器學習、資料分析、統計分析</p>
-        <p>◆ 軟體前端開發 1+ 年經驗，具備自學及獨立解決問題的能力</p>
+        <p>
+          ◆ Experienced in providing data-driven decision suggestions to
+          optimize performance and campaign effectiveness.
+        </p>
+        <p>
+          ◆ Involved in digital marketing optimization, focusing on traffic
+          monitoring, visitor journey analysis, and SEO strategy development.
+        </p>
+        <p>
+          ◆ Proficient in data analysis using SQL, Python, and BI tools to
+          analyze large datasets and identify trends.
+        </p>
+        <p>
+          ◆ Skilled in data visualization and report writing to effectively
+          communicate insights.
+        </p>
+        <p>
+          ◆ Strong cross-departmental communication and project management
+          skills.
+        </p>
       </div>
       <p>
         Email: <span className="email">shirleyhsieh825@gmail.com</span>

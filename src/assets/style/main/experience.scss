@@ -29,14 +29,44 @@ h3 {
 @include laptop {
     .ant-timeline.ant-timeline-label {
         .ant-timeline-item-label {
-            width: calc(50% - 150px);
+            width: calc(40% - 100px);
         }
         .ant-timeline-item-tail, .ant-timeline-item-head {
-            left: calc(50% - 120px);
+            left: calc(40% - 75px);
         }
         .ant-timeline-item-left .ant-timeline-item-content {
-            left: calc(50% - 120px);
+            left: calc(40% - 70px);
+            width: 60%;
+        }
+    }
+}
+
+@include pad {
+    .ant-timeline.ant-timeline-label {
+        .ant-timeline-item-label {
+            width: calc(40% - 100px);
+        }
+        .ant-timeline-item-tail, .ant-timeline-item-head {
+            left: calc(40% - 75px);
+        }
+        .ant-timeline-item-left .ant-timeline-item-content {
+            left: calc(40% - 70px);
+            width: 60%;
+        }
+    }
+}
+
+@include mobile {
+    .ant-timeline.ant-timeline-label {
+        .ant-timeline-item-label {
             width: calc(50% - 100px);
+        }
+        .ant-timeline-item-tail, .ant-timeline-item-head {
+            left: calc(50% - 75px);
+        }
+        .ant-timeline-item-left .ant-timeline-item-content {
+            left: calc(50% - 70px);
+            width: 50%;
         }
     }
 }

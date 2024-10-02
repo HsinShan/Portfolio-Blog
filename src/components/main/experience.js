@@ -6,8 +6,8 @@ import "../../assets/style/main/experience.scss";
 const Experience = () => {
   return (
     <div className="experience">
-      <Education />
       <Work />
+      <Education />
     </div>
   );
 };

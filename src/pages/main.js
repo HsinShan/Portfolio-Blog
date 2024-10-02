@@ -16,11 +16,11 @@ const Main = () => {
         <Title />
       </div>
       <div className="block block2">
-        <h1>經歷</h1>
+        <h1>Experience</h1>
         <Experience />
       </div>
       <div className="block">
-        <h1>技能</h1>
+        <h1>MY SKILLS & EXPERTISE</h1>
         <Skills />
       </div>
       <div className="block block2">

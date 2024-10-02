@@ -2,17 +2,27 @@ const SKILLS = [
   {
     title: "Data Science",
     skill: [
+      "Big Data Analytics",
+      "Statistical Analysis",
+      "Data Visualization",
+      "BI tools: Metabase/Looker Studio",
       "Data Preprocessing",
       "Machine Learning",
-      "Data Interpretation",
-      "Statistics",
-      "Data Visualization",
-      "Metabase (Dashboard)",
+      "Requirements Interview",
+      "Project Management",
     ],
   },
   {
-    title: "Project Management",
-    skill: ["需求訪談", "專案規劃", "時程控管"],
+    title: "Digital Marketing",
+    skill: [
+      "Traffic Monitoring",
+      "SEO Keyword Research",
+      "Vistor/Customer Journey Analysis",
+      "GA4/GTM",
+      "BigQuery",
+      "Tracking Event Planning",
+      "Google Search Console",
+    ],
   },
   {
     title: "Programming",
