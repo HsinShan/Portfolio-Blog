@@ -12,7 +12,7 @@ const Title = () => {
       <h1> Shirley Hsieh </h1>
       <h3> Data Analyst / Data Scientist</h3>
       <p>
-        <b>Data Analyst with Software Engineering Background</b>
+        <b>2+ years work experience in data field</b>
       </p>
       <div className="tags">
         <span># Big Data Analytics</span>
@@ -23,9 +23,7 @@ const Title = () => {
         <span># Software Development</span>
       </div>
       <div className="about">
-        <li>
-          Proactive learner with data analysis and digital marketing expertise.
-        </li>
+        <li>Proactive learner with data analysis and digital marketing.</li>
         <li>
           Provide data-driven insights to boost performance and campaign
           success.
@@ -41,6 +39,10 @@ const Title = () => {
         <li>
           Strong in data visualization, report writing, and cross-departmental
           communication.
+        </li>
+        <li>
+          1+ years of frontend experience enhancing problem-solving and
+          self-learning for a developer's approach to data challenges.
         </li>
       </div>
       <p>

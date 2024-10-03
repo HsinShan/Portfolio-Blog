@@ -1,5 +1,6 @@
 import React from "react";
 import { Timeline } from "antd";
+import { Link } from "react-router-dom";
 
 const Work = () => {
   return (
@@ -48,6 +49,9 @@ const Work = () => {
             Identify Most Valuable Customers: Examine the Influence of Customer
             Online Behaviors and the Application of LSTM Model
           </p>
+          <p>
+            <Link to="/portfolio-data">See More</Link>
+          </p>
           <p class="block-title">Project experience</p>
           <p>
             Feature engineering, Machine learning, Deep learning, Statistical
@@ -57,12 +61,14 @@ const Work = () => {
         <Timeline.Item label="2019.11-2020.09" color="blue">
           <h3>Frontend Engineer | Rakuten</h3>
           <p>Javascript, React, ROR, Graphql</p>
+          <p class="block-title">Main Project</p>
           <p>1. New product review page project.</p>
           <p>2. New Shop Campaign page project.</p>
         </Timeline.Item>
         <Timeline.Item label="2019.03-2019.06" color="blue">
           <h3>RD intern | Adventech</h3>
           <p>Vue (Vuestic + echarts)</p>
+          <p class="block-title">Main Responsibility</p>
           <p>
             Frontend development of IoT software, and setting up agents on
             devices.
@@ -74,6 +80,7 @@ const Work = () => {
         <Timeline.Item label="2018.09-2019.01" color="blue">
           <h3>RD intern | 若水國際</h3>
           <p>Vue (ElementUI + Axios) </p>
+          <p class="block-title">Main Responsibility</p>
           <p>
             1. Assist in frontend development of the new AI annotation platform.
           </p>
@@ -83,8 +90,16 @@ const Work = () => {
           <h3>
             Management of Information Systems | National ChengChi University
           </h3>
-          <p>Graduation project: A Nail Art Information Integration System</p>
-          <p>Experience in database planning and implementation</p>
+          <p class="block-title">Graduation project </p>
+          <p> A Nail Art Information Integration System</p>
+          <p class="block-title">Project experience</p>
+          <p>
+            Database planning and implementation, Frontend Development, API
+            Development
+          </p>
+          <p>
+            <Link to="/portfolio-frontend">See More</Link>
+          </p>
         </Timeline.Item>
       </Timeline>
     </div>
