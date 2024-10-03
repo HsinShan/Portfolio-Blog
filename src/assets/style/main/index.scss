@@ -20,4 +20,16 @@
     .block2 {
         background-color: white;
     }
+
+    @include pad {
+
+        .block {
+            padding: 30px 20px;
+           
+            h1 {
+                margin-bottom: 20px;
+            }
+           
+        }
+    }
 }

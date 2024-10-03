@@ -16,7 +16,7 @@ const Main = () => {
         <Title />
       </div>
       <div className="block block2">
-        <h1>Experience</h1>
+        <h1>Education & Experience</h1>
         <Experience />
       </div>
       <div className="block">
