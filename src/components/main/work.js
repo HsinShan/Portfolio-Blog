@@ -8,56 +8,50 @@ const Work = () => {
         <Timeline.Item label="2022.10-now" color="blue">
           <h3>Data Analyst | TutorABC</h3>
           <p class="block-title">Monthly Performance and Campaign Analysis</p>
-          <p>◆ Identify factors contributing to performance fluctuations.</p>
-          <p>◆ Evaluate the effectiveness of various media channels.</p>
-          <p>
-            ◆ Produce data reports and communicate insights to stakeholders.
-          </p>
-          <p>◆ Assess the effectiveness of promotional campaigns.</p>
+          <p>◆ Identify factors behind performance changes.</p>
+          <p>◆ Evaluate media channel effectiveness.</p>
+          <p>◆ Create reports and share insights with stakeholders.</p>
+          <p>◆ Assess promotional campaign success.</p>
           <p class="block-title">
             Digital Marketing Optimization: Traffic, SEO Strategies, and Visitor
             Journey Analysis
           </p>
-          <p>◆ Utilize GA4 and GTM to track website and app traffic.</p>
+          <p>◆ Track web and app traffic using GA4 and GTM.</p>
+          <p>◆ Plan tracking events to analyze user interactions.</p>
           <p>
-            ◆ Plan tracking events across all web and app pages to gain insights
-            into user interactions.
+            ◆ Export GA4 raw data using BigQuery and merge with offline data for
+            full journey analysis.
           </p>
+          <p>◆ Develop SEO strategies and monitor performance regularly.</p>
           <p>
-            ◆ Export GA4 raw data using BigQuery and combine it with offline
-            data for comprehensive visitor journey analysis.
-          </p>
-          <p>
-            ◆ Develop SEO strategies through keyword research and regularly
-            monitor SEO performance.
-          </p>
-          <p>
-            ◆ Export Search Console data and create keyword tracking reports in
-            Looker Studio for marketing colleagues to easily access keyword
-            status.
+            ◆ Create keyword reports using Search Console and Looker Studio.
           </p>
           <p class="block-title">Operational Process Enhancement</p>
-          <p>
-            ◆ Define KPIs and establish dashboards for efficient performance
-            tracking.
-          </p>
-          <p>
-            ◆ Provide automated data-driven solutions to optimize daily
-            operational processes in other departments.
-          </p>
+          <p>◆ Define KPIs and set up dashboards for tracking.</p>
+          <p>◆ Automate solutions to optimize daily operations.</p>
           <p class="block-title">Data Governance</p>
           <p>
-            ◆ Collaborate with the data engineering team to ensure data accuracy
-            and compliance.
+            ◆ Ensure data accuracy and compliance with the data engineering
+            team.
           </p>
           <p class="block-title">Cross-Functional Collaboration</p>
+          <p>◆ Support marketing, sales, and RD with data analysis.</p>
           <p>
-            ◆ Work with marketing, sales, and RD teams to support
-            cross-departmental data requirements and analysis.
+            ◆ Participate in project management for timely delivery and analysis
+            goals.
           </p>
+        </Timeline.Item>
+        <Timeline.Item label="2020.09-2022.07" color="red">
+          <h3>Information Management | National Taiwan University</h3>
+          <p class="block-title">Master Thesis</p>
           <p>
-            ◆ Participate in project management to ensure timely project
-            delivery and meet data analysis goals.
+            Identify Most Valuable Customers: Examine the Influence of Customer
+            Online Behaviors and the Application of LSTM Model
+          </p>
+          <p class="block-title">Project experience</p>
+          <p>
+            Feature engineering, Machine learning, Deep learning, Statistical
+            modeling
           </p>
         </Timeline.Item>
         <Timeline.Item label="2019.11-2020.09" color="blue">
@@ -84,6 +78,13 @@ const Work = () => {
             1. Assist in frontend development of the new AI annotation platform.
           </p>
           <p>2. Maintain the existing AI annotation platform.</p>
+        </Timeline.Item>
+        <Timeline.Item label="2015.09-2019.06" color="red">
+          <h3>
+            Management of Information Systems | National ChengChi University
+          </h3>
+          <p>Graduation project: A Nail Art Information Integration System</p>
+          <p>Experience in database planning and implementation</p>
         </Timeline.Item>
       </Timeline>
     </div>

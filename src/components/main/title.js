@@ -23,30 +23,25 @@ const Title = () => {
         <span># Software Development</span>
       </div>
       <div className="about">
-        <p>
-          ◆ Proactive learner with a passion for acquiring new skills and
-          staying updated with industry trends.
-        </p>
-        <p>
-          ◆ Experienced in providing data-driven decision suggestions to
-          optimize performance and campaign effectiveness.
-        </p>
-        <p>
-          ◆ Involved in digital marketing optimization, focusing on traffic
-          monitoring, visitor journey analysis, and SEO strategy development.
-        </p>
-        <p>
-          ◆ Proficient in data analysis using SQL, Python, and BI tools to
-          analyze large datasets and identify trends.
-        </p>
-        <p>
-          ◆ Skilled in data visualization and report writing to effectively
-          communicate insights.
-        </p>
-        <p>
-          ◆ Strong cross-departmental communication and project management
-          skills.
-        </p>
+        <li>
+          Proactive learner with data analysis and digital marketing expertise.
+        </li>
+        <li>
+          Provide data-driven insights to boost performance and campaign
+          success.
+        </li>
+        <li>
+          Experienced in traffic monitoring, visitor journey analysis, and SEO
+          strategies.
+        </li>
+        <li>
+          Proficient in SQL, Python, and BI tools for analyzing large datasets
+          and identifying trends.
+        </li>
+        <li>
+          Strong in data visualization, report writing, and cross-departmental
+          communication.
+        </li>
       </div>
       <p>
         Email: <span className="email">shirleyhsieh825@gmail.com</span>
