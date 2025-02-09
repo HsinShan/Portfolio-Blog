@@ -24,7 +24,7 @@ const PROJECTS = [
     ],
   },
   {
-    category: "課程專案 & 自製專案",
+    category: "研究所時期課程專案",
     tags: [
       "Rolling Window Prediction",
       "Statistics",

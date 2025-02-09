@@ -8,34 +8,44 @@ const Work = () => {
       <Timeline mode="left">
         <Timeline.Item label="2022.10-now" color="blue">
           <h3>Data Analyst | TutorABC</h3>
-          <p class="block-title">Monthly Performance and Campaign Analysis</p>
-          <p>◆ Identify factors behind performance changes.</p>
-          <p>◆ Evaluate media channel effectiveness.</p>
-          <p>◆ Create reports and share insights with stakeholders.</p>
-          <p>◆ Assess promotional campaign success.</p>
-          <p class="block-title">
-            Digital Marketing Optimization: Traffic, SEO Strategies, and Visitor
-            Journey Analysis
-          </p>
-          <p>◆ Track web and app traffic using GA4 and GTM.</p>
-          <p>◆ Plan tracking events to analyze user interactions.</p>
+          <p class="block-title">Performance & Marketing Analysis</p>
           <p>
-            ◆ Export GA4 raw data using BigQuery and merge with offline data for
-            full journey analysis.
+            ◆ Conduct monthly performance analysis and evaluate marketing
+            campaign effectiveness.
           </p>
-          <p>◆ Develop SEO strategies and monitor performance regularly.</p>
           <p>
-            ◆ Create keyword reports using Search Console and Looker Studio.
+            ◆ Design marketing budget allocation formulas, assisting in
+            improving cost efficiency.
+          </p>
+          <p class="block-title">Website Traffic & Conversion Optimization</p>
+          <p>
+            ◆ Improve website conversion rate by 2% through visitor journey
+            analysis and process optimization.
+          </p>
+          <p>
+            ◆ Monitor traffic trends and provide real-time optimization
+            insights.
+          </p>
+          <p>
+            ◆ Conduct SEO keyword research and prioritize content optimization,
+            boosting CTR by 1%.
+          </p>
+          <p>
+            ◆ Analyze app usage data to assist to help prioritize free resource
+            updates.
           </p>
           <p class="block-title">Operational Process Enhancement</p>
-          <p>◆ Define KPIs and set up dashboards for tracking.</p>
-          <p>◆ Automate solutions to optimize daily operations.</p>
-          <p class="block-title">Data Governance</p>
+          <p>◆ Build 10+ dashboards, boosting tracking efficiency by 80%.</p>
           <p>
-            ◆ Ensure data accuracy and compliance with the data engineering
-            team.
+            ◆ Design a sales result labeling system to track and analyze lead
+            quality.
           </p>
-          <p class="block-title">Cross-Functional Collaboration</p>
+          <p>
+            ◆ Develop a capacity threshold alert in BigQuery to prevent data
+            import failures.
+          </p>
+          <p class="block-title">Data Governance & Collaboration</p>
+          <p>◆ Ensure data accuracy to support reliable analysis.</p>
           <p>◆ Support marketing, sales, and RD with data analysis.</p>
           <p>
             ◆ Participate in project management for timely delivery and analysis
