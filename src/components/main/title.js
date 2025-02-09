@@ -12,7 +12,16 @@ const Title = () => {
       <h1> Shirley Hsieh </h1>
       <h3> Data Analyst / Data Scientist</h3>
       <p>
-        <b>2+ years work experience in data field</b>
+        <b>
+          Data Analyst with 2+ years of experience in digital marketing data
+          analysis and data-driven decision-making.
+        </b>
+      </p>
+      <p>
+        <b>
+          Passionate about logical thinking and problem-solving to drive
+          business growth.
+        </b>
       </p>
       <div className="tags">
         <span># Big Data Analytics</span>
@@ -23,26 +32,25 @@ const Title = () => {
         <span># Software Development</span>
       </div>
       <div className="about">
-        <li>Proactive learner with data analysis and digital marketing.</li>
         <li>
-          Provide data-driven insights to boost performance and campaign
-          success.
+          <b>Visitor Journey Analysis, SEO Strategy & Traffic Monitoring</b>:
+          Increased website conversion rate by 2%
         </li>
         <li>
-          Experienced in traffic monitoring, visitor journey analysis, and SEO
-          strategies.
+          <b>Data Visualization & Performance Tracking</b>: Built 10+
+          dashboards, boosting efficiency by 80%
         </li>
         <li>
-          Proficient in SQL, Python, and BI tools for analyzing large datasets
-          and identifying trends.
+          <b>Technical Proficiency</b>: Skilled in SQL, Python, and BI tools for
+          analyzing large datasets and identify trends
         </li>
         <li>
-          Strong in data visualization, report writing, and cross-departmental
-          communication.
+          <b>Reporting & Cross-Department Collaboration</b>: Strong in report
+          writing, cross-functional communication, and project management
         </li>
         <li>
-          1+ years of frontend experience enhancing problem-solving and
-          self-learning for a developer's approach to data challenges.
+          <b>Technical Mindset in Data Challenges</b>: 1+ year of front-end
+          development, applying a technical approach to data analysis
         </li>
       </div>
       <p>
