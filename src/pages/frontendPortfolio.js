@@ -10,7 +10,11 @@ const FrontendPortfolio = () => {
 
   return (
     <>
-      <Portfolio type={2} title="前端開發作品集" projects={PROJECTS_FRONTEND} />
+      <Portfolio
+        type={2}
+        title="前端開發作品集(2017~2020)"
+        projects={PROJECTS_FRONTEND}
+      />
     </>
   );
 };
