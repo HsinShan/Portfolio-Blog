@@ -1,5 +1,36 @@
 const PROJECTS = [
   {
+    category: "2025 自製研究",
+    tags: [
+      "NLP",
+      "Topic Modeling",
+      "Statistical Analysis",
+      "Regression",
+      "Apriori Association Rules",
+    ],
+    projects: [
+      {
+        title:
+          "Decoding Taiwan's Data Job Market (2025/04): Role Classification, Skill Trends, and Salary Insights",
+        subtitle: "自製研究",
+        period: "2025.04",
+        image: "https://hackmd.io/_uploads/HkQLPRbelx.png",
+        description:
+          "1. Scraped and analyzed 1,954 data-related job postings in Taiwan using NLP and LDA topic modeling to classify roles. <br/>2. Applied statistical testing and regression modeling to identify key skill combinations and background factors associated with higher salaries.<h3>分析方法</h3>1. NLP preprocessing (jieba, spaCy), LDA topic modeling for job classification<br/>2. Statistical tests (t-test, ANOVA) to assess salary differences by role and skill<br/>3. OLS regression to model salary ceilings (Adj. R² = 0.645)<br/>4. Apriori association rules to uncover high-value skill combinations",
+        results:
+          "1. Cross-functional capabilities (technical + business thinking) drive the highest salary potential.<br/>2. Master's degrees combined with communication skills are strongly linked to managerial roles and higher compensation (up to +53K).<br/>3. Technical depth in Python, machine learning, and ETL correlates with significant salary gains.<br/>4. Execution-only skills (e.g., GA4/GTM, reporting) have limited impact on salary ceilings.",
+        tags: [
+          "NLP",
+          "Topic Modeling",
+          "Statistical Analysis",
+          "Regression",
+          "Apriori Association Rules",
+        ],
+        url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/104%20scraper",
+      },
+    ],
+  },
+  {
     category: "碩士論文",
     tags: ["LSTM", "Customer Behavior", "Data Imbalance", "Random Forest"],
     projects: [
@@ -24,7 +55,7 @@ const PROJECTS = [
     ],
   },
   {
-    category: "研究所時期課程專案",
+    category: "2020~2022 研究所時期課程專案&自製研究",
     tags: [
       "Rolling Window Prediction",
       "Statistics",
