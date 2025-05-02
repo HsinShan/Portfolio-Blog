@@ -11,7 +11,7 @@ const PROJECTS = [
         description:
           "使用 91APP 提供的店家網站資料，進行<span class='highlight'>顧客價值</span>的研究<br/>提出 2 種行為資料前處理方式(event-based & session-based) + 5 個實驗模型(Random Forest / LSTM) <br/>期望找出未來一年的高價值顧客<br/>VIP 定義: 80-20 法則<h3>研究架構</h3><img src='https://i.imgur.com/VOs8izP.png' alt='Thesis Structure'/>'",
         results:
-          "1. 模型最佳表現 : <span class='highlight'>0.95 (F1 & AUC)</span><br/>2. <span class='highlight'>顧客的活躍度</span>是關鍵<br/>3. 應多引導顧客有想下單的動作<br/><h3>行銷策略</h3><img src='https://i.imgur.com/xjzDHg8.png' alt='Thesis result'/>",
+          "1. <span class='highlight'>顧客的線上行為具有前瞻性價值</span><br/>線上行為模式(尚未購買時的「瀏覽、加購務車、造訪頻率」) 可展現成為高價值顧客的潛力 <br/> Event-based + 行為特徵模型的 F1/AUC 高達 0.95<br/>2. <span class='highlight'>高活躍度 ≠ 立即下單</span>，但有潛力成為 VIP <br/> 部分尚未轉換的活躍顧客，其行為模式與現有 VIP 相近，值得及早鎖定與培養<br/>3. <span class='highlight'>意圖型行為比單純曝光更具預測力</span><br/>加入購物車、點擊商品詳情等「高意圖」行為，是識別未來 VIP 的關鍵信號，遠勝於純曝光或進站次數<br/>4. <span class='highlight'>分群策略與行銷建議</span><br/><img src='https://i.imgur.com/xjzDHg8.png' alt='Thesis result'/>",
         tags: [
           "LSTM",
           "Random Forest",
