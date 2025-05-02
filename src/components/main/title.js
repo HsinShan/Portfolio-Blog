@@ -10,7 +10,7 @@ const Title = () => {
         <LoadingImg src={meImg} width="180"></LoadingImg>
       </center>
       <h1> Shirley Hsieh </h1>
-      <h3> Data Analyst / Data Scientist</h3>
+      <h3> Data Analyst / Data Scientist / Digital Marketing</h3>
       <p>
         <b>
           Data Analyst with 2+ years of experience in digital marketing data
@@ -31,7 +31,7 @@ const Title = () => {
         <span># Machine Learning</span>
         <span># Software Development</span>
       </div>
-      <div className="about">
+      {/* <div className="about">
         <li>
           <b>Visitor Journey Analysis, SEO Strategy & Traffic Monitoring</b>:
           Increased website conversion rate by 2%
@@ -52,10 +52,10 @@ const Title = () => {
           <b>Technical Mindset in Data Challenges</b>: 1+ year of front-end
           development, applying a technical approach to data analysis
         </li>
-      </div>
-      <p>
+      </div> */}
+      {/* <p>
         Email: <span className="email">shirleyhsieh825@gmail.com</span>
-      </p>
+      </p> */}
       <div class="link">
         <a
           href="https://tw.linkedin.com/in/shirley-hsieh-101397170"
