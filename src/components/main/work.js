@@ -16,7 +16,7 @@ const Work = () => {
             Project: Decoding Taiwan's Data Job Market (2025/04): Role
             Classification, Skill Trends, and Salary Insights
           </p>
-          <p class="block-title">★ Key Insights</p>
+          <p>★ Key Insights</p>
           <p>
             1. Cross-functional capabilities (technical + business thinking)
             drive the highest salary potential.

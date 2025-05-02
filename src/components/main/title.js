@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LoadingImg from "../common/loadingImg";
 import meImg from "../../assets/images/me.png";
 import "../../assets/style/main/title.scss";
@@ -21,6 +22,21 @@ const Title = () => {
         <b>
           Passionate about logical thinking and problem-solving to drive
           business growth.
+        </b>
+      </p>
+      <p>
+        <b>
+          A lifelong learner who thrives on continuous learning and picking up
+          new skills.
+        </b>
+      </p>
+      <p>
+        <b>
+          Explore more Shirley's independent projects and research showcased.
+          <br />→ <Link to="/portfolio-data">Data Science Portfolio</Link> →
+          <Link to="/portfolio-frontend">
+            Software Frontend Development Portfolio
+          </Link>
         </b>
       </p>
       <div className="tags">
