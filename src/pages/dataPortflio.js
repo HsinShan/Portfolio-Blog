@@ -10,11 +10,7 @@ const DataPortfolio = () => {
 
   return (
     <>
-      <Portfolio
-        type={1}
-        title="資料科學作品集 (2020~2022)"
-        projects={PROJECTS}
-      />
+      <Portfolio type={1} title="資料科學作品集" projects={PROJECTS} />
     </>
   );
 };

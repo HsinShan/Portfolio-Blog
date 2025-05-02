@@ -6,50 +6,109 @@ const Work = () => {
   return (
     <div className="work">
       <Timeline mode="left">
-        <Timeline.Item label="2022.10-now" color="blue">
+        <Timeline.Item label="2025.04-Now" color="blue">
+          <h3>Freelance Data Scientist | Self-Initiated Project</h3>
+          <p>
+            Initiated a self-directed research and portfolio enhancement phase
+            after leaving my previous role.
+          </p>
+          <p class="block-title">
+            Project: Decoding Taiwan's Data Job Market (2025/04): Role
+            Classification, Skill Trends, and Salary Insights
+          </p>
+          <p>★ Key Insights</p>
+          <p>
+            1. Cross-functional capabilities (technical + business thinking)
+            drive the highest salary potential.
+          </p>
+          <p>
+            2. Master's degrees combined with communication skills are strongly
+            linked to managerial roles and higher compensation (up to +53K).
+          </p>
+          <p>
+            3. Technical depth in Python, machine learning, and ETL correlates
+            with significant salary gains.
+          </p>
+          <p>
+            4. Execution-only skills (e.g., GA4/GTM, reporting) have limited
+            impact on salary ceilings.
+          </p>
+          <p>
+            <Link to="/portfolio-data">Project Detail</Link>
+          </p>
+        </Timeline.Item>
+        <Timeline.Item label="2022.10-2025.03" color="blue">
           <h3>Data Analyst | TutorABC</h3>
           <p class="block-title">Performance & Marketing Analysis</p>
           <p>
-            ◆ Conduct monthly performance analysis and evaluate marketing
-            campaign effectiveness.
+            ◆ Conducted monthly performance reviews and evaluated marketing
+            campaign effectiveness
           </p>
           <p>
-            ◆ Design marketing budget allocation formulas, assisting in
-            improving cost efficiency.
-          </p>
-          <p class="block-title">Website Traffic & Conversion Optimization</p>
-          <p>
-            ◆ Improve website conversion rate by 2% through visitor journey
-            analysis and process optimization.
+            ◆ Designed budget allocation formulas to enhance cost efficiency
           </p>
           <p>
-            ◆ Monitor traffic trends and provide real-time optimization
-            insights.
+            ◆ Established a PLS-PM model to uncover both direct and indirect
+            drivers of revenue fluctuation, providing actionable business
+            recommendations
+          </p>
+
+          <p class="block-title">
+            CRM: Customer Journey Construction & Behavior Analysis
           </p>
           <p>
-            ◆ Conduct SEO keyword research and prioritize content optimization,
-            boosting CTR by 1%.
+            ◆ Integrated tens of millions of online/offline data to construct a
+            complete customer journey and designed ETL flows to optimize queries
           </p>
           <p>
-            ◆ Analyze app usage data to assist to help prioritize free resource
-            updates.
+            ◆ Designed and implemented event tagging strategy across website and
+            app to enhance visitor behavior tracking
           </p>
+          <p>
+            ◆ Built dashboards to monitor traffic trends and provide real-time
+            optimization insights
+          </p>
+          <p>
+            ◆ Performed behavior and funnel analysis to identify drop-off
+            points, improving lead CVR by 2%
+          </p>
+
+          <p class="block-title">SEO Strategy to Boost Organic Traffic</p>
+          <p>
+            ◆ Developed keyword strategies and prioritized content optimization
+            based on SEO potential, increasing organic CTR by 1%
+          </p>
+          <p>
+            ◆ Collaborated with the IMC team to optimize high-potential articles
+            and address keyword gaps
+          </p>
+
           <p class="block-title">Operational Process Enhancement</p>
-          <p>◆ Build 10+ dashboards, boosting tracking efficiency by 80%.</p>
           <p>
-            ◆ Design a sales result labeling system to track and analyze lead
-            quality.
+            ◆ Built 10+ dashboards, enhancing tracking and reporting efficiency
           </p>
           <p>
-            ◆ Develop a capacity threshold alert in BigQuery to prevent data
-            import failures.
+            ◆ Designed a sales result labeling system to analyze lead quality
           </p>
-          <p class="block-title">Data Governance & Collaboration</p>
-          <p>◆ Ensure data accuracy to support reliable analysis.</p>
-          <p>◆ Support marketing, sales, and RD with data analysis.</p>
           <p>
-            ◆ Participate in project management for timely delivery and analysis
-            goals.
+            ◆ Developed a capacity threshold alert in BigQuery to prevent data
+            import failures
+          </p>
+
+          <p class="block-title">
+            Data Governance & Cross-Functional Collaboration
+          </p>
+          <p>
+            ◆ Ensured data accuracy and consistency across tracking
+            infrastructure
+          </p>
+          <p>
+            ◆ Provided data-driven insights to support marketing, sales, and RD
+            teams
+          </p>
+          <p>
+            ◆ Participated in cross-functional projects to ensure timely
+            delivery of analysis tasks
           </p>
         </Timeline.Item>
         <Timeline.Item label="2020.09-2022.07" color="red">
