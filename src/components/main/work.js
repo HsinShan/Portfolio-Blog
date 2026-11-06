@@ -3,7 +3,7 @@ import { Timeline } from "antd";
 import { Link } from "react-router-dom";
 import useContent from "../../content";
 
-// Render one timeline block; see content/experience.js for the block shapes.
+// Render one timeline block; see content/en/experience.js for the block shapes.
 const Block = ({ block }) => {
   if (typeof block === "string") return <p>{block}</p>;
   if (block.heading) return <p className="block-title">{block.heading}</p>;
@@ -15,7 +15,9 @@ const Block = ({ block }) => {
     );
   return (
     <p>
-      <a href={block.href}>{block.label}</a>
+      <a href={block.href} target="_blank" rel="noopener noreferrer">
+        {block.label}
+      </a>
     </p>
   );
 };

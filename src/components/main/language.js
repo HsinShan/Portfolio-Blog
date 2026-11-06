@@ -12,7 +12,9 @@ const Language = () => {
       <p className="date">{date}</p>
       <p>
         {transcript.label}
-        <a href={transcript.href}>{transcript.linkText}</a>
+        <a href={transcript.href} target="_blank" rel="noopener noreferrer">
+          {transcript.linkText}
+        </a>
       </p>
     </div>
   );

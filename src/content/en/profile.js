@@ -39,7 +39,7 @@ const PROFILE = {
   ],
   language: {
     title: "Language",
-    score: "TOEIC: 875 分",
+    score: "TOEIC: 875",
     date: "Date: 2021.09.26",
     transcript: { label: "Transcript : ", linkText: "LINK", href: "https://reurl.cc/RrDOZD" },
   },

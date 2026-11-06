@@ -95,7 +95,7 @@ const EXPERIENCE = [
   {
     period: "2019.03-2019.06",
     color: "blue",
-    title: "RD intern | Adventech",
+    title: "RD intern | Advantech",
     blocks: [
       "Vue (Vuestic + echarts)",
       { heading: "Main Responsibility" },
@@ -108,7 +108,7 @@ const EXPERIENCE = [
     color: "blue",
     title: "RD intern | 若水國際",
     blocks: [
-      "Vue (ElementUI + Axios) ",
+      "Vue (ElementUI + Axios)",
       { heading: "Main Responsibility" },
       "1. Assist in frontend development of the new AI annotation platform.",
       "2. Maintain the existing AI annotation platform.",
@@ -119,8 +119,8 @@ const EXPERIENCE = [
     color: "red",
     title: "Management of Information Systems | National ChengChi University",
     blocks: [
-      { heading: "Graduation project " },
-      " A Nail Art Information Integration System",
+      { heading: "Graduation project" },
+      "A Nail Art Information Integration System",
       { heading: "Project experience" },
       "Database planning and implementation, Frontend Development, API Development",
       { to: "/portfolio-frontend", label: "See More" },
