@@ -16,15 +16,18 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
       onCancel={handleCancel}
       width={width}
       footer={[
-        <Button
-          key="link"
-          href={url}
-          target="_blank"
-          onClick={handleOk}
-          className="url"
-        >
-          See Code
-        </Button>,
+        // Projects without a public repo (e.g. url omitted) show only Close
+        url ? (
+          <Button
+            key="link"
+            href={url}
+            target="_blank"
+            onClick={handleOk}
+            className="url"
+          >
+            See Code
+          </Button>
+        ) : null,
         <Button key="back" onClick={handleCancel}>
           Close
         </Button>,

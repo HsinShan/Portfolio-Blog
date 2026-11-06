@@ -11,23 +11,24 @@ const Title = () => {
         <LoadingImg src={meImg} width="180"></LoadingImg>
       </center>
       <h1> Shirley Hsieh </h1>
-      <h3> Data Analyst / Data Scientist / Digital Marketing</h3>
+      <h3> Data Analyst | Product & Marketing Analytics</h3>
       <p>
         <b>
-          Data Analyst with 2+ years of experience in digital marketing data
-          analysis and data-driven decision-making.
+          Data Analyst with 3+ years of experience and 1 year in front-end
+          development.
         </b>
       </p>
       <p>
         <b>
-          Passionate about logical thinking and problem-solving to drive
-          business growth.
+          Product analytics for copy-trading products and marketing analytics
+          for online education, focused on metric definition, funnel analysis,
+          and customer journey analysis.
         </b>
       </p>
       <p>
         <b>
-          A lifelong learner who thrives on continuous learning and picking up
-          new skills.
+          Built and launched a web tool with Claude Code, from tracking plan to
+          funnel-driven iteration.
         </b>
       </p>
       <p>
@@ -40,6 +41,8 @@ const Title = () => {
         </b>
       </p>
       <div className="tags">
+        <span># Product Analytics</span>
+        <span># Metric Framework</span>
         <span># Big Data Analytics</span>
         <span># Data Visualization</span>
         <span># Digital Marketing</span>

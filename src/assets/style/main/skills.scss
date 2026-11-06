@@ -6,7 +6,8 @@
     margin: 20px 0;
 
     .ant-card {
-        width: 30%;
+        // 4 categories per row; 23% leaves ~8% for gaps via space-between
+        width: 23%;
         border-radius: 5px;
         box-shadow: 4px 4px 5px $gray-light;
         

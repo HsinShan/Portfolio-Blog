@@ -6,36 +6,75 @@ const Work = () => {
   return (
     <div className="work">
       <Timeline mode="left">
-        <Timeline.Item label="2025.04-Now" color="blue">
-          <h3>Freelance Data Scientist | Self-Initiated Project</h3>
+        <Timeline.Item label="2026.03-Now" color="blue">
+          <h3>Independent Product Builder & Analyst | Self-employed</h3>
           <p>
-            Initiated a self-directed research and portfolio enhancement phase
-            after leaving my previous role.
-          </p>
-          <p class="block-title">
-            Project: Decoding Taiwan's Data Job Market (2025/04): Role
-            Classification, Skill Trends, and Salary Insights
-          </p>
-          <p>★ Key Insights</p>
-          <p>
-            1. Cross-functional capabilities (technical + business thinking)
-            drive the highest salary potential.
+            Initiated, built, and analyzed my own web product with Claude Code,
+            reaching 2,300+ active users.
           </p>
           <p>
-            2. Master's degrees combined with communication skills are strongly
-            linked to managerial roles and higher compensation (up to +53K).
+            ◆ Build: k-means clustering in CIELAB color space extracts true
+            colors from photos, separating highlights and shadows
           </p>
           <p>
-            3. Technical depth in Python, machine learning, and ETL correlates
-            with significant salary gains.
+            ◆ Launch: shipped with a 29-event GA4 tracking plan covering
+            activation and upgrade funnels
           </p>
           <p>
-            4. Execution-only skills (e.g., GA4/GTM, reporting) have limited
-            impact on salary ceilings.
+            ◆ Measure: landing-to-upload was only 16%, so added a sample-data
+            entry point to lower the barrier
+          </p>
+          <p>
+            ◆ Validate: caught sample data inflating upgrade clicks (17 of 21)
+            and fixed the tracking logic before pricing decisions
+          </p>
+          <p>
+            ◆ Engineering: React, modular architecture, graphify impact
+            analysis, code review, and 193 automated tests
           </p>
           <p>
             <Link to="/portfolio-data">Project Detail</Link>
           </p>
+        </Timeline.Item>
+        <Timeline.Item label="2025.06-2026.02" color="blue">
+          <h3>Data Analyst | Hytech</h3>
+          <p>
+            Product analytics for copy-trading products, partnering with PMs
+            and engineers on metrics, reporting, and product decisions.
+          </p>
+
+          <p class="block-title">Metric Framework & BI Dashboards</p>
+          <p>
+            ◆ Defined North Star and secondary metrics; built daily/weekly/monthly
+            Power BI dashboards
+          </p>
+          <p>
+            ◆ Handled 160+ requests from 15+ stakeholders; turned ad-hoc
+            requests (65%) into dashboard metrics
+          </p>
+          <p>◆ Wrote event tracking specs for new releases (Sensors Data)</p>
+
+          <p class="block-title">Product Analytics & Root Cause Analysis</p>
+          <p>
+            ◆ Diagnosed why trade count fell while active users rose: traced it
+            to declining signal-provider trades (-28% MoM) and an influx of
+            low-frequency followers (trades per user -49%)
+          </p>
+          <p>
+            ◆ Delivered policy analyses (leverage, profit-sharing) and annual
+            reports for 4 brands
+          </p>
+
+          <p class="block-title">Data Pipeline Automation & Data Quality</p>
+          <p>
+            ◆ Launched a data automation project with a teammate, aligning data
+            source definitions with engineering
+          </p>
+          <p>
+            ◆ Resolved 6+ data quality issues and reconciled P&L figures with
+            the BI team
+          </p>
+          <p>◆ Redefined campaign eligibility logic to match business goals</p>
         </Timeline.Item>
         <Timeline.Item label="2022.10-2025.03" color="blue">
           <h3>Data Analyst | TutorABC</h3>
@@ -45,7 +84,8 @@ const Work = () => {
             campaign effectiveness
           </p>
           <p>
-            ◆ Designed budget allocation formulas to enhance cost efficiency
+            ◆ Designed budget allocation formulas, improving cost efficiency by
+            10%
           </p>
           <p>
             ◆ Established a PLS-PM model to uncover both direct and indirect
@@ -69,14 +109,23 @@ const Work = () => {
             optimization insights
           </p>
           <p>
-            ◆ Performed behavior and funnel analysis to identify drop-off
-            points, improving lead CVR by 2%
+            ◆ Performed funnel analysis on the self-booking flow to identify
+            drop-off points, raising completion rate by 2% (key steps +10% and
+            +6%)
+          </p>
+          <p>
+            ◆ Optimized CRM automated email content at each journey stage,
+            increasing lead rate by 2%
+          </p>
+          <p>
+            ◆ Identified Webchat drop-off points and introduced proactive lead
+            capture, increasing lead rate by 0.3% and adding 14 closed deals
           </p>
 
           <p class="block-title">SEO Strategy to Boost Organic Traffic</p>
           <p>
-            ◆ Developed keyword strategies and prioritized content optimization
-            based on SEO potential, increasing organic CTR by 1%
+            ◆ Developed keyword strategies and optimized high-impression,
+            low-CTR articles, raising site-wide CTR from 3.03% to 3.7%
           </p>
           <p>
             ◆ Collaborated with the IMC team to optimize high-potential articles
@@ -85,7 +134,8 @@ const Work = () => {
 
           <p class="block-title">Operational Process Enhancement</p>
           <p>
-            ◆ Built 10+ dashboards, enhancing tracking and reporting efficiency
+            ◆ Built 20+ dashboards across sales, marketing, business
+            development, and traffic, improving tracking efficiency by 80%
           </p>
           <p>
             ◆ Designed a sales result labeling system to analyze lead quality
