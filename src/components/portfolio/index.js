@@ -9,11 +9,11 @@ const Portfolio = ({ type, title, projects }) => {
     <div className="portfolio">
       <h1 className="page-title">{title}</h1>
       <div className="projects">
-        {projects.map((project) => {
+        {projects.map((project, i) => {
           if (type === 1)
             // Data portfolio
             return (
-              <div className="category" key={project.category}>
+              <div className="category" key={i}>
                 <h2 className="project-title">{project.category}</h2>
                 <div className="all-tags">
                   {project.tags.map((tag) => (
@@ -22,7 +22,7 @@ const Portfolio = ({ type, title, projects }) => {
                 </div>
                 <div className="category-projects">
                   {project.projects.map((p) => (
-                    <ProjectData project={p} key={p.title} />
+                    <ProjectData project={p} key={p.image} />
                   ))}
                 </div>
               </div>
@@ -31,24 +31,24 @@ const Portfolio = ({ type, title, projects }) => {
             // frontend portfolio
             if (project.group === 1) {
               return (
-                <div className="category" key={project.category}>
+                <div className="category" key={i}>
                   <h2 className="project-title">{project.category}</h2>
                   <div className="category-projects">
                     {project.projects.map((p) => (
-                      <ProjectFrontend project={p} key={p.title} />
+                      <ProjectFrontend project={p} key={p.image} />
                     ))}
                   </div>
                 </div>
               );
             } else {
               return (
-                <div className="js-block" key={project.category}>
+                <div className="js-block" key={i}>
                   <h2 className="project-title">{project.category}</h2>
                   <h3>{project.title}</h3>
                   <h4>{project.subtitle}</h4>
                   <div className="js-block-projects">
                     {project.projects.map((p) => (
-                      <ProjectFrontendTiny project={p} key={p.title} />
+                      <ProjectFrontendTiny project={p} key={p.image} />
                     ))}
                   </div>
                 </div>

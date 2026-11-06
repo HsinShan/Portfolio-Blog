@@ -17,8 +17,8 @@ const ProjectFrontend = ({ project }) => {
         <div className="subtitle">【{subtitle}】</div>
         <div className="title">{title}</div>
         <div className="skills">
-          {skills.map((skill) => (
-            <p key={skill}>{skill}</p>
+          {skills.map((skill, i) => (
+            <p key={i}>{skill}</p>
           ))}
         </div>
         <div className="link">

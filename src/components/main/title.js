@@ -15,8 +15,8 @@ const Title = () => {
       </center>
       <h1>{name}</h1>
       <h3>{headline}</h3>
-      {intro.map((line) => (
-        <p key={line}>
+      {intro.map((line, i) => (
+        <p key={i}>
           <b>{line}</b>
         </p>
       ))}

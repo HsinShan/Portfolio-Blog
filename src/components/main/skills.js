@@ -7,10 +7,10 @@ const Skills = () => {
   const { SKILLS } = useContent();
   return (
     <div className="skills">
-      {SKILLS.map((skill) => (
-        <Card title={skill.title} bordered={false} key={skill.title}>
+      {SKILLS.map((skill, i) => (
+        <Card title={skill.title} bordered={false} key={i}>
           {skill.skill.map((item, index) => (
-            <li className="skill" key={item + index}>
+            <li className="skill" key={index}>
               ★ {item}
             </li>
           ))}

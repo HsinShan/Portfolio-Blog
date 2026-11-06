@@ -9,7 +9,7 @@ const PROJECTS = [
         period: "2026",
         image: "/images/color-tool.png",
         description:
-          "獨立開發並上線的網頁工具，累計 <span class='highlight'>2,300+ 活躍使用者</span>、2.1 萬次事件<br/>自行規劃 29 個 GA4 事件與升級漏斗<h3>核心功能</h3>以 <span class='bold'>k-means</span> 在 Lab 色彩空間分群，從照片分離出物品本色與高光、陰影<br/>採 farthest-first 初始化，確保同一張照片結果一致<h3>開發方式</h3>以 Claude Code 協作開發：拆分為 11 個獨立元件與各自附測試的邏輯模組<br/>用 graphify 建立程式碼圖譜，改版前先評估影響範圍<br/>搭配 Code Review 與 193 項自動化測試控管品質",
+          "獨立開發並上線的網頁工具，累計 <span class='highlight'>2,300+ 活躍使用者</span>、21,000 次事件<br/>自行規劃 29 個 GA4 事件與升級漏斗<h3>核心功能</h3>以 <span class='bold'>k-means</span> 在 Lab 色彩空間分群，從照片分離出物品本色與高光、陰影<br/>採 farthest-first 初始化，確保同一張照片結果一致<h3>開發方式</h3>以 Claude Code 協作開發：拆分為 11 個獨立元件與各自附測試的邏輯模組<br/>用 graphify 建立程式碼圖譜，改版前先評估影響範圍<br/>搭配 Code Review 與 193 項自動化測試控管品質",
         results:
           "1. 發現進站 → 首次上傳僅 <span class='highlight'>16%</span>，新增「載入範例」入口降低使用門檻<br/>2. 新功能影片帶動流量高峰後，升級漏斗為 <span class='highlight'>105 → 82 → 21</span><br/>3. 拆解後發現範例資料觸發付費提示，<span class='highlight'>21 次點擊中 17 次</span>來自只用過範例的用戶，判定該期付費意願數據失真<br/>4. 修正觸發門檻與事件邏輯，只計算用戶自己的資料，並把資料切換點前後的判讀規則寫進埋點規劃文件",
         tags: [
@@ -36,14 +36,14 @@ const PROJECTS = [
     projects: [
       {
         title:
-          "Decoding Taiwan's Data Job Market (2025/04): Role Classification, Skill Trends, and Salary Insights",
+          "台灣數據職缺市場解析（2025/04）：職務分類、技能趨勢與薪資洞察",
         subtitle: "自製研究",
         period: "2025.04",
         image: "https://hackmd.io/_uploads/HkQLPRbelx.png",
         description:
-          "1. Scraped and analyzed 1,954 data-related job postings in Taiwan using NLP and LDA topic modeling to classify roles. <br/>2. Applied statistical testing and regression modeling to identify key skill combinations and background factors associated with higher salaries.<h3>分析方法</h3>1. NLP preprocessing (jieba, spaCy), LDA topic modeling for job classification<br/>2. Statistical tests (t-test, ANOVA) to assess salary differences by role and skill<br/>3. OLS regression to model salary ceilings (Adj. R² = 0.645)<br/>4. Apriori association rules to uncover high-value skill combinations",
+          "1. 爬取並分析台灣 1,954 筆數據相關職缺，以 NLP 與 LDA topic modeling 進行職務分類<br/>2. 透過統計檢定與迴歸模型，找出與高薪相關的關鍵技能組合及背景因素<h3>分析方法</h3>1. NLP 前處理（jieba、spaCy），以 LDA topic modeling 分類職缺<br/>2. 統計檢定（t-test、ANOVA）比較不同職務與技能的薪資差異<br/>3. OLS 迴歸建模薪資上限（Adj. R² = 0.645）<br/>4. Apriori 關聯規則找出高價值技能組合",
         results:
-          "1. Cross-functional capabilities (technical + business thinking) drive the highest salary potential.<br/>2. Master's degrees combined with communication skills are strongly linked to managerial roles and higher compensation (up to +53K).<br/>3. Technical depth in Python, machine learning, and ETL correlates with significant salary gains.<br/>4. Execution-only skills (e.g., GA4/GTM, reporting) have limited impact on salary ceilings.",
+          "1. 跨域能力（技術 + 商業思維）的薪資潛力最高<br/>2. 碩士學歷加上溝通能力，與管理職及較高薪資強烈相關（最高 +53K）<br/>3. Python、機器學習、ETL 的技術深度與薪資明顯提升相關<br/>4. 純執行型技能（如 GA4/GTM、報表製作）對薪資上限的影響有限",
         tags: [
           "NLP",
           "Topic Modeling",
@@ -65,9 +65,9 @@ const PROJECTS = [
         period: "2021~2022",
         image: "https://i.imgur.com/bgtC3nu.png",
         description:
-          "使用 91APP 提供的店家網站資料，進行<span class='highlight'>顧客價值</span>的研究<br/>提出 2 種行為資料前處理方式(event-based & session-based) + 5 個實驗模型(Random Forest / LSTM) <br/>期望找出未來一年的高價值顧客<br/>VIP 定義: 80-20 法則<h3>研究架構</h3><img src='https://i.imgur.com/VOs8izP.png' alt='Thesis Structure'/>'",
+          "使用 91APP 提供的店家網站資料，進行<span class='highlight'>顧客價值</span>的研究<br/>提出 2 種行為資料前處理方式(event-based & session-based) + 5 個實驗模型(Random Forest / LSTM) <br/>期望找出未來一年的高價值顧客<br/>VIP 定義: 80-20 法則<h3>研究架構</h3><img src='https://i.imgur.com/VOs8izP.png' alt='Thesis Structure'/>",
         results:
-          "1. <span class='highlight'>顧客的線上行為具有前瞻性價值</span><br/>線上行為模式(尚未購買時的「瀏覽、加購務車、造訪頻率」) 可展現成為高價值顧客的潛力 <br/> Event-based + 行為特徵模型的 F1/AUC 高達 0.95<br/>2. <span class='highlight'>高活躍度 ≠ 立即下單</span>，但有潛力成為 VIP <br/> 部分尚未轉換的活躍顧客，其行為模式與現有 VIP 相近，值得及早鎖定與培養<br/>3. <span class='highlight'>意圖型行為比單純曝光更具預測力</span><br/>加入購物車、點擊商品詳情等「高意圖」行為，是識別未來 VIP 的關鍵信號，遠勝於純曝光或進站次數<br/>4. <span class='highlight'>分群策略與行銷建議</span><br/><img src='https://i.imgur.com/xjzDHg8.png' alt='Thesis result'/>",
+          "1. <span class='highlight'>顧客的線上行為具有前瞻性價值</span><br/>線上行為模式(尚未購買時的「瀏覽、加入購物車、造訪頻率」) 可展現成為高價值顧客的潛力 <br/> Event-based + 行為特徵模型的 F1/AUC 高達 0.95<br/>2. <span class='highlight'>高活躍度 ≠ 立即下單</span>，但有潛力成為 VIP <br/> 部分尚未轉換的活躍顧客，其行為模式與現有 VIP 相近，值得及早鎖定與培養<br/>3. <span class='highlight'>意圖型行為比單純曝光更具預測力</span><br/>加入購物車、點擊商品詳情等「高意圖」行為，是識別未來 VIP 的關鍵信號，遠勝於純曝光或進站次數<br/>4. <span class='highlight'>分群策略與行銷建議</span><br/><img src='https://i.imgur.com/xjzDHg8.png' alt='Thesis result'/>",
         tags: [
           "LSTM",
           "Random Forest",
@@ -116,10 +116,10 @@ const PROJECTS = [
       {
         title: "用AI及社群數據協助投資決策",
         subtitle: "大數據與商業分析期中專案",
-        period: "2021.03~2022.05",
+        period: "2021.03~2021.05",
         image: "https://i.imgur.com/F7708kK.png",
         description:
-          "主要針對個股: 玉晶光<br/>社群數據資料庫中挑選出看漲及看跌的一批 YAHOO 股市新聞文章<br/>提取出關鍵字並建構文本向量空間</br>使用 5 種不同分類演算法建立預測模型(Naive Bayes, KNN, SVM, Decision Tree, Random Forest)",
+          "主要針對個股: 玉晶光<br/>社群數據資料庫中挑選出看漲及看跌的一批 YAHOO 股市新聞文章<br/>提取出關鍵字並建構文本向量空間<br/>使用 5 種不同分類演算法建立預測模型(Naive Bayes, KNN, SVM, Decision Tree, Random Forest)",
         results:
           "1. 以 <span class='highlight'>TF*DF 卡方指標</span>提取看漲看跌各 700 個關鍵字<br/><img src='https://i.imgur.com/paObsOb.png' alt='keywords' class='img-min'/><br/>2. 最佳模型預測準確度: <span class='highlight'>77%</span> (Naive Bayes)",
         tags: [
@@ -137,7 +137,7 @@ const PROJECTS = [
       {
         title: "線上購買受到廣告影響的人群分析",
         subtitle: "大數據與商業分析期末專案",
-        period: "2021.04~2022.06",
+        period: "2021.04~2021.06",
         image: "https://i.imgur.com/T2XO1f5.png",
         description:
           "使用 91APP 提供的女鞋店家資料<br/>探討<span class='highlight'>受廣告影響不同程度的客群</span>之間的差異,以優化廣告投放的成效<br/>Step1: EDA 檢視分群差異<br/>Step2: 模型預測(使用 Decision Tree)，找出兩群人的重要特徵及分群依據",
