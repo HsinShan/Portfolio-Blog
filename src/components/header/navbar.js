@@ -8,87 +8,55 @@ import {
   LineChartOutlined,
   LaptopOutlined,
 } from "@ant-design/icons";
-import _ from "lodash";
 import usePathname from "../../hooks/usePathname";
+import UI from "../../content/ui";
 import "../../assets/style/header/navbar.scss";
 
+// Menu key = index in LINKS, used to highlight the current page.
 const LINKS = ["/", "/portfolio-data", "/portfolio-frontend"];
-const NAVS = [
+
+const linkItem = (index, label, icon) => ({
+  key: String(index),
+  label: (
+    <Link to={LINKS[index]} className="link">
+      {icon}
+      {label}
+    </Link>
+  ),
+});
+
+// antd v4.20+ `items` API (the JSX children API is deprecated)
+const MENU_ITEMS = [
+  linkItem(0, UI.nav.about, <UserOutlined />),
   {
-    num: 1,
-    items: [
-      {
-        link: "/",
-        nav: "介紹",
-        icon: <UserOutlined />,
-        key: 0,
-      },
-    ],
-  },
-  {
-    num: 2,
-    title: "作品集",
-    icon: <FolderOpenOutlined />,
-    icon2: <CaretDownOutlined />,
-    items: [
-      {
-        link: "/portfolio-data",
-        nav: "資料科學",
-        icon: <LineChartOutlined />,
-        key: 1,
-      },
-      {
-        link: "/portfolio-frontend",
-        nav: "前端開發",
-        icon: <LaptopOutlined />,
-        key: 2,
-      },
+    type: "group",
+    key: "portfolio",
+    label: (
+      <>
+        <FolderOpenOutlined />
+        {UI.nav.portfolio}
+        <CaretDownOutlined />
+      </>
+    ),
+    children: [
+      linkItem(1, UI.nav.dataScience, <LineChartOutlined />),
+      linkItem(2, UI.nav.frontend, <LaptopOutlined />),
     ],
   },
 ];
 
 const Navbar = ({ onClose }) => {
-  const navItems = (items) => {
-    return items.map((item) => (
-      <Menu.Item key={item.key} onClick={onClose}>
-        <Link to={item.link} className="link">
-          {item.icon}
-          {item.nav}
-        </Link>
-      </Menu.Item>
-    ));
-  };
-
-  const menuItems = NAVS.map((nav, i) => {
-    if (nav.num > 1) {
-      return (
-        <Menu.ItemGroup
-          key={i}
-          mode="vertical"
-          title={
-            <>
-              {nav.icon}
-              {nav.title}
-              {nav.icon2}
-            </>
-          }
-        >
-          {navItems(nav.items)}
-        </Menu.ItemGroup>
-      );
-    }
-    return navItems(nav.items);
-  });
   const pathname = usePathname();
-  let activeIndex = _.findIndex(LINKS, (link) => pathname === link);
-  let selectedKeys = [activeIndex.toString()];
-  if (!pathname) activeIndex = 0;
-  if (pathname && activeIndex === -1) selectedKeys = [];
+  const activeIndex = LINKS.indexOf(pathname);
+  const selectedKeys = activeIndex === -1 ? [] : [String(activeIndex)];
 
   return (
-    <Menu mode="vertical" selectedKeys={selectedKeys}>
-      {menuItems}
-    </Menu>
+    <Menu
+      mode="vertical"
+      selectedKeys={selectedKeys}
+      items={MENU_ITEMS}
+      onClick={onClose}
+    />
   );
 };
 
