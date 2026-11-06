@@ -18,12 +18,12 @@ const ProjectFrontend = ({ project }) => {
         <div className="title">{title}</div>
         <div className="skills">
           {skills.map((skill) => (
-            <p>{skill}</p>
+            <p key={skill}>{skill}</p>
           ))}
         </div>
         <div className="link">
           {Object.keys(links).map((key) => (
-            <Button href={links[key]} target="_blank">
+            <Button href={links[key]} target="_blank" key={key}>
               {key}
             </Button>
           ))}
