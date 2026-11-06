@@ -39,7 +39,12 @@ const Title = () => {
       </div>
       <div className="link">
         {social.map((s) => (
-          <a href={s.href} target="blank" key={s.name}>
+          <a
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={s.name}
+          >
             <img src={s.icon} width="40" alt={s.name} />
           </a>
         ))}
