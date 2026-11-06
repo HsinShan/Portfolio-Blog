@@ -3,6 +3,7 @@ import { Button } from "antd";
 import Detail from "./detail";
 import LoadingImg from "../common/loadingImg";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
+import UI from "../../content/ui";
 import "../../assets/style/portfolio/projectData.scss";
 import "../../assets/style/portfolio/overlay.scss";
 
@@ -15,7 +16,7 @@ const ProjectData = ({ project }) => {
     device === "laptop" ? null : (
       <div className="btn">
         <Button className="more-btn" onClick={showModal}>
-          See More
+          {UI.portfolio.seeMore}
         </Button>
       </div>
     );
@@ -46,7 +47,7 @@ const ProjectData = ({ project }) => {
         {device === "laptop" ? (
           <div className="tags">
             {tags.map((tag) => (
-              <span># {tag}</span>
+              <span key={tag}># {tag}</span>
             ))}
           </div>
         ) : null}

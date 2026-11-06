@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Portfolio from "../components/portfolio";
-import PROJECTS from "../constants/PROJECTS_DATA";
+import PROJECTS from "../content/projectsData";
+import UI from "../content/ui";
 import "../assets/style/portfolio/index.scss";
 
 const DataPortfolio = () => {
@@ -10,7 +11,7 @@ const DataPortfolio = () => {
 
   return (
     <>
-      <Portfolio type={1} title="資料科學作品集" projects={PROJECTS} />
+      <Portfolio type={1} title={UI.portfolio.dataTitle} projects={PROJECTS} />
     </>
   );
 };

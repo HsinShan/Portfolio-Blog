@@ -4,6 +4,7 @@ import useDeviceDetect from "../../hooks/useDeviceDetect";
 import LoadingImg from "../common/loadingImg";
 import "../../assets/style/portfolio/projectFrontendTiny.scss";
 import "../../assets/style/portfolio/overlay.scss";
+import UI from "../../content/ui";
 
 const ProjectFrontendTiny = ({ project }) => {
   const { title, image, demoURL, codeURL } = project;
@@ -16,10 +17,10 @@ const ProjectFrontendTiny = ({ project }) => {
         <div className="title">{title}</div>
         <div className="link">
           <Button href={demoURL} target="_blank">
-            DEMO
+            {UI.portfolio.demo}
           </Button>
           <Button href={codeURL} target="_blank">
-            CODE
+            {UI.portfolio.code}
           </Button>
         </div>
       </div>
