@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# graphify (regenerable code graph)
+graphify-out/
+
+# machine-specific Claude Code settings (graphify hook uses an absolute path)
+.claude/settings.local.json
