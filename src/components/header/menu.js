@@ -1,10 +1,11 @@
 import { Drawer } from "antd";
 import React from "react";
 import Navbar from "./navbar";
-import UI from "../../content/ui";
+import useContent from "../../content";
 import "../../assets/style/header/menu.scss";
 
 const Menu = ({ isVisible, onClose }) => {
+  const { UI } = useContent();
   return (
     <Drawer
       placement="right"

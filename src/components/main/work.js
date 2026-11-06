@@ -1,7 +1,7 @@
 import React from "react";
 import { Timeline } from "antd";
 import { Link } from "react-router-dom";
-import EXPERIENCE from "../../content/experience";
+import useContent from "../../content";
 
 // Render one timeline block; see content/experience.js for the block shapes.
 const Block = ({ block }) => {
@@ -21,6 +21,7 @@ const Block = ({ block }) => {
 };
 
 const Work = () => {
+  const { EXPERIENCE } = useContent();
   return (
     <div className="work">
       <Timeline mode="left">

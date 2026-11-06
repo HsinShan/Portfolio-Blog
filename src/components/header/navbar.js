@@ -9,7 +9,7 @@ import {
   LaptopOutlined,
 } from "@ant-design/icons";
 import usePathname from "../../hooks/usePathname";
-import UI from "../../content/ui";
+import useContent from "../../content";
 import "../../assets/style/header/navbar.scss";
 
 // Menu key = index in LINKS, used to highlight the current page.
@@ -25,8 +25,9 @@ const linkItem = (index, label, icon) => ({
   ),
 });
 
-// antd v4.20+ `items` API (the JSX children API is deprecated)
-const MENU_ITEMS = [
+// antd v4.20+ `items` API (the JSX children API is deprecated).
+// Built per render so labels follow the current language.
+const buildMenuItems = (UI) => [
   linkItem(0, UI.nav.about, <UserOutlined />),
   {
     type: "group",
@@ -46,6 +47,7 @@ const MENU_ITEMS = [
 ];
 
 const Navbar = ({ onClose }) => {
+  const { UI } = useContent();
   const pathname = usePathname();
   const activeIndex = LINKS.indexOf(pathname);
   const selectedKeys = activeIndex === -1 ? [] : [String(activeIndex)];
@@ -54,7 +56,7 @@ const Navbar = ({ onClose }) => {
     <Menu
       mode="vertical"
       selectedKeys={selectedKeys}
-      items={MENU_ITEMS}
+      items={buildMenuItems(UI)}
       onClick={onClose}
     />
   );

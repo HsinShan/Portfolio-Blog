@@ -3,18 +3,19 @@
 
 const UI = {
   siteName: "Shirley's Blog",
+  langSwitch: { label: "EN", ariaLabel: "Switch to English" },
   main: {
-    experience: "Education & Experience",
-    skills: "MY SKILLS & EXPERTISE",
+    experience: "學歷與經歷",
+    skills: "專業技能",
   },
   portfolio: {
     dataTitle: "資料科學作品集",
     frontendTitle: "前端開發作品集(2017~2020)",
     descriptionHeading: "簡介",
     resultsHeading: "結論",
-    seeMore: "See More",
-    seeCode: "See Code",
-    close: "Close",
+    seeMore: "查看更多",
+    seeCode: "查看程式碼",
+    close: "關閉",
     demo: "DEMO",
     code: "CODE",
   },

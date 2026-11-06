@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Portfolio from "../components/portfolio";
-import PROJECTS from "../content/projectsData";
-import UI from "../content/ui";
+import useContent from "../content";
 import "../assets/style/portfolio/index.scss";
 
 const DataPortfolio = () => {
+  const { UI, PROJECTS } = useContent();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

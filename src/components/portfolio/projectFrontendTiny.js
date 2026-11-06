@@ -4,9 +4,10 @@ import useDeviceDetect from "../../hooks/useDeviceDetect";
 import LoadingImg from "../common/loadingImg";
 import "../../assets/style/portfolio/projectFrontendTiny.scss";
 import "../../assets/style/portfolio/overlay.scss";
-import UI from "../../content/ui";
+import useContent from "../../content";
 
 const ProjectFrontendTiny = ({ project }) => {
+  const { UI } = useContent();
   const { title, image, demoURL, codeURL } = project;
   const device = useDeviceDetect();
   const overlayClass = device === "laptop" ? "overlay" : "normal";

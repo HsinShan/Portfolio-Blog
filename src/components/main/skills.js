@@ -1,9 +1,10 @@
 import React from "react";
 import { Card } from "antd";
-import SKILLS from "../../content/skills";
+import useContent from "../../content";
 import "../../assets/style/main/skills.scss";
 
 const Skills = () => {
+  const { SKILLS } = useContent();
   return (
     <div className="skills">
       {SKILLS.map((skill) => (

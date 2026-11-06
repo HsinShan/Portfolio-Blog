@@ -26,6 +26,43 @@
         
     }
 
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    // Outline style so it reads as secondary to the menu button
+    .lang-btn {
+        min-width: 56px;
+        background-color: white;
+        color: $font-brown-light;
+        border: 1px solid $font-brown-light;
+        font-weight: bold;
+
+        // Keep the outline look after a click (antd buttons keep :focus,
+        // and phones keep :hover after a tap); fill only on real mouse hover
+        &:focus {
+            background-color: white;
+            color: $font-brown-light;
+            border-color: $font-brown-light;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $font-brown-light;
+                color: white;
+                border-color: $font-brown-light;
+            }
+        }
+
+        // Keyboard focus: outline only, so it never looks like a stuck "pressed" state
+        &:focus-visible {
+            outline: 2px solid $font-brown-light;
+            outline-offset: 2px;
+        }
+    }
+
     .menu-btn {
         background-color: $font-brown-light;
         color: white;
@@ -34,6 +71,22 @@
             background-color: white;
             color: $font-brown-light;
             border: 1px solid $font-brown-light;
+        }
+    }
+
+    // Language button + menu button need room on phones (~340px wide):
+    // tighten spacing so "Shirley's Blog" stays on one line
+    @include mobile {
+        padding: 0 12px;
+
+        .logo-name {
+            font-size: 22px;
+            white-space: nowrap;
+        }
+
+        .lang-btn {
+            min-width: 0;
+            padding: 4px 10px;
         }
     }
 }

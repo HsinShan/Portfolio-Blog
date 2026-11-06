@@ -1,10 +1,11 @@
 import React from "react";
 import { Modal, Button } from "antd";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
-import UI from "../../content/ui";
+import useContent from "../../content";
 import "../../assets/style/portfolio/detail.scss";
 
 const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
+  const { UI } = useContent();
   const { title, subtitle, description, results, period, tags, url } = project;
   const device = useDeviceDetect();
   const width = device === "laptop" ? "65%" : "95%";

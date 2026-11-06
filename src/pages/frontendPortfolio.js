@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Portfolio from "../components/portfolio";
-import PROJECTS_FRONTEND from "../content/projectsFrontend";
-import UI from "../content/ui";
+import useContent from "../content";
 import "../assets/style/portfolio/index.scss";
 
 const FrontendPortfolio = () => {
+  const { UI, PROJECTS_FRONTEND } = useContent();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

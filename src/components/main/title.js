@@ -2,10 +2,11 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import LoadingImg from "../common/loadingImg";
 import meImg from "../../assets/images/me.png";
-import PROFILE from "../../content/profile";
+import useContent from "../../content";
 import "../../assets/style/main/title.scss";
 
 const Title = () => {
+  const { PROFILE } = useContent();
   const { name, headline, intro, explore, tags, social } = PROFILE;
   return (
     <div className="title">

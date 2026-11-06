@@ -3,11 +3,12 @@ import { Button } from "antd";
 import Detail from "./detail";
 import LoadingImg from "../common/loadingImg";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
-import UI from "../../content/ui";
+import useContent from "../../content";
 import "../../assets/style/portfolio/projectData.scss";
 import "../../assets/style/portfolio/overlay.scss";
 
 const ProjectData = ({ project }) => {
+  const { UI } = useContent();
   const { title, subtitle, image, period, tags } = project;
   const [isModalVisible, setIsModalVisible] = useState(false);
   const device = useDeviceDetect();
