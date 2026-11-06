@@ -3,6 +3,7 @@ import Title from "../components/main/title";
 import Experience from "../components/main/experience";
 import Skills from "../components/main/skills";
 import Language from "../components/main/language";
+import Reveal from "../components/common/reveal";
 import useContent from "../content";
 import "../assets/style/main/index.scss";
 
@@ -14,19 +15,22 @@ const Main = () => {
 
   return (
     <div className="main">
-      <div className="block">
+      {/* hero is above the fold: show it immediately, no reveal animation */}
+      <div className="block hero">
         <Title />
       </div>
       <div className="block block2">
-        <h1>{UI.main.experience}</h1>
+        <Reveal as="h1">{UI.main.experience}</Reveal>
         <Experience />
       </div>
       <div className="block">
-        <h1>{UI.main.skills}</h1>
+        <Reveal as="h1">{UI.main.skills}</Reveal>
         <Skills />
       </div>
       <div className="block block2">
-        <Language />
+        <Reveal>
+          <Language />
+        </Reveal>
       </div>
     </div>
   );

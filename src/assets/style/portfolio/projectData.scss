@@ -53,3 +53,7 @@
         justify-content: center;
     }
 }
+// keep an anchored card (e.g. #color-tool) clear of the fixed header
+.projectData[id] {
+    scroll-margin-top: 80px;
+}

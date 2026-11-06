@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import LoadingImg from "../common/loadingImg";
 import meImg from "../../assets/images/me.png";
@@ -15,24 +15,24 @@ const Title = () => {
       </center>
       <h1>{name}</h1>
       <h3>{headline}</h3>
-      {intro.map((line, i) => (
-        <p key={i}>
-          <b>{line}</b>
-        </p>
-      ))}
-      <p>
-        <b>
-          {explore.text}
-          <br />
-          {/* TODO(UI step): arrow spacing kept as before ("→ A →B") */}
-          {explore.links.map((link, i) => (
-            <Fragment key={link.to}>
-              {i === 0 ? "→ " : " →"}
-              <Link to={link.to}>{link.label}</Link>
-            </Fragment>
+      {/* first intro line is the one-sentence summary; the rest support it */}
+      <div className="intro">
+        {intro.map((line, i) => (
+          <p key={i} className={i === 0 ? "lead" : undefined}>
+            {line}
+          </p>
+        ))}
+      </div>
+      <div className="explore">
+        <p>{explore.text}</p>
+        <div className="explore-links">
+          {explore.links.map((link) => (
+            <Link key={link.to} to={link.to} className="explore-btn">
+              {link.label}
+            </Link>
           ))}
-        </b>
-      </p>
+        </div>
+      </div>
       <div className="tags">
         {tags.map((tag) => (
           <span key={tag}># {tag}</span>

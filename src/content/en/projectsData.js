@@ -9,6 +9,7 @@ const PROJECTS = [
         subtitle: "Independent Project",
         period: "2026",
         image: "/images/color-tool.png",
+        anchor: "color-tool", // id for in-page links (e.g. timeline "Project Detail")
         description:
           "A web tool I built and launched on my own, reaching <span class='highlight'>2,300+ active users</span> and 21,000 events<br/>Designed 29 GA4 events and the upgrade funnel myself<h3>Core Features</h3>Clusters colors with <span class='bold'>k-means</span> in the Lab color space, separating an object's base color from highlights and shadows<br/>Uses farthest-first initialization so the same photo always gives the same result<h3>How It Was Built</h3>Developed with Claude Code: split into 11 independent components and logic modules, each with its own tests<br/>Mapped the codebase with graphify to assess impact before each change<br/>Kept quality in check with code review and 193 automated tests",
         results:

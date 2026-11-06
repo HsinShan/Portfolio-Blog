@@ -9,7 +9,7 @@ import "../../assets/style/portfolio/overlay.scss";
 
 const ProjectData = ({ project }) => {
   const { UI } = useContent();
-  const { title, subtitle, image, period, tags } = project;
+  const { title, subtitle, image, period, tags, anchor } = project;
   const [isModalVisible, setIsModalVisible] = useState(false);
   const device = useDeviceDetect();
   const overlayClass = device === "laptop" ? "overlay" : "normal";
@@ -35,7 +35,7 @@ const ProjectData = ({ project }) => {
   };
 
   return (
-    <div className="project projectData">
+    <div className="project projectData" id={anchor}>
       <LoadingImg alt={title} src={image} />
       <div
         className={overlayClass}

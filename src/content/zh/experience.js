@@ -15,7 +15,7 @@ const EXPERIENCE = [
       "◆ 衡量：進站 → 首次上傳僅 16%，新增「載入範例」入口降低使用門檻",
       "◆ 驗證：發現範例資料灌高升級點擊（21 次中 17 次），在做定價判斷前修正事件邏輯",
       "◆ 工程：React、模組化架構、graphify 影響範圍分析、Code Review 與 193 項自動化測試",
-      { to: "/portfolio-data", label: "專案詳情" },
+      { to: "/portfolio-data#color-tool", label: "專案詳情" },
     ],
   },
   {

@@ -5,7 +5,7 @@ const UI = {
   langSwitch: { label: "中文", ariaLabel: "切換為中文" },
   main: {
     experience: "Education & Experience",
-    skills: "MY SKILLS & EXPERTISE",
+    skills: "Skills & Expertise",
   },
   portfolio: {
     dataTitle: "Data Science Portfolio",

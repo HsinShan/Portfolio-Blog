@@ -8,6 +8,7 @@ const PROJECTS = [
         subtitle: "獨立專案",
         period: "2026",
         image: "/images/color-tool.png",
+        anchor: "color-tool", // id for in-page links (e.g. timeline "Project Detail")
         description:
           "獨立開發並上線的網頁工具，累計 <span class='highlight'>2,300+ 活躍使用者</span>、21,000 次事件<br/>自行規劃 29 個 GA4 事件與升級漏斗<h3>核心功能</h3>以 <span class='bold'>k-means</span> 在 Lab 色彩空間分群，從照片分離出物品本色與高光、陰影<br/>採 farthest-first 初始化，確保同一張照片結果一致<h3>開發方式</h3>以 Claude Code 協作開發：拆分為 11 個獨立元件與各自附測試的邏輯模組<br/>用 graphify 建立程式碼圖譜，改版前先評估影響範圍<br/>搭配 Code Review 與 193 項自動化測試控管品質",
         results:

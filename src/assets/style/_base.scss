@@ -2,11 +2,13 @@
 $page-background: #f0d3c3;
 $page-background-dark: #e6c3b0;
 $page-background-gray: #bababa;
-$font-brown-light: #7d625a;;
+$font-brown-light: #7d625a;
 $font-brown: #4c3a19;
 $gray-light: #525251;
 $gray-dark: #282828;
 $font-highlight: #bf5125;
+// darker than $font-highlight so body-size links reach WCAG AA 4.5:1 on $page-background
+$link-color: #9c3f1b;
 // RWD breakpoint setting
 @mixin laptop {
   @media (min-width: 921px) {
