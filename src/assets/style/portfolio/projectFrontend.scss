@@ -1,35 +1,22 @@
 @import "../base";
 
 .projectFrontend {
-    width: 96%;
-    margin: 20px auto;
+    // not ".skills": that name is a global selector in main/skills.scss (homepage)
+    .card-skills {
+        margin: 4px auto 0;
 
-    @include laptop {
-        width: calc(50% - 50px);
-        margin: 20px;
-        min-height: 250px;
-
-        .image {
-            min-height: 250px;
-        }
-        
-    }
-      
-    .overlay {
-        padding-top: 50px;
-
-        @include mobile {
-            padding: 10px 4px;
-        }
-    }
-
-    .skills {
-        display: block;
-        margin: 8px auto;
-
-        p{
-            text-align: center; 
+        p {
+            text-align: center;
             margin: 0;
+            font-size: 13px;
+            color: $gray-light;
         }
+    }
+
+    .description {
+        margin: 10px 0 0;
+        padding-left: 20px;
+        font-size: 13px;
+        color: $gray-light;
     }
 }

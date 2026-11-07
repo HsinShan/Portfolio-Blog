@@ -18,6 +18,15 @@
     }
 
 }
+// timeline dots: content uses antd's "blue" = work, "red" = education; map to brand colors
+.ant-timeline-item-head-blue {
+    color: $font-brown-light;
+    border-color: $font-brown-light;
+}
+.ant-timeline-item-head-red {
+    color: $font-highlight;
+    border-color: $font-highlight;
+}
 .ant-timeline.ant-timeline-label .ant-timeline-item-label {
     color: $font-brown;
     font-weight: bold;
@@ -56,17 +65,104 @@ h3 {
     }
 }
 
+.work .period-inline {
+    display: none;
+}
+
+// mobile: drop the left date column so the content gets the full width
 @include mobile {
     .ant-timeline.ant-timeline-label {
         .ant-timeline-item-label {
-            width: calc(50% - 100px);
+            display: none;
         }
         .ant-timeline-item-tail, .ant-timeline-item-head {
-            left: calc(50% - 75px);
+            left: 4px;
         }
         .ant-timeline-item-left .ant-timeline-item-content {
-            left: calc(50% - 70px);
-            width: 60%;
+            left: 0;
+            width: auto;
+            margin-left: 26px;
+            text-align: left;
+        }
+    }
+    // .work prefix outranks `.content p` (brown text)
+    .work .period-inline {
+        display: block;
+        margin-bottom: 2px;
+        color: $font-brown-light;
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+
+// readability: more air between entries and lines, numbers stand out
+.work {
+    // stat cards under each job title (compact variant, see statCards.scss)
+    .work-stats {
+        margin: 8px 0 16px;
+    }
+
+    .ant-timeline-item {
+        padding-bottom: 40px;
+    }
+    .ant-timeline-item-content {
+        p {
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+    }
+
+    // `.work .num` outranks `.content span`-style brown text rules
+    // $link-color, not $font-highlight: #bf5125 is < 4.5:1 on the card tint
+    .num {
+        color: $link-color;
+        font-weight: bold;
+    }
+
+    // entry intro sentence: supporting context, so a lighter tone
+    .summary {
+        color: $font-brown-light;
+    }
+
+    // "Build:" / "開發：" at the start of a bullet
+    .lead-label {
+        color: $font-brown;
+    }
+
+    // sub-sections (one per heading) as cards: 2 columns on laptop, stacked below.
+    // CSS columns (not grid) so cards of different heights pack without row gaps.
+    .sections {
+        margin-top: 12px;
+
+        // only entries with 2+ cards get two columns (one card would sit at half width)
+        &.multi {
+            @include laptop {
+                column-count: 2;
+                column-gap: 12px;
+            }
+        }
+    }
+
+    .section-card {
+        break-inside: avoid;
+        margin-bottom: 12px;
+        padding: 12px 16px 6px;
+        border-radius: 8px;
+        background-color: rgba($page-background, 0.3);
+        border-left: 3px solid $page-background-dark;
+
+        .block-title {
+            margin-top: 0;
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 6px;
+        }
+
+        // inside a card plain lines (thesis title, project list) are content, not intro
+        .summary {
+            color: $font-brown;
         }
     }
 }

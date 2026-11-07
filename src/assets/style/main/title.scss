@@ -1,36 +1,154 @@
 @import "../base";
 
 .title {
-    .tags {
-        margin: 10px;
-        span {
-            padding: 10px;
-            text-decoration: underline;
-            color: $gray-light;
-            font-weight: bold;
+    h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
 
-            @include mobile {
-                padding: 0 10px;
-                display: block;
+    // short line length reads better than full-width centered text
+    .intro {
+        max-width: 720px;
+        margin: 0 auto;
+
+        p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .lead {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            // avoid a one-character last line on phones (same as .explore-heading)
+            text-wrap: balance;
+        }
+    }
+
+    .explore {
+        margin: 28px auto 8px;
+
+        p {
+            color: $font-brown-light;
+            margin-bottom: 12px;
+        }
+    }
+
+    // both explore headings ("把過去…" and "其他作品集") share one style;
+    // capped below the intro lead (17px) so the hero keeps its hierarchy
+    p.explore-heading {
+        font-size: 16px;
+        font-weight: bold;
+        color: $font-brown;
+        margin-bottom: 12px;
+        // even out the two lines on narrow screens (ignored by older browsers)
+        text-wrap: balance;
+
+        @include mobile {
+            font-size: 15px;
+        }
+    }
+
+    // featured product card: the whole card is the button (no inner CTA)
+    // a.explore-featured beats `.content a` (underline + link color) incl. :hover
+    a.explore-featured {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        max-width: 460px;
+        margin: 0 auto 28px;
+        padding: 14px 20px;
+        background-color: rgba(255, 255, 255, 0.55);
+        border: 1px solid $font-brown-light;
+        border-radius: 10px;
+        color: $font-brown;
+        text-decoration: none;
+        transition: background-color 0.2s, border-color 0.2s;
+
+        &:hover,
+        &:focus {
+            background-color: white;
+            border-color: $font-brown;
+            color: $font-brown;
+        }
+
+        .featured-meta {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: $font-brown-light;
+        }
+
+        .featured-title {
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .featured-lead {
+            font-size: 14px;
+            line-height: 1.6;
+            color: $font-brown-light;
+        }
+    }
+
+    .explore-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        // a.explore-btn beats `.content a` (underline + link color) incl. :hover
+        // fixed width so both buttons line up in either language
+        a.explore-btn {
+            display: inline-block;
+            width: 200px;
+            max-width: 100%;
+            text-align: center;
+            padding: 6px 16px;
+            border: 2px solid $font-brown-light;
+            border-radius: 6px;
+            background-color: white;
+            color: $font-brown-light;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s;
+
+            &:hover,
+            &:focus {
+                background-color: $font-brown;
+                border-color: $font-brown;
+                color: white;
             }
         }
-    }
-    .about {
-        text-align: left;
-        padding: 15px;
 
-        @include laptop {
-            text-align: center;
-            padding: 15px 100px;
-            
+        // mobile: stack, same fixed width as desktop
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
         }
     }
-    
-    .email {
-        text-decoration: underline;
+
+    // keywords as chips (they are not links, so no underline)
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        max-width: 760px;
+        margin: 24px auto 10px;
+
+        span {
+            padding: 2px 10px;
+            border: 1px solid $font-brown-light;
+            border-radius: 14px;
+            color: $font-brown-light;
+            font-size: 13px;
+        }
     }
+
     .link {
-        a:hover img{
+        a:hover img {
             transform: scale(1.2);
         }
     }

@@ -1,55 +1,6 @@
 @import "../base";
 
-.projectData {
-    width: 96%;
-    margin: 20px auto;
-
-    @include laptop {
-        width: calc(50% - 50px);
-        margin: 20px;
-        min-height: 250px;
-
-        .image {
-            min-height: 250px;
-        }
-    }
-
-    .overlay {
-        padding: 44px 8px 10px;
-
-        @include mobile {
-            padding: 10px 4px;
-        }
-
-        .tags {
-            position: absolute;
-            bottom: 20px;
-            width:100%;
-        }
-    }
-
-
-    .period {
-        font-size: 12px;
-        text-align: right;
-    }
-
-    .tags {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        span {
-            margin:2px 8px;
-            text-align: center;
-            text-decoration: underline;
-            font-size: 14px;
-            font-weight: bold;
-        }
-    }
-
-    .button {
-        display: flex;
-        justify-content: center;
-    }
+// keep an anchored card (project `anchor` field) clear of the fixed header
+.projectData[id] {
+    scroll-margin-top: $header-height + 16px;
 }

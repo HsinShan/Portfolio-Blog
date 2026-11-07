@@ -1,0 +1,125 @@
+@import "../base";
+
+// everything scoped under .product so it can't leak into other pages
+.product {
+  background-color: $page-background;
+  min-height: calc(100vh - #{$header-height});
+  // full-width background, content column capped at 880px
+  padding: 64px max(24px, calc((100% - 880px) / 2)) 72px;
+
+  @include mobile {
+    min-height: calc(100vh - #{$header-height-mobile});
+    padding: 40px 16px 48px;
+  }
+
+  .product-hero {
+    text-align: center;
+    margin-bottom: 32px;
+
+    h1 {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  }
+
+  .product-meta {
+    color: $font-brown-light;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .product-subtitle {
+    font-size: 18px;
+    color: $font-brown;
+    margin-bottom: 12px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  .product-lead {
+    color: $font-brown-light;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .product-stats {
+    // the data-period note below carries the 32px gap to the screenshot
+    margin: 0 0 8px;
+  }
+
+  // "data period" note under the stat cards
+  .product-stats-period {
+    text-align: right;
+    font-size: 13px;
+    color: $font-brown-light;
+    margin: 0 0 32px;
+  }
+
+  .product-shot {
+    margin-bottom: 40px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(76, 58, 25, 0.15);
+    }
+  }
+
+  .product-section {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 20px;
+
+    @include mobile {
+      padding: 20px 16px;
+    }
+
+    h2 {
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+
+    li {
+      line-height: 1.8;
+      margin-bottom: 6px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .num {
+      color: $link-color;
+    }
+  }
+
+  .product-tags {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+
+    li {
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid $font-brown-light;
+      color: $font-brown-light;
+      font-size: 13px;
+    }
+  }
+}
