@@ -10,14 +10,6 @@
         padding-bottom: 10px;
     }
 
-    .projects {
-        @include laptop {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-    }
 
     .all-tags {
         display: flex;
@@ -49,9 +41,21 @@
     .category {
         padding: 20px;
 
+        // 1 col on mobile, 2 on tablet / desktop, 3 on wide screens
         &-projects {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            margin: 20px 20px 0;
+
+            @include wide {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            @include mobile {
+                grid-template-columns: minmax(0, 1fr);
+                margin: 16px 0 0;
+            }
         }
     }
 
@@ -60,8 +64,19 @@
         text-align: center;
 
         &-projects {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+            text-align: left;
+
+            @include pad {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            @include mobile {
+                grid-template-columns: minmax(0, 1fr);
+            }
         }
     }
 }

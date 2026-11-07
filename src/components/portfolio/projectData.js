@@ -2,63 +2,39 @@ import React, { useState } from "react";
 import { Button } from "antd";
 import Detail from "./detail";
 import LoadingImg from "../common/loadingImg";
-import useDeviceDetect from "../../hooks/useDeviceDetect";
 import useContent from "../../content";
 import "../../assets/style/portfolio/projectData.scss";
-import "../../assets/style/portfolio/overlay.scss";
+import "../../assets/style/portfolio/card.scss";
 
+// Same layout on every screen size: image, then subtitle / title / period and a
+// button that opens the detail modal (no hover-only overlay).
 const ProjectData = ({ project }) => {
   const { UI } = useContent();
-  const { title, subtitle, image, period, tags, anchor } = project;
+  const { title, subtitle, image, period, anchor } = project;
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const device = useDeviceDetect();
-  const overlayClass = device === "laptop" ? "overlay" : "normal";
-  const moreBtn = () =>
-    device === "laptop" ? null : (
-      <div className="btn">
-        <Button className="more-btn" onClick={showModal}>
-          {UI.portfolio.seeMore}
-        </Button>
-      </div>
-    );
 
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
+  const showModal = () => setIsModalVisible(true);
+  const hideModal = () => setIsModalVisible(false);
 
   return (
     <div className="project projectData" id={anchor}>
-      <LoadingImg alt={title} src={image} />
-      <div
-        className={overlayClass}
-        onClick={device === "laptop" ? showModal : null}
-      >
-        <div className="subtitle">【{subtitle}】</div>
+      <div className="card-image clickable" onClick={showModal}>
+        <LoadingImg alt={title} src={image} />
+      </div>
+      <div className="card-body">
+        <div className="subtitle">{subtitle}</div>
         <div className="title">{title}</div>
         <div className="period">{period}</div>
-
-        {device === "laptop" ? (
-          <div className="tags">
-            {tags.map((tag) => (
-              <span key={tag}># {tag}</span>
-            ))}
-          </div>
-        ) : null}
-
-        {moreBtn()}
+        <div className="card-actions">
+          <Button className="more-btn" onClick={showModal}>
+            {UI.portfolio.seeMore}
+          </Button>
+        </div>
       </div>
       <Detail
         isVisible={isModalVisible}
-        handleOk={handleOk}
-        handleCancel={handleCancel}
+        handleOk={hideModal}
+        handleCancel={hideModal}
         project={project}
       />
     </div>

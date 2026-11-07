@@ -14,9 +14,10 @@ const UI = {
     resultsHeading: "Findings",
     seeMore: "See More",
     seeCode: "See Code",
+    seeSlides: "See Slides",
     close: "Close",
-    demo: "DEMO",
-    code: "CODE",
+    // labels for project link buttons, keyed like `links` in projectsFrontend.js
+    links: { demo: "Demo", code: "Code", frontendCode: "Frontend Code", backendCode: "Backend Code", codepen: "CodePen", docs: "Docs" },
   },
   nav: {
     title: "Menu",

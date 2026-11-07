@@ -14,9 +14,9 @@ const PROJECTS_FRONTEND = [
         ],
         description: [],
         links: {
-          DOCS: "https://drive.google.com/file/d/1xZilQ0e7YO33zzZDANWatRMndg9ShUdi/view?usp=sharing",
-          CODE1: "https://github.com/HsinShan/MeetLangLang-Frontend",
-          CODE2: "https://github.com/HsinShan/MeetLangLang-Backend",
+          docs: "https://drive.google.com/file/d/1xZilQ0e7YO33zzZDANWatRMndg9ShUdi/view?usp=sharing",
+          frontendCode: "https://github.com/HsinShan/MeetLangLang-Frontend",
+          backendCode: "https://github.com/HsinShan/MeetLangLang-Backend",
         },
       },
       {
@@ -26,7 +26,7 @@ const PROJECTS_FRONTEND = [
         skills: ["Frontend: React + Sass", "Backend: Ruby on Rails"],
         description: [],
         links: {
-          CODE: "https://github.com/HsinShan/ror-practice/tree/dev/shirley",
+          code: "https://github.com/HsinShan/ror-practice/tree/dev/shirley",
         },
       },
     ],
@@ -42,8 +42,8 @@ const PROJECTS_FRONTEND = [
         skills: ["Vue.js+Firebase"],
         description: [],
         links: {
-          DEMO: "https://crud-table-cb119.firebaseapp.com/",
-          CODE: "https://github.com/HsinShan/crud-table",
+          demo: "https://crud-table-cb119.firebaseapp.com/",
+          code: "https://github.com/HsinShan/crud-table",
         },
       },
       {
@@ -53,7 +53,7 @@ const PROJECTS_FRONTEND = [
         skills: ["Vue.js"],
         description: [],
         links: {
-          CODEPEN: "https://codepen.io/ShirleyHsieh/pen/bJPboe",
+          codepen: "https://codepen.io/ShirleyHsieh/pen/bJPboe",
         },
       },
       {
@@ -63,7 +63,7 @@ const PROJECTS_FRONTEND = [
         skills: ["Vue.js+Firebase"],
         description: [],
         links: {
-          CODE: "https://github.com/HsinShan/Portfolio/tree/master/blog",
+          code: "https://github.com/HsinShan/Portfolio/tree/master/blog",
         },
       },
     ],
@@ -74,12 +74,12 @@ const PROJECTS_FRONTEND = [
     projects: [
       {
         title: "Weather",
-        subtitle: "其他",
+        subtitle: "自學 自製專案",
         image: "https://i.imgur.com/omf4njD.png",
         skills: ["JS"],
         description: [],
         links: {
-          CODEPEN: "https://codepen.io/ShirleyHsieh/pen/LoEvZa",
+          codepen: "https://codepen.io/ShirleyHsieh/pen/LoEvZa",
         },
       },
     ],
@@ -102,7 +102,7 @@ const PROJECTS_FRONTEND = [
           "協助PHP後端開發測試網站及串接前後端",
         ],
         links: {
-          CODE: "https://github.com/HsinShan/Handstory/blob/master/README.md",
+          code: "https://github.com/HsinShan/Handstory/blob/master/README.md",
         },
       },
     ],
@@ -118,8 +118,8 @@ const PROJECTS_FRONTEND = [
         skills: ["Html+CSS+Javascript+Bootstrap"],
         description: [],
         links: {
-          DEMO: "https://hsinshan.github.io/Portfolio/HappyTravel%20Club/",
-          CODE: "https://github.com/HsinShan/Portfolio/tree/master/HappyTravel%20Club",
+          demo: "https://hsinshan.github.io/Portfolio/HappyTravel%20Club/",
+          code: "https://github.com/HsinShan/Portfolio/tree/master/HappyTravel%20Club",
         },
       },
       {
@@ -129,8 +129,8 @@ const PROJECTS_FRONTEND = [
         skills: ["RWD+CSS animation"],
         description: [],
         links: {
-          DEMO: "https://hsinshan.github.io/Portfolio/Bag/",
-          CODE: "https://github.com/HsinShan/Portfolio/tree/master/Bag",
+          demo: "https://hsinshan.github.io/Portfolio/Bag/",
+          code: "https://github.com/HsinShan/Portfolio/tree/master/Bag",
         },
       },
       {
@@ -140,8 +140,8 @@ const PROJECTS_FRONTEND = [
         skills: ["Bootstrap"],
         description: [],
         links: {
-          DEMO: "https://hsinshan.github.io/Portfolio/Shirley's%20Dessert/",
-          CODE: "https://github.com/HsinShan/Portfolio/tree/master/Shirley's%20Dessert",
+          demo: "https://hsinshan.github.io/Portfolio/Shirley's%20Dessert/",
+          code: "https://github.com/HsinShan/Portfolio/tree/master/Shirley's%20Dessert",
         },
       },
     ],

@@ -1,30 +1,38 @@
 import React from "react";
 import { Button } from "antd";
-import useDeviceDetect from "../../hooks/useDeviceDetect";
 import LoadingImg from "../common/loadingImg";
+import useContent from "../../content";
 import "../../assets/style/portfolio/projectFrontend.scss";
-import "../../assets/style/portfolio/overlay.scss";
+import "../../assets/style/portfolio/card.scss";
 
 const ProjectFrontend = ({ project }) => {
-  const { title, subtitle, image, skills, links } = project;
-  const device = useDeviceDetect();
-  const overlayClass = device === "laptop" ? "overlay" : "normal";
+  const { UI } = useContent();
+  const { title, subtitle, image, skills, description, links } = project;
 
   return (
     <div className="project projectFrontend">
-      <LoadingImg alt={title} src={image} />
-      <div className={overlayClass}>
-        <div className="subtitle">【{subtitle}】</div>
+      <div className="card-image">
+        <LoadingImg alt={title} src={image} />
+      </div>
+      <div className="card-body">
+        <div className="subtitle">{subtitle}</div>
         <div className="title">{title}</div>
-        <div className="skills">
-          {skills.map((skill, i) => (
-            <p key={i}>{skill}</p>
+        <div className="card-skills">
+          {skills.map((skill) => (
+            <p key={skill}>{skill}</p>
           ))}
         </div>
-        <div className="link">
+        {description.length > 0 && (
+          <ul className="description">
+            {description.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        )}
+        <div className="card-actions">
           {Object.keys(links).map((key) => (
             <Button href={links[key]} target="_blank" key={key}>
-              {key}
+              {UI.portfolio.links[key] || key}
             </Button>
           ))}
         </div>

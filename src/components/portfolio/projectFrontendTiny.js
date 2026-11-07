@@ -1,27 +1,26 @@
 import React from "react";
 import { Button } from "antd";
-import useDeviceDetect from "../../hooks/useDeviceDetect";
 import LoadingImg from "../common/loadingImg";
-import "../../assets/style/portfolio/projectFrontendTiny.scss";
-import "../../assets/style/portfolio/overlay.scss";
 import useContent from "../../content";
+import "../../assets/style/portfolio/projectFrontendTiny.scss";
+import "../../assets/style/portfolio/card.scss";
 
 const ProjectFrontendTiny = ({ project }) => {
   const { UI } = useContent();
   const { title, image, demoURL, codeURL } = project;
-  const device = useDeviceDetect();
-  const overlayClass = device === "laptop" ? "overlay" : "normal";
   return (
     <div className="project projectFrontendTiny">
-      <LoadingImg alt={title} src={image} />
-      <div className={overlayClass}>
+      <div className="card-image">
+        <LoadingImg alt={title} src={image} />
+      </div>
+      <div className="card-body">
         <div className="title">{title}</div>
-        <div className="link">
+        <div className="card-actions">
           <Button href={demoURL} target="_blank">
-            {UI.portfolio.demo}
+            {UI.portfolio.links.demo}
           </Button>
           <Button href={codeURL} target="_blank">
-            {UI.portfolio.code}
+            {UI.portfolio.links.code}
           </Button>
         </div>
       </div>

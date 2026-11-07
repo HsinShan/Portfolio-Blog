@@ -15,9 +15,10 @@ const UI = {
     resultsHeading: "結論",
     seeMore: "查看更多",
     seeCode: "查看程式碼",
+    seeSlides: "查看簡報",
     close: "關閉",
-    demo: "DEMO",
-    code: "CODE",
+    // labels for project link buttons, keyed like `links` in projectsFrontend.js
+    links: { demo: "展示", code: "程式碼", frontendCode: "前端程式碼", backendCode: "後端程式碼", codepen: "CodePen", docs: "文件" },
   },
   nav: {
     title: "導覽列",

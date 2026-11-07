@@ -6,7 +6,7 @@ import "../../assets/style/portfolio/detail.scss";
 
 const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
   const { UI } = useContent();
-  const { title, subtitle, description, results, period, tags, url } = project;
+  const { title, subtitle, description, results, period, tags, url, urlType } = project;
   const device = useDeviceDetect();
   const width = device === "laptop" ? "65%" : "95%";
   return (
@@ -27,7 +27,7 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
             onClick={handleOk}
             className="url"
           >
-            {UI.portfolio.seeCode}
+            {urlType === "slides" ? UI.portfolio.seeSlides : UI.portfolio.seeCode}
           </Button>
         ) : null,
         <Button key="back" onClick={handleCancel}>

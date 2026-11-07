@@ -15,6 +15,11 @@ $link-color: #9c3f1b;
     @content;
   }
 }
+@mixin wide {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
 @mixin pad {
   @media (max-width: 920px) {
     @content;

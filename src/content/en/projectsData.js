@@ -197,6 +197,7 @@ const PROJECTS = [
           "Statistics",
         ],
         url: "https://drive.google.com/file/d/1Tw_u9DVwmb0XxLNjcwvHuIWZxrChPgLz/view?usp=sharing",
+        urlType: "slides", // Drive slide deck, not a repo: modal shows "See Slides"
       },
       {
         title: "Data Science Job Salary Analysis and Dream Job Recommendations",
