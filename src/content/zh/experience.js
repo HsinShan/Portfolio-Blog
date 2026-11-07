@@ -8,6 +8,12 @@ const EXPERIENCE = [
     period: "2026.03-至今",
     color: "blue",
     title: "獨立產品開發與分析｜自僱",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "2,300+", label: "活躍使用者" },
+      { value: "29", label: "個 GA4 事件" },
+      { value: "193", label: "項自動化測試" },
+    ],
     blocks: [
       "以 Claude Code 獨立發起、開發並分析自己的網頁產品，累計 2,300+ 活躍使用者。",
       "◆ 開發：以 k-means 在 CIELAB 色彩空間分群，從照片抽取物品本色，並分離高光與陰影",
@@ -22,6 +28,12 @@ const EXPERIENCE = [
     period: "2025.06-2026.02",
     color: "blue",
     title: "數據分析師｜海科科技",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "160+", label: "件分析需求" },
+      { value: "15+", label: "位需求方" },
+      { value: "65%", label: "一次性提數轉成指標" },
+    ],
     blocks: [
       "負責跟單產品數據分析，與 PM、RD 協作指標設計、報表建置與產品決策。",
       { heading: "跟單指標定義與 BI Dashboard" },
@@ -41,6 +53,12 @@ const EXPERIENCE = [
     period: "2022.10-2025.03",
     color: "blue",
     title: "大數據分析師｜麥奇數位（TutorABC）",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "20+", label: "個 Dashboard" },
+      { value: "+80%", label: "追蹤效率" },
+      { value: "+10%", label: "成本效益" },
+    ],
     blocks: [
       { heading: "業績與行銷分析" },
       "◆ 每月分析業績表現並評估行銷活動效益",

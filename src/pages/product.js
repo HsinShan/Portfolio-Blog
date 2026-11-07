@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import useContent from "../content";
 import HighlightNumbers from "../components/common/highlightNumbers";
 import Reveal from "../components/common/reveal";
+import StatCards from "../components/common/statCards";
 import "../assets/style/product/index.scss";
 
 // Standalone product page (/product). Layout only: all text lives in content/*/product.js.
@@ -23,14 +24,7 @@ const Product = () => {
         <p className="product-lead">{PRODUCT.lead}</p>
       </header>
 
-      <ul className="product-stats">
-        {PRODUCT.stats.map((s) => (
-          <li key={s.value}>
-            <span className="stat-value">{s.value}</span>
-            <span className="stat-label">{s.label}</span>
-          </li>
-        ))}
-      </ul>
+      <StatCards stats={PRODUCT.stats} className="product-stats" />
       <p className="product-stats-period">{PRODUCT.statsPeriod}</p>
 
       <Reveal className="product-shot">

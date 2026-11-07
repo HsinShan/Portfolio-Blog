@@ -4,6 +4,7 @@
 //   { heading: "..." }          -> bold section title
 //   { to: "/path", label }      -> in-site link (react-router)
 //   { href: "https://...", label } -> external link
+// stats (optional): [{ value, label }] -> stat cards under the title
 // color: "blue" = work, "red" = education
 
 const EXPERIENCE = [
@@ -11,6 +12,12 @@ const EXPERIENCE = [
     period: "2026.03-Now",
     color: "blue",
     title: "Independent Product Builder & Analyst | Self-employed",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "2,300+", label: "active users" },
+      { value: "29", label: "GA4 events" },
+      { value: "193", label: "automated tests" },
+    ],
     blocks: [
       "Initiated, built, and analyzed my own web product with Claude Code, reaching 2,300+ active users.",
       "◆ Build: k-means clustering in CIELAB color space extracts true colors from photos, separating highlights and shadows",
@@ -25,6 +32,12 @@ const EXPERIENCE = [
     period: "2025.06-2026.02",
     color: "blue",
     title: "Data Analyst | Hytech",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "160+", label: "analysis requests" },
+      { value: "15+", label: "stakeholders" },
+      { value: "65%", label: "ad-hoc requests turned into metrics" },
+    ],
     blocks: [
       "Product analytics for copy-trading products, partnering with PMs and engineers on metrics, reporting, and product decisions.",
       { heading: "Metric Framework & BI Dashboards" },
@@ -44,6 +57,12 @@ const EXPERIENCE = [
     period: "2022.10-2025.03",
     color: "blue",
     title: "Data Analyst | TutorABC",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "20+", label: "dashboards" },
+      { value: "+80%", label: "tracking efficiency" },
+      { value: "+10%", label: "cost efficiency" },
+    ],
     blocks: [
       { heading: "Performance & Marketing Analysis" },
       "◆ Conducted monthly performance reviews and evaluated marketing campaign effectiveness",

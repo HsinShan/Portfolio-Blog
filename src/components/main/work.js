@@ -3,6 +3,7 @@ import { Timeline } from "antd";
 import { Link } from "react-router-dom";
 import Reveal from "../common/reveal";
 import HighlightNumbers from "../common/highlightNumbers";
+import StatCards from "../common/statCards";
 import useContent from "../../content";
 
 const isBullet = (block) => typeof block === "string" && block.startsWith("◆");
@@ -91,6 +92,7 @@ const Work = () => {
               {/* mobile only: the side label column is hidden and the date sits above the title */}
               <p className="period-inline">{item.period}</p>
               <h3>{item.title}</h3>
+              <StatCards stats={item.stats} compact className="work-stats" />
               <ItemBody blocks={item.blocks} />
             </Reveal>
           </Timeline.Item>

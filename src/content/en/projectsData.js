@@ -13,6 +13,12 @@ const PROJECTS = [
         title:
           "Decoding Taiwan's Data Job Market (2025/04): Role Classification, Skill Trends, and Salary Insights",
         subtitle: "Personal Research",
+        // stat cards at the top of the detail modal; values also appear in the text below
+        stats: [
+          { value: "1,954", label: "data job postings" },
+          { value: "0.645", label: "salary model Adj.\u00a0R²" },
+          { value: "+53K", label: "master's + communication (max)" },
+        ],
         period: "2025.04",
         image: "/images/job-market-2025-en.png",
         description:
@@ -92,6 +98,11 @@ const PROJECTS = [
       {
         title: "Using AI and Social Data to Support Investment Decisions",
         subtitle: "Big Data & Business Analytics, Midterm Project",
+        // stat cards at the top of the detail modal; values also appear in the text below
+        stats: [
+          { value: "77%", label: "best model accuracy" },
+          { value: "700", label: "keywords per bullish / bearish side" },
+        ],
         period: "2021.03~2021.05",
         image: "/images/portfolio/F7708kK.png",
         description:

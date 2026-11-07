@@ -13,6 +13,12 @@ const PROJECTS = [
         title:
           "台灣數據職缺市場解析（2025/04）：職務分類、技能趨勢與薪資洞察",
         subtitle: "自製研究",
+        // stat cards at the top of the detail modal; values also appear in the text below
+        stats: [
+          { value: "1,954", label: "筆數據職缺" },
+          { value: "0.645", label: "薪資模型 Adj.\u00a0R²" },
+          { value: "+53K", label: "碩士＋溝通能力（最高）" },
+        ],
         period: "2025.04",
         image: "/images/job-market-2025-zh.png",
         description:
@@ -91,6 +97,11 @@ const PROJECTS = [
       {
         title: "用AI及社群數據協助投資決策",
         subtitle: "大數據與商業分析期中專案",
+        // stat cards at the top of the detail modal; values also appear in the text below
+        stats: [
+          { value: "77%", label: "最佳模型準確度" },
+          { value: "700", label: "看漲、看跌各取關鍵字" },
+        ],
         period: "2021.03~2021.05",
         image: "/images/portfolio/F7708kK.png",
         description:

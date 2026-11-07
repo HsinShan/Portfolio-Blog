@@ -97,6 +97,11 @@ h3 {
 
 // readability: more air between entries and lines, numbers stand out
 .work {
+    // stat cards under each job title (compact variant, see statCards.scss)
+    .work-stats {
+        margin: 8px 0 16px;
+    }
+
     .ant-timeline-item {
         padding-bottom: 40px;
     }

@@ -2,6 +2,7 @@ import React from "react";
 import { Modal, Button } from "antd";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
 import useContent from "../../content";
+import StatCards from "../common/statCards";
 import "../../assets/style/portfolio/detail.scss";
 
 // phones: full-screen sheet (see detail.scss); tablets: almost full width
@@ -9,7 +10,7 @@ const MODAL_WIDTH = { laptop: "65%", pad: "90%", mobile: "100%" };
 
 const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
   const { UI } = useContent();
-  const { title, subtitle, description, results, period, tags, url, urlType } = project;
+  const { title, subtitle, description, results, period, tags, url, urlType, stats } = project;
   const device = useDeviceDetect();
   const width = MODAL_WIDTH[device];
   return (
@@ -40,6 +41,7 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
     >
       <div className="title">{title}</div>
       <div className="period">{period}</div>
+      <StatCards stats={stats} compact className="detail-stats" />
       <div className="description">
         <h3>{UI.portfolio.descriptionHeading}</h3>
         <div dangerouslySetInnerHTML={{ __html: description }} />
