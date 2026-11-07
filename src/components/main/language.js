@@ -1,14 +1,20 @@
 import React from "react";
+import useContent from "../../content";
 import "../../assets/style/main/language.scss";
 
 const Language = () => {
+  const { PROFILE } = useContent();
+  const { title, score, date, transcript } = PROFILE.language;
   return (
     <div className="language">
-      <h1>Language</h1>
-      <h3>TOEIC: 875 分</h3>
-      <p className="date">Date: 2021.09.26</p>
+      <h1>{title}</h1>
+      <h3>{score}</h3>
+      <p className="date">{date}</p>
       <p>
-        Transcript : <a href="https://reurl.cc/RrDOZD">LINK</a>
+        {transcript.label}
+        <a href={transcript.href} target="_blank" rel="noopener noreferrer">
+          {transcript.linkText}
+        </a>
       </p>
     </div>
   );

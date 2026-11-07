@@ -1,0 +1,146 @@
+// 學歷與經歷時間軸（新的在前）。結構與 en/experience.js 一一對應：
+// 同樣的段落、同樣的順序、同樣的數字（content.test.js 會比對）。
+// 用詞以 Notion「初版履歷 v1」為準；履歷沒有的條目才直譯英文版。
+// Block 格式見 en/experience.js 開頭說明。
+
+const EXPERIENCE = [
+  {
+    period: "2026.03-至今",
+    color: "blue",
+    title: "獨立產品開發與分析｜自僱",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "2,300+", label: "活躍使用者" },
+      { value: "29", label: "個 GA4 事件" },
+      { value: "193", label: "項自動化測試" },
+    ],
+    blocks: [
+      "以 Claude Code 獨立發起、開發並分析自己的網頁產品，累計 2,300+ 活躍使用者。",
+      "◆ 開發：以 k-means 在 CIELAB 色彩空間分群，從照片抽取物品本色，並分離高光與陰影",
+      "◆ 上線：同步規劃 29 個 GA4 事件，涵蓋啟用與升級漏斗",
+      "◆ 衡量：進站 → 首次上傳僅 16%，新增「載入範例」入口降低使用門檻",
+      "◆ 驗證：發現範例資料灌高升級點擊（21 次中 17 次），在做定價判斷前修正事件邏輯",
+      "◆ 工程：React、模組化架構、graphify 影響範圍分析、Code Review 與 193 項自動化測試",
+      { to: "/product", label: "專案詳情" },
+    ],
+  },
+  {
+    period: "2025.06-2026.02",
+    color: "blue",
+    title: "數據分析師｜海科科技",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "160+", label: "件分析需求" },
+      { value: "15+", label: "位需求方" },
+      { value: "65%", label: "一次性提數轉成指標" },
+    ],
+    blocks: [
+      "負責跟單產品數據分析，與 PM、RD 協作指標設計、報表建置與產品決策。",
+      { heading: "跟單指標定義與 BI Dashboard" },
+      "◆ 定義北極星與次級指標，建置 Power BI 日／週／月 Dashboard",
+      "◆ 對接 15+ 位需求方、處理 160+ 件分析需求；將占 65% 的一次性提數轉為 Dashboard 指標",
+      "◆ 撰寫新版本埋點文件（神策）",
+      { heading: "產品分析與根因定位" },
+      "◆ 拆解「活躍用戶上升、交易筆數下滑」：定位信號源交易下滑（環比 -28%）與低頻用戶湧入（人均筆數 -49%）",
+      "◆ 提供槓桿、分潤週期等產品政策分析與 4 個品牌年度報告",
+      { heading: "數據自動化與資料品質" },
+      "◆ 與同事共同發起數據自動化專案，與 RD 對齊資料來源定義",
+      "◆ 排查 6+ 起數據異常，並與 BI 團隊核對 P&L 數字",
+      "◆ 依業務目標重新定義活動資格邏輯",
+    ],
+  },
+  {
+    period: "2022.10-2025.03",
+    color: "blue",
+    title: "大數據分析師｜麥奇數位（TutorABC）",
+    // stat cards under the title; every value also appears in a bullet below
+    stats: [
+      { value: "20+", label: "個 Dashboard" },
+      { value: "+80%", label: "追蹤效率" },
+      { value: "+10%", label: "成本效益" },
+    ],
+    blocks: [
+      { heading: "業績與行銷分析" },
+      "◆ 每月分析業績表現並評估行銷活動效益",
+      "◆ 設計預算分配公式，成本效益提升 10%",
+      "◆ 建置 PLS-PM 模型，拆解營收波動的直接與間接影響因素，並提出策略建議",
+      { heading: "CRM 顧客旅程與行為分析" },
+      "◆ 整合千萬筆線上／線下資料建構完整顧客旅程，並規劃 ETL 流程以優化查詢效能",
+      "◆ 規劃並導入官網與 APP 的事件追蹤，強化訪客行為追蹤",
+      "◆ 建置 Dashboard 監控流量趨勢，即時提供優化建議",
+      "◆ 自助預約流程：定位漏斗斷點並提出改版，整體完成率提升 2%（關鍵步驟 +10%、+6%）",
+      "◆ CRM 自動化信件：優化各節點內容，留單率提升 2%",
+      "◆ Webchat：分析對話流程斷點並導入主動留單機制，留單率提升 0.3%，新增 14 筆成交",
+      { heading: "SEO 策略與自然流量成長" },
+      "◆ 建立關鍵字佈局策略，優化高曝光、低點擊率文章，官網整體點擊率由 3.03% 提升至 3.7%",
+      "◆ 與 IMC 團隊合作優化高潛力文章，補足關鍵字缺口",
+      { heading: "營運流程優化" },
+      "◆ 建置 20+ Dashboard（業績、行銷、業務、流量），追蹤效率提升 80%",
+      "◆ 建立業務開發結果標籤，分析名單品質",
+      "◆ 在 BigQuery 建立容量門檻預警，避免資料匯入失敗",
+      { heading: "數據治理與跨部門協作" },
+      "◆ 確保各追蹤架構的數據準確性與一致性",
+      "◆ 提供數據洞察，支援行銷、業務與 RD 團隊",
+      "◆ 參與跨部門專案，確保分析任務準時交付",
+    ],
+  },
+  {
+    period: "2020.09-2022.07",
+    color: "red",
+    title: "資訊管理學研究所 碩士｜國立臺灣大學",
+    blocks: [
+      { heading: "碩士論文" },
+      "辨識高價值顧客：探討顧客線上行為的影響及 LSTM 之應用",
+      { to: "/portfolio-data", label: "查看更多" },
+      { heading: "專案經驗" },
+      "特徵工程、機器學習、深度學習、統計建模",
+    ],
+  },
+  {
+    period: "2019.11-2020.09",
+    color: "blue",
+    title: "前端應用開發工程師｜台灣樂天市場",
+    blocks: [
+      "Javascript, React, ROR, Graphql",
+      { heading: "主要專案" },
+      "1. 全新商品評價頁",
+      "2. 全新店家促銷活動頁",
+    ],
+  },
+  {
+    period: "2019.03-2019.06",
+    color: "blue",
+    title: "研發實習生｜研華科技",
+    blocks: [
+      "Vue (Vuestic + echarts)",
+      { heading: "主要職責" },
+      "IoT 軟體前端開發，並在裝置上設置 agent。",
+      { href: "http://bit.ly/31lOjID", label: "實習證明" },
+    ],
+  },
+  {
+    period: "2018.09-2019.01",
+    color: "blue",
+    title: "研發實習生｜若水國際",
+    blocks: [
+      "Vue (ElementUI + Axios)",
+      { heading: "主要職責" },
+      "1. 協助新 AI 標註平台的前端開發",
+      "2. 維護既有 AI 標註平台",
+    ],
+  },
+  {
+    period: "2015.09-2019.06",
+    color: "red",
+    title: "資訊管理學系｜國立政治大學",
+    blocks: [
+      { heading: "畢業專案" },
+      "美甲資訊整合平台",
+      { heading: "專案經驗" },
+      "資料庫規劃與建置、前端開發、API 開發",
+      { to: "/portfolio-frontend", label: "查看更多" },
+    ],
+  },
+];
+
+export default EXPERIENCE;

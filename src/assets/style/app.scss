@@ -1,12 +1,48 @@
 @import "./base";
 
 .content {
-  padding-top: 30px;
+  // header is position: fixed, so push content below it
+  padding-top: $header-height;
+
+  @include mobile {
+    padding-top: $header-height-mobile;
+  }
   
   h1, h2, h3, h4, p, span{
     color: $font-brown;
   }
+  // one heading scale for every page (antd's default h1 is 2em and varies by parent)
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  // replace antd's default blue (#1890ff) with the brand palette
   a {
+    color: $link-color;
     text-decoration: underline;
+
+    // hover darkens (not lightens to $font-highlight, which is < 4.5:1 on the pink bg)
+    &:hover,
+    &:focus {
+      color: $font-brown;
+    }
+  }
+}
+
+// printing / saving as PDF: sections not yet scrolled into view are still at
+// opacity 0 from the reveal animation, so force them visible
+@media print {
+  .content * {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

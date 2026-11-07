@@ -1,7 +1,8 @@
 @import "../base";
 .main {
     .block {
-        padding: 30px 50px;
+        // generous vertical rhythm so each section reads as its own unit
+        padding: 72px 50px;
         text-align: center;
         background-color: $page-background;
         img {
@@ -9,7 +10,7 @@
         }
         h1 {
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         h3 {
             color: $font-brown-light;
@@ -24,7 +25,7 @@
     @include pad {
 
         .block {
-            padding: 30px 20px;
+            padding: 48px 20px;
            
             h1 {
                 margin-bottom: 20px;

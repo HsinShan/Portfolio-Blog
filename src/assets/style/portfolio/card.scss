@@ -1,0 +1,80 @@
+@import "../base";
+
+// Shared card layout for all portfolio cards: image on top, text + buttons below.
+// Same on desktop and mobile (no hover-only overlay), so content is always visible.
+.project {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba($gray-dark, 0.12);
+
+    .card-image {
+        aspect-ratio: 16 / 10;
+        // without this, aspect-ratio lets a tall image stretch the box (min-height: auto)
+        overflow: hidden;
+        background-color: $page-background-dark;
+
+        &.clickable {
+            cursor: pointer;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    .card-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 14px 16px 16px;
+        color: $gray-dark;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        color: $font-brown-light;
+        text-align: center;
+        padding-bottom: 4px;
+    }
+
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.4;
+        text-align: center;
+        padding-bottom: 6px;
+
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    .period {
+        font-size: 12px;
+        color: $gray-light;
+        text-align: center;
+    }
+
+    // pushed to the bottom so buttons line up across cards of different text length
+    .card-actions {
+        margin-top: auto;
+        padding-top: 14px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        .ant-btn:hover,
+        .ant-btn:focus-visible {
+            color: $font-brown;
+            border-color: $font-brown;
+        }
+    }
+}

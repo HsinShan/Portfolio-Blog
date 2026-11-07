@@ -5,8 +5,14 @@
     justify-content: space-between;
     margin: 20px 0;
 
+    // the Reveal wrapper is the flex item now, so the width lives here
+    .skill-col {
+        // 4 categories per row; 23% leaves ~8% for gaps via space-between
+        width: 23%;
+    }
+
     .ant-card {
-        width: 30%;
+        height: 100%;
         border-radius: 5px;
         box-shadow: 4px 4px 5px $gray-light;
         
@@ -38,7 +44,7 @@
     @include mobile {
         display: block;
 
-        .ant-card {
+        .skill-col {
             width: 95%;
             margin: 20px auto;
         }

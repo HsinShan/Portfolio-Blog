@@ -2,90 +2,63 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LoadingImg from "../common/loadingImg";
 import meImg from "../../assets/images/me.png";
+import useContent from "../../content";
 import "../../assets/style/main/title.scss";
 
 const Title = () => {
+  const { PROFILE, PRODUCT } = useContent();
+  const { name, headline, intro, explore, tags, social } = PROFILE;
   return (
     <div className="title">
       <center>
-        <LoadingImg src={meImg} width="180"></LoadingImg>
+        <LoadingImg src={meImg} width="180" height="180" loading="eager" />
       </center>
-      <h1> Shirley Hsieh </h1>
-      <h3> Data Analyst / Data Scientist / Digital Marketing</h3>
-      <p>
-        <b>
-          Data Analyst with 2+ years of experience in digital marketing data
-          analysis and data-driven decision-making.
-        </b>
-      </p>
-      <p>
-        <b>
-          Passionate about logical thinking and problem-solving to drive
-          business growth.
-        </b>
-      </p>
-      <p>
-        <b>
-          A lifelong learner who thrives on continuous learning and picking up
-          new skills.
-        </b>
-      </p>
-      <p>
-        <b>
-          Explore more Shirley's independent projects and research showcased.
-          <br />→ <Link to="/portfolio-data">Data Science Portfolio</Link> →
-          <Link to="/portfolio-frontend">
-            Software Frontend Development Portfolio
-          </Link>
-        </b>
-      </p>
-      <div className="tags">
-        <span># Big Data Analytics</span>
-        <span># Data Visualization</span>
-        <span># Digital Marketing</span>
-        <span># Statistical Analysis</span>
-        <span># Machine Learning</span>
-        <span># Software Development</span>
+      <h1>{name}</h1>
+      <h3>{headline}</h3>
+      {/* first intro line is the one-sentence summary; the rest support it */}
+      <div className="intro">
+        {intro.map((line, i) => (
+          <p key={i} className={i === 0 ? "lead" : undefined}>
+            {line}
+          </p>
+        ))}
       </div>
-      {/* <div className="about">
-        <li>
-          <b>Visitor Journey Analysis, SEO Strategy & Traffic Monitoring</b>:
-          Increased website conversion rate by 2%
-        </li>
-        <li>
-          <b>Data Visualization & Performance Tracking</b>: Built 10+
-          dashboards, boosting efficiency by 80%
-        </li>
-        <li>
-          <b>Technical Proficiency</b>: Skilled in SQL, Python, and BI tools for
-          analyzing large datasets and identify trends
-        </li>
-        <li>
-          <b>Reporting & Cross-Department Collaboration</b>: Strong in report
-          writing, cross-functional communication, and project management
-        </li>
-        <li>
-          <b>Technical Mindset in Data Challenges</b>: 1+ year of front-end
-          development, applying a technical approach to data analysis
-        </li>
-      </div> */}
-      {/* <p>
-        Email: <span className="email">shirleyhsieh825@gmail.com</span>
-      </p> */}
-      <div class="link">
-        <a
-          href="https://tw.linkedin.com/in/shirley-hsieh-101397170"
-          target="blank"
-        >
-          <img
-            src="https://i.imgur.com/DQfuQnm.png"
-            width="40"
-            alt="linkedin"
-          />
-        </a>
-        <a href="https://github.com/HsinShan" target="blank">
-          <img src="https://i.imgur.com/ZbIeZFi.png" width="40" alt="github" />
-        </a>
+      <div className="explore">
+        {/* featured product: whole card is one link; text reused from PRODUCT */}
+        <p className="explore-heading">{explore.featured.text}</p>
+        <Link to={explore.featured.to} className="explore-featured">
+          {/* {" "} keeps the link's accessible name readable (flex hides the spaces) */}
+          <span className="featured-meta">
+            {PRODUCT.label} · {PRODUCT.period}
+          </span>{" "}
+          <span className="featured-title">{PRODUCT.title}</span>{" "}
+          <span className="featured-lead">{PRODUCT.lead}</span>
+        </Link>
+        <p className="explore-heading">{explore.text}</p>
+        <div className="explore-links">
+          {explore.links.map((link) => (
+            <Link key={link.to} to={link.to} className="explore-btn">
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+      <div className="tags">
+        {tags.map((tag) => (
+          <span key={tag}># {tag}</span>
+        ))}
+      </div>
+      <div className="link">
+        {social.map((s) => (
+          <a
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={s.name}
+          >
+            <img src={s.icon} width="40" height="40" alt={s.name} />
+          </a>
+        ))}
       </div>
     </div>
   );
