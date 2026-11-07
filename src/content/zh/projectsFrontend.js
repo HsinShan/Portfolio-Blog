@@ -4,6 +4,25 @@ const PROJECTS_FRONTEND = [
     category: "React",
     projects: [
       {
+        title: "彈珠台遊戲",
+        subtitle: "React 自製網頁遊戲",
+        image: "/images/portfolio/psl-pinball.jpg",
+        skills: [
+          "Frontend: React + Vite + Sass Modules",
+          "Game: SVG 盤面動畫 + 純函式遊戲引擎",
+          "Test: Vitest",
+          "Run with: Docker",
+        ],
+        description: [
+          "遊戲邏輯與畫面分離：結果全由引擎計算，畫面只負責播放動畫",
+          "每局隨機配置風車位置與轉速，並以自動化測試驗證獎勵期望值",
+          "上線前規劃 GA4 埋點，事件帶版本號，方便比較不同盤面的表現",
+        ],
+        links: {
+          demo: "https://psl-pinball.onrender.com/",
+        },
+      },
+      {
         title: "MeetLangLang",
         subtitle: "研究所軟體開發方法期末專案",
         image: "/images/portfolio/ZpGwTvS.png",
