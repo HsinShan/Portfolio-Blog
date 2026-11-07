@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { Menu } from "antd";
 import {
   UserOutlined,
-  FolderOpenOutlined,
-  CaretDownOutlined,
   LineChartOutlined,
   LaptopOutlined,
 } from "@ant-design/icons";
@@ -27,37 +25,45 @@ const linkItem = (index, label, icon) => ({
 
 // antd v4.20+ `items` API (the JSX children API is deprecated).
 // Built per render so labels follow the current language.
-const buildMenuItems = (UI) => [
-  linkItem(0, UI.nav.about, <UserOutlined />),
-  {
-    type: "group",
-    key: "portfolio",
-    label: (
-      <>
-        <FolderOpenOutlined />
-        {UI.nav.portfolio}
-        <CaretDownOutlined />
-      </>
-    ),
-    children: [
-      linkItem(1, UI.nav.dataScience, <LineChartOutlined />),
-      linkItem(2, UI.nav.frontend, <LaptopOutlined />),
-    ],
-  },
-];
+// Desktop (horizontal): three flat links, no icons, so the header stays light.
+// Drawer (vertical): portfolio pages sit under a plain group heading
+// (no caret: the group can't collapse, so an arrow would look broken).
+const buildMenuItems = (UI, horizontal) =>
+  horizontal
+    ? [
+        linkItem(0, UI.nav.about),
+        linkItem(1, UI.nav.dataScience),
+        linkItem(2, UI.nav.frontend),
+      ]
+    : [
+        linkItem(0, UI.nav.about, <UserOutlined />),
+        {
+          type: "group",
+          key: "portfolio",
+          label: UI.nav.portfolio,
+          children: [
+            linkItem(1, UI.nav.dataScience, <LineChartOutlined />),
+            linkItem(2, UI.nav.frontend, <LaptopOutlined />),
+          ],
+        },
+      ];
 
-const Navbar = ({ onClose }) => {
+const Navbar = ({ mode = "vertical", onClose }) => {
   const { UI } = useContent();
   const pathname = usePathname();
   const activeIndex = LINKS.indexOf(pathname);
   const selectedKeys = activeIndex === -1 ? [] : [String(activeIndex)];
+  const horizontal = mode === "horizontal";
 
   return (
     <Menu
-      mode="vertical"
+      mode={mode}
+      className={horizontal ? "nav-horizontal" : "nav-vertical"}
       selectedKeys={selectedKeys}
-      items={buildMenuItems(UI)}
+      items={buildMenuItems(UI, horizontal)}
       onClick={onClose}
+      // only 3 items: never collapse them into antd's "…" overflow menu
+      disabledOverflow={horizontal}
     />
   );
 };

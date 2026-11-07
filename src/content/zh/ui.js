@@ -22,6 +22,7 @@ const UI = {
   },
   nav: {
     title: "導覽列",
+    openMenu: "開啟選單",
     about: "介紹",
     portfolio: "作品集",
     dataScience: "資料科學",

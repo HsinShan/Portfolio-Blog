@@ -4,11 +4,14 @@ import useDeviceDetect from "../../hooks/useDeviceDetect";
 import useContent from "../../content";
 import "../../assets/style/portfolio/detail.scss";
 
+// phones: full-screen sheet (see detail.scss); tablets: almost full width
+const MODAL_WIDTH = { laptop: "65%", pad: "90%", mobile: "100%" };
+
 const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
   const { UI } = useContent();
   const { title, subtitle, description, results, period, tags, url, urlType } = project;
   const device = useDeviceDetect();
-  const width = device === "laptop" ? "65%" : "95%";
+  const width = MODAL_WIDTH[device];
   return (
     <Modal
       title={subtitle}

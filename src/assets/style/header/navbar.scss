@@ -1,60 +1,109 @@
 @import "../base";
 
-.ant-menu-vertical {
+// Scoped to our two menus so antd Menu elsewhere keeps its defaults.
+
+// Desktop: links in the header, current page = brown underline
+.ant-menu.nav-horizontal {
+    background: transparent;
     border-bottom: none;
+    line-height: $header-height; // fills the header, so the underline sits on its bottom edge
+    font-size: 15px;
     font-weight: bold;
-    color: $gray-light;
 
-    .anticon {
-        margin-right: 5px;
-    }
+    > .ant-menu-item {
+        padding: 0 16px;
+        top: 0; // antd nudges items 1px down, below the header edge
 
-
-    .ant-menu-item {
-        margin-top: 0px;
-
-        &:not(:last-child) {
-            margin-bottom: 0px;
+        a {
+            color: $gray-light;
         }
-        
-        a:hover {
+
+        // antd draws the underline with ::after; recolor from antd blue
+        &::after {
+            left: 16px;
+            right: 16px;
+            border-bottom-width: 3px;
+        }
+
+        &:hover a,
+        &-active a {
             color: $font-brown-light;
         }
-    }
 
-    .ant-menu-item-selected a {
-        color: white;
-    }
-    
-    &:not(.ant-menu-dark) {
-        .ant-menu-item:hover {
-            background-color: white;
-            transform: scale(1.1); 
+        // antd's hover rule resets the border shorthand to 2px; keep 3px
+        &:hover::after,
+        &-active::after {
+            border-bottom-width: 3px;
+            border-bottom-color: $page-background-dark;
+        }
+
+        &-selected a {
+            color: $font-brown-light;
+        }
+
+        &-selected::after,
+        &-selected:hover::after {
+            border-bottom-width: 3px;
+            border-bottom-color: $font-brown-light;
         }
     }
 }
 
-.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: $font-brown-light;
-    color: white;
-}
+// Drawer: bigger text and tap targets, current page = brown bar on the left
+.ant-menu.nav-vertical {
+    border-right: none;
+    font-size: 16px;
+    font-weight: bold;
 
-.ant-menu-item-group {
-    &-title {
-        color: black;
+    .anticon {
+        margin-right: 10px;
+    }
 
-        > span:last-child {
-            margin-left: 10px;
+    .ant-menu-item {
+        height: 48px;
+        line-height: 48px;
+        margin: 0;
+        width: 100%;
+        padding-left: 24px;
+        border-left: 4px solid transparent;
+
+        a {
+            color: $gray-light;
+        }
+
+        &:hover a,
+        &-active a {
+            color: $font-brown-light;
+        }
+
+        &-selected {
+            background-color: lighten($page-background, 8%);
+            border-left-color: $font-brown-light;
+
+            a {
+                color: $font-brown-light;
+            }
+        }
+
+        // antd's own right-edge highlight bar; we use the left one instead
+        &::after {
+            display: none;
         }
     }
 
-    &-list {
-        font-size: 12px;
+    .ant-menu-item-group {
+        margin-top: 8px;
 
-        .ant-menu-item {
-            margin-left: 16px;
-            padding-left: 16px;
+        &-title {
+            padding: 12px 24px 4px;
+            font-size: 13px;
+            font-weight: normal;
+            color: $font-brown-light;
+            letter-spacing: 1px;
+        }
+
+        &-list .ant-menu-item {
+            padding-left: 40px;
         }
     }
-
 }

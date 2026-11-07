@@ -4,6 +4,11 @@
     padding: 60px 40px;
     background-color: $page-background;
 
+    // phones: give the cards the screen width instead of stacked side padding
+    @include mobile {
+        padding: 40px 16px;
+    }
+
     .page-title {
         font-weight: bold;
         text-align: center;
@@ -16,6 +21,10 @@
         flex-wrap: wrap;
         margin: 20px 20px 0;
         align-items: flex-start;
+
+        @include mobile {
+            margin: 16px 0 0;
+        }
 
         .tag {
             margin-right: 8px;
@@ -36,10 +45,18 @@
     .project-title {
         font-weight: bold;
         padding-left: 20px;
+
+        @include mobile {
+            padding-left: 0;
+        }
     }
 
     .category {
         padding: 20px;
+
+        @include mobile {
+            padding: 20px 0;
+        }
 
         // 1 col on mobile, 2 on tablet / desktop, 3 on wide screens
         &-projects {
@@ -62,6 +79,10 @@
     .js-block {
         padding: 20px;
         text-align: center;
+
+        @include mobile {
+            padding: 20px 0;
+        }
 
         &-projects {
             display: grid;

@@ -21,6 +21,7 @@ const UI = {
   },
   nav: {
     title: "Menu",
+    openMenu: "Open menu",
     about: "About",
     portfolio: "Portfolio",
     dataScience: "Data Science",

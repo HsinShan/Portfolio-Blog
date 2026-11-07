@@ -11,8 +11,8 @@ const PROFILE = {
   explore: {
     text: "Explore more Shirley's independent projects and research showcased.",
     links: [
-      { to: "/portfolio-data", label: "Data Science Portfolio" },
-      { to: "/portfolio-frontend", label: "Software Frontend Development Portfolio" },
+      { to: "/portfolio-data", label: "Data Portfolio" },
+      { to: "/portfolio-frontend", label: "Frontend Portfolio" },
     ],
   },
   tags: [

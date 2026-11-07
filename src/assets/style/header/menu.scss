@@ -1,17 +1,35 @@
 @import "../base";
 
-.ant-drawer {
-    &-body {
-        padding: 0px;
+.nav-drawer {
+    .ant-drawer-header {
+        padding: 12px 24px;
+        border-bottom: 1px dashed $page-background-dark;
     }
 
-    .nav-title {
-        font-size: 20px;
+    .ant-drawer-title {
+        font-size: 18px;
         font-weight: bold;
-        height: 45px;
-        border-bottom: 1px dashed $gray-light;
         color: $font-brown-light;
-        text-align: center;
-        line-height: 42px;
+    }
+
+    // close (X) on the right, where the menu button was tapped
+    .ant-drawer-header-title {
+        flex-direction: row-reverse;
+    }
+
+    .ant-drawer-close {
+        margin-right: 0;
+        margin-left: 12px;
+        color: $font-brown-light;
+    }
+
+    .ant-drawer-body {
+        padding: 8px 0;
+    }
+
+    // Desktop shows the links in the header; hide the drawer if the window
+    // is widened while it's open
+    @include laptop {
+        display: none;
     }
 }

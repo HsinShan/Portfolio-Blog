@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    height: $header-height;
     position: fixed;
     width: 100%;
     background: white;
@@ -24,6 +25,16 @@
             
         }
         
+    }
+
+    // Desktop links sit right of the logo, before the language button
+    .header-nav {
+        margin-left: auto;
+        margin-right: 16px;
+
+        @include pad {
+            display: none;
+        }
     }
 
     .header-actions {
@@ -72,11 +83,17 @@
             color: $font-brown-light;
             border: 1px solid $font-brown-light;
         }
+
+        // Desktop uses the header links instead of the drawer
+        @include laptop {
+            display: none;
+        }
     }
 
     // Language button + menu button need room on phones (~340px wide):
     // tighten spacing so "Shirley's Blog" stays on one line
     @include mobile {
+        height: $header-height-mobile;
         padding: 0 12px;
 
         .logo-name {
