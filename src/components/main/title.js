@@ -6,7 +6,7 @@ import useContent from "../../content";
 import "../../assets/style/main/title.scss";
 
 const Title = () => {
-  const { PROFILE } = useContent();
+  const { PROFILE, PRODUCT } = useContent();
   const { name, headline, intro, explore, tags, social } = PROFILE;
   return (
     <div className="title">
@@ -24,7 +24,17 @@ const Title = () => {
         ))}
       </div>
       <div className="explore">
-        <p>{explore.text}</p>
+        {/* featured product: whole card is one link; text reused from PRODUCT */}
+        <p className="explore-heading">{explore.featured.text}</p>
+        <Link to={explore.featured.to} className="explore-featured">
+          {/* {" "} keeps the link's accessible name readable (flex hides the spaces) */}
+          <span className="featured-meta">
+            {PRODUCT.label} · {PRODUCT.period}
+          </span>{" "}
+          <span className="featured-title">{PRODUCT.title}</span>{" "}
+          <span className="featured-lead">{PRODUCT.lead}</span>
+        </Link>
+        <p className="explore-heading">{explore.text}</p>
         <div className="explore-links">
           {explore.links.map((link) => (
             <Link key={link.to} to={link.to} className="explore-btn">

@@ -18,6 +18,8 @@ const PRODUCT = {
     { value: "29", label: "GA4 events" },
     { value: "193", label: "automated tests" },
   ],
+  // shown under the stat cards; date range the stats cover
+  statsPeriod: "Data period: 2026/08/25 ~ 2026/11/04",
   sections: [
     {
       heading: "Core Features",

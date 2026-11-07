@@ -48,7 +48,8 @@
   .product-stats {
     list-style: none;
     padding: 0;
-    margin: 0 0 32px;
+    // the data-period note below carries the 32px gap to the screenshot
+    margin: 0 0 8px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
@@ -82,6 +83,14 @@
       font-size: 14px;
       color: $font-brown-light;
     }
+  }
+
+  // "data period" note under the stat cards
+  .product-stats-period {
+    text-align: right;
+    font-size: 13px;
+    color: $font-brown-light;
+    margin: 0 0 32px;
   }
 
   .product-shot {

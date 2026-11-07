@@ -3,13 +3,19 @@
 const PROFILE = {
   name: "Shirley Hsieh",
   headline: "Data Analyst | Product & Marketing Analytics",
+  // no sentence-final punctuation in the hero block (intro + explore)
   intro: [
-    "Data Analyst with 3+ years of experience and 1 year in front-end development.",
-    "Product analytics for copy-trading products and marketing analytics for online education, focused on metric definition, funnel analysis, and customer journey analysis.",
-    "Built and launched a web tool with Claude Code, from tracking plan to funnel-driven iteration.",
+    "Data Analyst with 3+ years of experience and 1 year in front-end development",
+    "Product analytics for copy-trading products and marketing analytics for online education, focused on metric definition, funnel analysis, and customer journey analysis",
+    "Built and launched a web tool with Claude Code, from tracking plan to funnel-driven iteration",
   ],
   explore: {
-    text: "Explore more Shirley's independent projects and research showcased.",
+    // featured card: label / period / title / lead come from PRODUCT (product.js)
+    featured: {
+      text: "Bringing my analytics and frontend experience together in one launched product",
+      to: "/product",
+    },
+    text: "More portfolios",
     links: [
       { to: "/portfolio-data", label: "Data Portfolio" },
       { to: "/portfolio-frontend", label: "Frontend Portfolio" },

@@ -31,6 +31,7 @@ const Product = () => {
           </li>
         ))}
       </ul>
+      <p className="product-stats-period">{PRODUCT.statsPeriod}</p>
 
       <Reveal className="product-shot">
         <img src={PRODUCT.image.src} alt={PRODUCT.image.alt} />

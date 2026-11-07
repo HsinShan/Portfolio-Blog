@@ -18,6 +18,8 @@ const PRODUCT = {
     { value: "29", label: "個 GA4 事件" },
     { value: "193", label: "項自動化測試" },
   ],
+  // shown under the stat cards; date range the stats cover
+  statsPeriod: "數據統計期間 2026/08/25 ~ 2026/11/04",
   sections: [
     {
       heading: "核心功能",
