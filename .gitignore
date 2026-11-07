@@ -27,3 +27,8 @@ graphify-out/
 
 # machine-specific Claude Code settings (graphify hook uses an absolute path)
 .claude/settings.local.json
+
+# internal planning notes (job-search decisions), keep local only
+.claude/backlog.md
+.claude/task-contract.md
+.claude/contract-archive.md
