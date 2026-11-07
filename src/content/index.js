@@ -13,6 +13,8 @@ import PROJECTS_ZH from "./zh/projectsData";
 import PROJECTS_EN from "./en/projectsData";
 import PROJECTS_FRONTEND_ZH from "./zh/projectsFrontend";
 import PROJECTS_FRONTEND_EN from "./en/projectsFrontend";
+import PRODUCT_ZH from "./zh/product";
+import PRODUCT_EN from "./en/product";
 
 export const CONTENT = {
   zh: {
@@ -22,6 +24,7 @@ export const CONTENT = {
     SKILLS: SKILLS_ZH,
     PROJECTS: PROJECTS_ZH,
     PROJECTS_FRONTEND: PROJECTS_FRONTEND_ZH,
+    PRODUCT: PRODUCT_ZH,
   },
   en: {
     UI: UI_EN,
@@ -30,6 +33,7 @@ export const CONTENT = {
     SKILLS: SKILLS_EN,
     PROJECTS: PROJECTS_EN,
     PROJECTS_FRONTEND: PROJECTS_FRONTEND_EN,
+    PRODUCT: PRODUCT_EN,
   },
 };
 

@@ -27,6 +27,7 @@ const UI = {
     portfolio: "作品集",
     dataScience: "資料科學",
     frontend: "前端開發",
+    product: "產品開發",
   },
 };
 

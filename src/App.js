@@ -5,6 +5,7 @@ import Main from "./pages/main";
 import Header from "./components/header";
 import DataPortfolio from "./pages/dataPortfolio";
 import FrontendPortfolio from "./pages/frontendPortfolio";
+import Product from "./pages/product";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/portfolio-data" element={<DataPortfolio />} />
           <Route path="/portfolio-frontend" element={<FrontendPortfolio />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
       </div>
     </div>

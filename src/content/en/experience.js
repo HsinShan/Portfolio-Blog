@@ -18,7 +18,7 @@ const EXPERIENCE = [
       "◆ Measure: landing-to-upload was only 16%, so added a sample-data entry point to lower the barrier",
       "◆ Validate: caught sample data inflating upgrade clicks (17 of 21) and fixed the tracking logic before pricing decisions",
       "◆ Engineering: React, modular architecture, graphify impact analysis, code review, and 193 automated tests",
-      { to: "/portfolio-data#color-tool", label: "Project Detail" },
+      { to: "/product", label: "Project Detail" },
     ],
   },
   {

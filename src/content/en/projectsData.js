@@ -1,32 +1,5 @@
 const PROJECTS = [
   {
-    category: "2026 Independent Project",
-    tags: ["k-means", "GA4", "Funnel Analysis", "Event Tracking", "Claude Code"],
-    projects: [
-      {
-        title:
-          "Color Palette Tool: Extracting Representative Colors from Photos, with Funnel Analysis Driving Iterations",
-        subtitle: "Independent Project",
-        period: "2026",
-        image: "/images/color-tool.png",
-        anchor: "color-tool", // id for in-page links (e.g. timeline "Project Detail")
-        description:
-          "A web tool I built and launched on my own, reaching <span class='highlight'>2,300+ active users</span> and 21,000 events<br/>Designed 29 GA4 events and the upgrade funnel myself<h3>Core Features</h3>Clusters colors with <span class='bold'>k-means</span> in the Lab color space, separating an object's base color from highlights and shadows<br/>Uses farthest-first initialization so the same photo always gives the same result<h3>How It Was Built</h3>Developed with Claude Code: split into 11 independent components and logic modules, each with its own tests<br/>Mapped the codebase with graphify to assess impact before each change<br/>Kept quality in check with code review and 193 automated tests",
-        results:
-          "1. Found that only <span class='highlight'>16%</span> of visitors uploaded a photo, so I added a \"Load example\" entry to lower the barrier<br/>2. After a feature video drove a traffic spike, the upgrade funnel read <span class='highlight'>105 → 82 → 21</span><br/>3. Breaking it down showed the paywall prompt was triggered by sample data: <span class='highlight'>17 of 21 clicks</span> came from users who had only tried the example, so that period's willingness-to-pay data was judged unreliable<br/>4. Fixed the trigger threshold and event logic to count only users' own data, and documented how to read data before and after the switch in the tracking plan",
-        tags: [
-          "k-means",
-          "CIELAB",
-          "GA4",
-          "Funnel Analysis",
-          "Event Tracking",
-          "React",
-          "Claude Code",
-        ],
-      },
-    ],
-  },
-  {
     category: "2025 Personal Research",
     tags: [
       "NLP",

@@ -26,6 +26,7 @@ const UI = {
     portfolio: "Portfolio",
     dataScience: "Data Science",
     frontend: "Frontend",
+    product: "Product",
   },
 };
 

@@ -1,6 +1,6 @@
 @import "../base";
 
-// keep an anchored card (e.g. #color-tool) clear of the fixed header
+// keep an anchored card (project `anchor` field) clear of the fixed header
 .projectData[id] {
     scroll-margin-top: $header-height + 16px;
 }

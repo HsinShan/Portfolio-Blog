@@ -8,7 +8,7 @@ const DataPortfolio = () => {
   const { UI, PROJECTS } = useContent();
   const { hash } = useLocation();
   // react-router doesn't scroll to #hash on its own: jump to the card if one is
-  // named (e.g. /portfolio-data#color-tool), otherwise start at the top
+  // named by a card's `anchor` (e.g. /portfolio-data#<anchor>), otherwise start at the top
   useEffect(() => {
     const target = hash && document.getElementById(hash.slice(1));
     if (target) target.scrollIntoView();
