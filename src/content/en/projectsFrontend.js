@@ -4,6 +4,25 @@ const PROJECTS_FRONTEND = [
     category: "React",
     projects: [
       {
+        title: "Pinball Game",
+        subtitle: "Self-built React Web Game",
+        image: "/images/portfolio/psl-pinball.jpg",
+        skills: [
+          "Frontend: React + Vite + Sass Modules",
+          "Game: SVG board animation + pure-function game engine",
+          "Test: Vitest",
+          "Run with: Docker",
+        ],
+        description: [
+          "Separated game logic from rendering: the engine computes every outcome, the UI only plays the animation",
+          "Randomized windmill positions and speeds each round, with automated tests guarding the expected reward value",
+          "Planned GA4 event tracking before launch, tagging every event with the build version to compare board layouts",
+        ],
+        links: {
+          demo: "https://psl-pinball.onrender.com/",
+        },
+      },
+      {
         title: "MeetLangLang",
         subtitle: "Graduate Software Development Methods, Final Project",
         image: "/images/portfolio/ZpGwTvS.png",
