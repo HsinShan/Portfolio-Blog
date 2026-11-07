@@ -9,7 +9,9 @@ const PRODUCT = {
   subtitle: "Extracting Representative Colors from Photos, with Funnel Analysis Driving Iterations",
   lead: "A web tool I built and launched on my own, with the GA4 events and upgrade funnel designed myself",
   image: {
-    src: "/images/color-tool-workspace.png",
+    src: "/images/color-tool-workspace.jpg",
+    width: 1600,
+    height: 1149,
     alt: "The color palette tool's swatch library and manual palette screen",
   },
   stats: [

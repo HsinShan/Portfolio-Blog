@@ -9,7 +9,9 @@ const PRODUCT = {
   subtitle: "從照片抽取代表色，並用漏斗分析驅動改版",
   lead: "獨立開發並上線的網頁工具，自行規劃 GA4 事件與升級漏斗",
   image: {
-    src: "/images/color-tool-workspace.png",
+    src: "/images/color-tool-workspace.jpg",
+    width: 1600,
+    height: 1149,
     alt: "配色工具網站的色票庫與手動配色畫面",
   },
   stats: [

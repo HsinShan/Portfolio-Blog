@@ -6,7 +6,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "MeetLangLang",
         subtitle: "研究所軟體開發方法期末專案",
-        image: "https://i.imgur.com/ZpGwTvS.png",
+        image: "/images/portfolio/ZpGwTvS.png",
         skills: [
           "Frontend: React + Sass",
           "Backend: Javascript + Mysql",
@@ -22,7 +22,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "每日股市資訊",
         subtitle: "Rakuten ROR Practice",
-        image: "https://i.imgur.com/VEvRqaQ.png",
+        image: "/images/portfolio/VEvRqaQ.png",
         skills: ["Frontend: React + Sass", "Backend: Ruby on Rails"],
         description: [],
         links: {
@@ -38,7 +38,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "Lucky Draw System",
         subtitle: "Vue 自製專案",
-        image: "https://i.imgur.com/uTzjXOk.png",
+        image: "/images/portfolio/uTzjXOk.png",
         skills: ["Vue.js+Firebase"],
         description: [],
         links: {
@@ -49,7 +49,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "飯店管理系統",
         subtitle: "Vue 自製專案",
-        image: "https://i.imgur.com/KdjeaRP.png",
+        image: "/images/portfolio/KdjeaRP.jpg",
         skills: ["Vue.js"],
         description: [],
         links: {
@@ -59,7 +59,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "Blog",
         subtitle: "Vue 自製專案",
-        image: "https://i.imgur.com/rqcabiL.png",
+        image: "/images/portfolio/rqcabiL.png",
         skills: ["Vue.js+Firebase"],
         description: [],
         links: {
@@ -75,7 +75,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "Weather",
         subtitle: "自學 自製專案",
-        image: "https://i.imgur.com/omf4njD.png",
+        image: "/images/portfolio/omf4njD.jpg",
         skills: ["JS"],
         description: [],
         links: {
@@ -91,7 +91,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "HandStory(美甲資訊整合平台) / 前端開發",
         subtitle: "2017.01-2018.06 畢業專案",
-        image: "https://i.imgur.com/dqqFzO4.png",
+        image: "/images/portfolio/dqqFzO4.jpg",
         skills: [
           "電腦版:php+html+css+jquery",
           "手機版:php+Jquery mobile(html/css/jquery)",
@@ -114,7 +114,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "HappyTravel Club / 旅行社網站",
         subtitle: "自學 自製專案",
-        image: "https://i.imgur.com/t4fVzPS.jpg",
+        image: "/images/portfolio/t4fVzPS.jpg",
         skills: ["Html+CSS+Javascript+Bootstrap"],
         description: [],
         links: {
@@ -125,7 +125,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "BagStore / 包包電商網站",
         subtitle: "自學 自製專案",
-        image: "https://i.imgur.com/ZbPEMPy.jpg",
+        image: "/images/portfolio/ZbPEMPy.jpg",
         skills: ["RWD+CSS animation"],
         description: [],
         links: {
@@ -136,7 +136,7 @@ const PROJECTS_FRONTEND = [
       {
         title: "Shirley's Dessert / 甜點店",
         subtitle: "自學 自製專案",
-        image: "https://i.imgur.com/6W6VRMy.jpg",
+        image: "/images/portfolio/6W6VRMy.jpg",
         skills: ["Bootstrap"],
         description: [],
         links: {
@@ -157,35 +157,35 @@ const PROJECTS_FRONTEND = [
         demoURL: "https://hsinshan.github.io/DailyChallenge/CoinCollector.html",
         codeURL:
           "https://github.com/HsinShan/DailyChallenge/blob/master/CoinCollector.html",
-        image: "https://i.imgur.com/hRGKnAH.png",
+        image: "/images/portfolio/hRGKnAH.png",
       },
       {
         title: "BombNumber",
         demoURL: "https://hsinshan.github.io/DailyChallenge/bombnumber.html",
         codeURL:
           "https://github.com/HsinShan/DailyChallenge/blob/master/bombnumber.html",
-        image: "https://i.imgur.com/qITDbaV.png",
+        image: "/images/portfolio/qITDbaV.png",
       },
       {
         title: "Painter",
         demoURL: "https://hsinshan.github.io/DailyChallenge/painter.html",
         codeURL:
           "https://github.com/HsinShan/DailyChallenge/blob/master/painter.html",
-        image: "https://i.imgur.com/oqCTPhi.png",
+        image: "/images/portfolio/oqCTPhi.png",
       },
       {
         title: "Calculator",
         demoURL: "https://hsinshan.github.io/DailyChallenge/calculator.html",
         codeURL:
           "https://github.com/HsinShan/DailyChallenge/blob/master/calculator.html",
-        image: "https://i.imgur.com/bfgnamy.png",
+        image: "/images/portfolio/bfgnamy.png",
       },
       {
         title: "Matching",
         demoURL: "https://hsinshan.github.io/DailyChallenge/matching.html",
         codeURL:
           "https://github.com/HsinShan/DailyChallenge/blob/master/matching.html",
-        image: "https://i.imgur.com/nGIUNAi.png",
+        image: "/images/portfolio/nGIUNAi.png",
       },
     ],
   },

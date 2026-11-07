@@ -34,7 +34,14 @@ const Product = () => {
       <p className="product-stats-period">{PRODUCT.statsPeriod}</p>
 
       <Reveal className="product-shot">
-        <img src={PRODUCT.image.src} alt={PRODUCT.image.alt} />
+        <img
+          src={PRODUCT.image.src}
+          alt={PRODUCT.image.alt}
+          width={PRODUCT.image.width}
+          height={PRODUCT.image.height}
+          loading="eager"
+          decoding="async"
+        />
       </Reveal>
 
       {PRODUCT.sections.map((section) => {

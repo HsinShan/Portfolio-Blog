@@ -11,7 +11,7 @@ const Title = () => {
   return (
     <div className="title">
       <center>
-        <LoadingImg src={meImg} width="180"></LoadingImg>
+        <LoadingImg src={meImg} width="180" height="180" loading="eager" />
       </center>
       <h1>{name}</h1>
       <h3>{headline}</h3>
@@ -56,7 +56,7 @@ const Title = () => {
             rel="noopener noreferrer"
             key={s.name}
           >
-            <img src={s.icon} width="40" alt={s.name} />
+            <img src={s.icon} width="40" height="40" alt={s.name} />
           </a>
         ))}
       </div>

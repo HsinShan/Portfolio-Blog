@@ -35,12 +35,12 @@ const PROFILE = {
     {
       name: "linkedin",
       href: "https://tw.linkedin.com/in/shirley-hsieh-101397170",
-      icon: "https://i.imgur.com/DQfuQnm.png",
+      icon: "/images/portfolio/DQfuQnm.png",
     },
     {
       name: "github",
       href: "https://github.com/HsinShan",
-      icon: "https://i.imgur.com/ZbIeZFi.png",
+      icon: "/images/portfolio/ZbIeZFi.png",
     },
   ],
   language: {
