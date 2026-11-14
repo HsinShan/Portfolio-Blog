@@ -16,7 +16,7 @@ const PRODUCT = {
   },
   stats: [
     { value: "2,300+", label: "活躍使用者" },
-    { value: "21,000", label: "次事件" },
+    { value: "2.1+ 萬", label: "次事件" },
     { value: "29", label: "個 GA4 事件" },
     { value: "193", label: "項自動化測試" },
   ],
