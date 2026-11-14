@@ -15,15 +15,20 @@ import {
   Cell,
 } from "recharts";
 import makeTooltip from "./tooltip";
-import { COLOR, TICK, signed, pct, edges } from "./theme";
+import { COLOR, TICK, signed, pct, edges, paren, range, yearsOf } from "./theme";
 
 // ---------- shared pieces ----------
 
-// Long category labels wrap to two lines on phones: before "（", or after "：" / "、" / "／".
+// Axis label: the short form when content gives one (English), else the full label.
+// Tables and tooltips always use the full label.
+const axisLabel = (r, key) => r.short || r[key];
+
+// Long category labels wrap to two lines on phones: before "（" / " (", or after "：" / "、" / "／" / ": ".
+// zh labels only use full-width punctuation, so the half-width rules only affect en.
 const splitLabel = (s) => {
-  const paren = s.indexOf("（");
-  if (paren > 0) return [s.slice(0, paren), s.slice(paren)];
-  const m = s.match(/^(.+?[：、／])(.+)$/);
+  const p = s.match(/^(.+?)\s?([（(].*)$/);
+  if (p) return [p[1], p[2]];
+  const m = s.match(/^(.+?(?:[：、／]|:(?= )))\s?(.+)$/);
   return m ? [m[1], m[2]] : [s];
 };
 
@@ -61,7 +66,7 @@ const HALO = { stroke: COLOR.surface, strokeWidth: 3, paintOrder: "stroke" };
 // ---------- 0. overview: change with 95% CI ----------
 
 export const ForestChart = ({ data, ui, narrow }) => {
-  const rows = data.rows.map((r) => ({ ...r, range: [r.lo, r.hi] }));
+  const rows = data.rows.map((r) => ({ ...r, range: [r.lo, r.hi], axis: axisLabel(r, "label") }));
   const shape = (p) => {
     const { y, height, payload } = p;
     const { left, right } = edges(p);
@@ -84,8 +89,8 @@ export const ForestChart = ({ data, ui, narrow }) => {
     (r) => [
       { value: `${pct(r.from)} → ${pct(r.to)}`, label: `${ui.y2025} → ${ui.y2026}` },
       { value: signed(r.diff), label: ui.change },
-      { value: `${signed(r.lo)} ～ ${signed(r.hi)}`, label: ui.ci },
-      { value: r.q, label: "q" },
+      { value: range(ui, r.lo, r.hi), label: ui.ci },
+      { value: r.q, label: ui.q },
     ]
   );
   return (
@@ -102,7 +107,7 @@ export const ForestChart = ({ data, ui, narrow }) => {
         />
         <YAxis
           type="category"
-          dataKey="label"
+          dataKey="axis"
           width={narrow ? 120 : 190}
           interval={0}
           tick={<CategoryTick wrap={narrow} />}
@@ -150,7 +155,7 @@ export const SlopeChart = ({ data, ui }) => {
           <Line
             key={s.key}
             dataKey={s.key}
-            name={`${s.label}（${s.n}）`}
+            name={paren(ui, s.label, s.n)}
             stroke={colorOf(s.key)}
             strokeWidth={2}
             dot={(p) => <Dot key={p.index} cx={p.cx} cy={p.cy} color={colorOf(s.key)} sig={s.sig} />}
@@ -176,7 +181,7 @@ export const SlopeChart = ({ data, ui }) => {
 // ---------- 2. diverging words ----------
 
 export const WordsChart = ({ data, ui, narrow }) => {
-  const rows = data.rows.map((r) => ({ ...r, diff: +(r.to - r.from).toFixed(1) }));
+  const rows = data.rows.map((r) => ({ ...r, diff: +(r.to - r.from).toFixed(1), axis: axisLabel(r, "word") }));
   const shape = (p) => {
     const { y, height, payload } = p;
     const { left, right } = edges(p);
@@ -206,7 +211,7 @@ export const WordsChart = ({ data, ui, narrow }) => {
     (r) => [
       { value: `${pct(r.from)} → ${pct(r.to)}`, label: `${ui.y2025} → ${ui.y2026}` },
       { value: signed(r.diff), label: ui.change },
-      { value: r.z.toFixed(2), label: "z" },
+      { value: r.z.toFixed(2), label: ui.z },
     ]
   );
   return (
@@ -228,7 +233,7 @@ export const WordsChart = ({ data, ui, narrow }) => {
           />
           <YAxis
             type="category"
-            dataKey="word"
+            dataKey="axis"
             width={narrow ? 84 : 132}
             interval={0}
             tick={<CategoryTick wrap={narrow} />}
@@ -248,8 +253,7 @@ export const WordsChart = ({ data, ui, narrow }) => {
 
 export const DeChart = ({ data, ui }) => {
   const [plain, ai] = data.layers;
-  const years = ["2025", "2026"];
-  const rows = years.map((y) => {
+  const rows = yearsOf(data.total).map((y) => {
     const n = data.total[y];
     return {
       year: ui[`y${y}`],
@@ -264,9 +268,9 @@ export const DeChart = ({ data, ui }) => {
   const tip = makeTooltip(
     (r) => r.year,
     (r) => [
-      { value: `${pct(r.total)}（${(r.plainN + r.aiN).toLocaleString()}／${r.n.toLocaleString()}）`, label: data.totalLabel },
-      { value: `${pct(r.ai)}（${r.aiN}）`, label: ai.label },
-      { value: `${pct(r.plain)}（${r.plainN}）`, label: plain.label },
+      { value: paren(ui, pct(r.total), `${(r.plainN + r.aiN).toLocaleString()}${ui.punct.slash}${r.n.toLocaleString()}`), label: data.totalLabel },
+      { value: paren(ui, pct(r.ai), r.aiN), label: ai.label },
+      { value: paren(ui, pct(r.plain), r.plainN), label: plain.label },
     ]
   );
   const sideLabel = (key) => (p) => (
@@ -281,7 +285,8 @@ export const DeChart = ({ data, ui }) => {
   );
   return (
     <ResponsiveContainer width="100%" height={300}>
-      <BarChart data={rows} margin={{ top: 28, right: 16, bottom: 8, left: 0 }} barSize={64}>
+      {/* right 36: room for the side labels ("12.9%") next to the 2026 bar on 320–360px phones */}
+      <BarChart data={rows} margin={{ top: 28, right: 36, bottom: 8, left: 0 }} barSize={64}>
         <CartesianGrid vertical={false} stroke={COLOR.grid} />
         <XAxis dataKey="year" tick={TICK} stroke={COLOR.grid} />
         <YAxis domain={[0, 30]} ticks={[0, 10, 20, 30]} tickFormatter={(v) => pct(v, 0)} tick={TICK} width={44} axisLine={false} tickLine={false} />
@@ -303,7 +308,7 @@ export const DeChart = ({ data, ui }) => {
 // ---------- 4. dumbbell: analyst skills ----------
 
 export const SkillsChart = ({ data, ui, narrow }) => {
-  const rows = data.rows.map((r) => ({ ...r, range: [Math.min(r.from, r.to), Math.max(r.from, r.to)] }));
+  const rows = data.rows.map((r) => ({ ...r, range: [Math.min(r.from, r.to), Math.max(r.from, r.to)], axis: axisLabel(r, "skill") }));
   const shape = (p) => {
     const { y, height, payload } = p;
     const { left, right } = edges(p);
@@ -340,7 +345,7 @@ export const SkillsChart = ({ data, ui, narrow }) => {
     (r) => [
       { value: `${pct(r.from)} → ${pct(r.to)}`, label: `${ui.y2025} → ${ui.y2026}` },
       { value: r.n, label: ui.count },
-      { value: r.q, label: "q" },
+      { value: r.q, label: ui.q },
     ]
   );
   return (
@@ -354,7 +359,7 @@ export const SkillsChart = ({ data, ui, narrow }) => {
         <BarChart layout="vertical" data={rows} margin={{ top: 4, right: 56, bottom: 8, left: 8 }}>
           <CartesianGrid horizontal={false} stroke={COLOR.grid} />
           <XAxis type="number" domain={[0, 16]} ticks={[0, 4, 8, 12, 16]} tickFormatter={(v) => pct(v, 0)} tick={TICK} stroke={COLOR.grid} />
-          <YAxis type="category" dataKey="skill" width={narrow ? 84 : 120} interval={0} tick={<CategoryTick wrap={narrow} />} axisLine={false} tickLine={false} />
+          <YAxis type="category" dataKey="axis" width={narrow ? 84 : 120} interval={0} tick={<CategoryTick wrap={narrow} />} axisLine={false} tickLine={false} />
           <Tooltip cursor={rowCursor} content={tip} />
           <Bar dataKey="range" shape={shape} isAnimationActive={false} />
         </BarChart>
@@ -370,7 +375,7 @@ export const PremiumChart = ({ data, ui }) => {
     (r) => r.year,
     (r) => [
       { value: signed(r.value), label: ui.premium },
-      { value: r.q, label: "q" },
+      { value: r.q, label: ui.q },
     ]
   );
   return (
@@ -381,8 +386,9 @@ export const PremiumChart = ({ data, ui }) => {
         <YAxis domain={[0, 20]} ticks={[0, 5, 10, 15, 20]} tickFormatter={(v) => signed(v, 0)} tick={TICK} width={44} axisLine={false} tickLine={false} />
         <Tooltip cursor={rowCursor} content={tip} />
         <Bar dataKey="value" radius={[4, 4, 0, 0]} isAnimationActive={false}>
-          {data.rows.map((r) => (
-            <Cell key={r.year} fill={r.year === "2025" ? COLOR.context : COLOR.brand} />
+          {/* first row = baseline year (gray), later rows = brand */}
+          {data.rows.map((r, i) => (
+            <Cell key={r.year} fill={i === 0 ? COLOR.context : COLOR.brand} />
           ))}
           <LabelList dataKey="value" position="top" offset={8} formatter={(v) => signed(v)} fontSize={14} fontWeight="bold" fill={COLOR.ink} />
         </Bar>

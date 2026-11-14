@@ -1,29 +1,28 @@
 const PROJECTS = [
-  // TODO(contract #8 stage 2): translate; Chinese placeholder until the zh version is approved
   {
-    category: "2026 自製研究",
+    category: "2026 Personal Research",
     tags: ["Web Scraping", "NLP", "Topic Modeling", "Hypothesis Testing", "Quantile Regression", "Data Visualization"],
     projects: [
       {
-        title: "AI 對台灣數據職缺的影響：2025 vs 2026 對照（2026/11）",
-        subtitle: "自製研究",
+        title: "AI's Impact on Taiwan's Data Job Market: 2025 vs 2026 (2026/11)",
+        subtitle: "Personal Research",
         stats: [
-          { value: "1,890 → 2,200", label: "筆職缺（2025 → 2026）" },
-          { value: "40.9% → 58.0%", label: "職稱掛 AI 的職缺" },
-          { value: "約 +14%", label: "AI 技能薪資溢價（中位數）" },
+          { value: "1,890 → 2,200", label: "job postings (2025 → 2026)" },
+          { value: "40.9% → 58.0%", label: "postings with AI in the title" },
+          { value: "~+14%", label: "AI-skill salary premium (median)" },
         ],
         period: "2026.11",
-        image: "/images/job-market-2026-zh.png",
+        image: "/images/job-market-2026-en.png",
         // numbers: Notion「收斂報告 v2」Step 1／2 (same source as content/zh/jobMarket2026.js)
         description:
-          "重新爬取 2026 年 104 數據職缺，用同一套清洗規則和 2025 年的資料對照，回答「AI 普及後，數據職缺的職稱、內容、技能和薪資有沒有變」<h3>分析方法</h3>1. 爬蟲＋清洗：兩年套同一套 v2 清洗規則，2025 1,890 筆、2026 2,200 筆<br/>2. 主題模型：LDA 套用 2025 模型比較兩年，再用 2026 資料重訓 50 個模型，只採多數模型都出現的主題<br/>3. 檢定：兩比例 z 檢定＋95% 信賴區間，多重比較用 BH-FDR 校正（q &lt; 0.05 才算顯著）<br/>4. 薪資：分位數迴歸（中位數）＋年份交互項，檢驗 AI 技能溢價有沒有變",
+          "Scraped 2026 data job postings from 104 Job Bank (Taiwan's largest job board) and compared them with the 2025 dataset under the same cleaning rules<br/>Goal: test whether job titles, responsibilities, skill requirements and salaries in data roles have changed as AI went mainstream<h3>Methods</h3>1. Scraping & cleaning: applied the same v2 cleaning rules to both years (1,890 postings in 2025, 2,200 in 2026)<br/>2. Topic modeling: applied the 2025 LDA model to both years, then retrained 50 models on 2026 data and kept only the topics most models agreed on<br/>3. Hypothesis testing: two-proportion z-tests with 95% CIs and BH-FDR correction for multiple comparisons (significant at q &lt; 0.05)<br/>4. Salary: median (quantile) regression with a year interaction term to test whether the AI-skill premium changed",
         results:
-          "數據職缺轉向 AI 應用整合，傳統 DA／DE 職缺的占比縮小，但 SQL、統計的要求看不出變化；要求 AI 技能的職缺薪資較高約 14%，兩年都在<br/><br/>"
-          + "<span class='highlight'>1. 職稱掛「AI」的職缺大增，主要是 2026 換了一批職缺在徵，不是舊職缺改名</span><br/>・職稱有 AI 字的職缺：40.9% → 58.0%<br/>・兩年都在徵的同一批職缺（364 個）裡，職稱有 AI 的只從 42.0% 變成 45.3%，幾乎沒有改名<br/>→ 增加的部分主要來自 2026 換了一批職缺在徵<br/><br/>"
-          + "<span class='highlight'>2. 職缺內容從「訓練模型」轉向「把 AI 接進產品和流程」</span><br/>・主題模型分類（沿用 2025 的分類）：「AI 模型開發與訓練」12.0% → 8.9%；「系統需求與專案管理」9.8% → 15.0%、「智慧系統與軟體整合」8.5% → 14.3%<br/>・要求深度學習的職缺：19.5% → 13.1%<br/>・描述常見用詞：agent 1.8% → 11.0%、RAG 2.5% → 6.6%<br/><br/>"
-          + "<span class='highlight'>3. 傳統 DA／DE 職缺的占比縮小；DE 看起來變多，其實是 AI 職缺被分進 DE</span><br/>・職稱沒掛 AI 的分析師類（BA／DA／DS）：36.1% → 25.7%<br/>・DE 整體 21.5% → 25.6%，拆開看：傳統 DE（職稱沒有 AI）17.2% → 12.9%，減少；職稱有 AI 的 DE 4.3% → 12.8%，增加<br/><span class='note'>註：比的是占全部職缺的比例，不是職缺數量</span><br/><br/>"
-          + "<span class='highlight'>4. 傳統分析師職缺：SQL、統計的要求兩年差不多，新增的是自動化和生成式 AI</span><br/>・描述提到 SQL：9.4% → 9.7%、統計：14.2% → 12.2%，兩項都看不出差異<br/>・流程自動化 4.7% → 9.6%、生成式 AI 1.2% → 3.9%（增加主要在 DS 職缺）<br/>→ SQL、統計還是基本門票，自動化和 GenAI 工具是加分項<br/><br/>"
-          + "<span class='highlight'>5. 要求 AI 技能的職缺，薪資中位數高約 14%，2026 也沒有因為 AI 普及而變少</span><br/>・在職務類別、年資、學歷、公司規模、能否遠端相近的條件下：2025 高 13.5%、2026 高 14.3%，兩年差異不顯著<br/>・整體薪資兩年看不出變化（未扣通膨）<br/><span class='note'>註：約 +14% 是全部數據職缺合併計算；單看分析師類時看不出溢價</span>",
+          "Data job postings shifted toward applied AI integration. DA/DE postings without AI in the title made up a smaller share, but SQL and statistics requirements showed no detectable change. Postings requiring AI skills carried a ~14% higher median salary in both years<br/><br/>"
+          + "<span class='highlight'>1. Postings with \"AI\" in the title surged, driven mainly by a different mix of postings in 2026 rather than by retitling existing jobs</span><br/>・Postings with AI in the title: 40.9% → 58.0%<br/>・Among the 364 postings that appeared in both snapshots, the AI-titled share rose only from 42.0% to 45.3%, so little retitling occurred<br/>→ Most of the increase comes from a change in which jobs were posted in 2026<br/><br/>"
+          + "<span class='highlight'>2. Content shifted from \"training models\" to \"building AI into products and processes\"</span><br/>・Topic shares (using the 2025 topic model): \"AI model development & training\" 12.0% → 8.9%; \"requirements & project management\" 9.8% → 15.0%; \"AI systems & software integration\" 8.5% → 14.3%<br/>・Postings requiring deep learning: 19.5% → 13.1%<br/>・Terms that became more common in descriptions: agent 1.8% → 11.0%, RAG 2.5% → 6.6%<br/><br/>"
+          + "<span class='highlight'>3. DA/DE postings without AI in the title made up a smaller share; DE appears to grow only because AI-titled postings are being classified as DE</span><br/>・Analyst postings (BA/DA/DS) without AI in the title: 36.1% → 25.7%<br/>・All DE: 21.5% → 25.6%. Broken down, DE without AI in the title fell (17.2% → 12.9%), while AI-titled DE rose (4.3% → 12.8%)<br/><span class='note'>Note: these are shares of all postings, not posting counts</span><br/><br/>"
+          + "<span class='highlight'>4. Analyst postings without AI in the title: SQL and statistics requirements held steady; process automation and generative AI are the new additions</span><br/>・Descriptions mentioning SQL: 9.4% → 9.7%; statistics: 14.2% → 12.2%; neither shows a detectable difference<br/>・Process automation (incl. RPA) 4.7% → 9.6%; generative AI 1.2% → 3.9% (mainly in DS postings)<br/>→ SQL and statistics remain table stakes; automation and GenAI tools are a plus<br/><br/>"
+          + "<span class='highlight'>5. Postings requiring AI skills have a ~14% higher median salary, and the premium held in 2026 even as AI became mainstream</span><br/>・Controlling for job category, experience, education, company size and remote work: +13.5% in 2025 and +14.3% in 2026; the year-to-year difference is not significant<br/>・Overall salaries showed no detectable change (nominal, not inflation-adjusted)<br/><span class='note'>Note: the ~+14% is estimated across all data postings; analyst roles alone show no detectable premium</span>",
         tags: ["Web Scraping", "NLP", "LDA", "Hypothesis Testing", "Quantile Regression", "Recharts"],
         // in-site report page; no repo link (private repo)
         reportPath: "/portfolio-data/job-market-2026",
@@ -114,13 +113,13 @@ const PROJECTS = [
         description:
           "Two lines of research: <br/> A. <span class='bold'>Predictive</span>: forecast next-day rentals from the past year of data (Random Forest)<br/>B. <span class='bold'>Explanatory</span>: analysis of total rentals and of differences between registered and casual users",
         results:
-          "1. Forecasts captured upward and downward trends (adding the previous week's average gave the best results)<br/>2. <span class='highlight'>Casual users rent significantly more on weekends than weekdays; registered users show the opposite</span> (One-way Anova + Post Hoc)<br/>3. Rentals are affected by <span class='highlight'>weather</span> (PLS)",
+          "1. Forecasts captured upward and downward trends (adding the previous week's average gave the best results)<br/>2. <span class='highlight'>Casual users rent significantly more on weekends than weekdays; registered users show the opposite</span> (One-way ANOVA + Post Hoc)<br/>3. Rentals are affected by <span class='highlight'>weather</span> (PLS)",
 
         tags: [
           "Rolling Window Prediction",
           "Random Forest",
           "Statistical Modeling",
-          "One-way Anova",
+          "One-way ANOVA",
           "Post Hoc",
           "PLS",
         ],

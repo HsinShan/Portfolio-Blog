@@ -13,7 +13,7 @@ import {
   SkillsChart,
   PremiumChart,
 } from "../components/report/charts";
-import { signed, pct } from "../components/report/theme";
+import { signed, pct, paren, range, yearsOf } from "../components/report/theme";
 import "../assets/style/report/index.scss";
 
 // Dashboard order: data facts → KPI row → overview → one card per finding → methods.
@@ -31,7 +31,7 @@ const JobMarket2026 = () => {
   const tables = {
     forest: {
       columns: R.forest.columns,
-      rows: R.forest.rows.map((r) => [r.label, pct(r.from), pct(r.to), signed(r.diff), `${signed(r.lo)} ～ ${signed(r.hi)}`, r.q]),
+      rows: R.forest.rows.map((r) => [r.label, pct(r.from), pct(r.to), signed(r.diff), range(ui, r.lo, r.hi), r.q]),
     },
     slope: {
       columns: R.slope.columns,
@@ -45,8 +45,7 @@ const JobMarket2026 = () => {
       columns: R.de.columns,
       rows: R.de.layers.map((l) => [
         l.label,
-        `${pct((l[2025] / R.de.total[2025]) * 100)}（${l[2025]}）`,
-        `${pct((l[2026] / R.de.total[2026]) * 100)}（${l[2026]}）`,
+        ...yearsOf(R.de.total).map((y) => paren(ui, pct((l[y] / R.de.total[y]) * 100), l[y])),
       ]),
     },
     skills: {

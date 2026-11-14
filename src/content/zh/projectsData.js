@@ -112,13 +112,13 @@ const PROJECTS = [
         description:
           "主要進行兩種研究: <br/> A. <span class='bold'>預測型研究</span>: 使用過去一年資料預測未來一天租借量(Random Forest)<br/>B. <span class='bold'>解釋型研究</span>: 總租借量分析及註冊／非註冊會員差異分析",
         results:
-          "1. 預測的租借量可以看出上升或下降的趨勢(加入前一周的平均數據進行預測成效最佳)<br/>2. <span class='highlight'>非註冊會員假日租借量顯著高於平日,註冊會員則相反</span>(One-way Anova + Post Hoc)<br/>3. 租借量受到<span class='highlight'>天氣因素</span>的影響(PLS)",
+          "1. 預測的租借量可以看出上升或下降的趨勢(加入前一周的平均數據進行預測成效最佳)<br/>2. <span class='highlight'>非註冊會員假日租借量顯著高於平日,註冊會員則相反</span>(One-way ANOVA + Post Hoc)<br/>3. 租借量受到<span class='highlight'>天氣因素</span>的影響(PLS)",
 
         tags: [
           "Rolling Window Prediction",
           "Random Forest",
           "Statistical Modeling",
-          "One-way Anova",
+          "One-way ANOVA",
           "Post Hoc",
           "PLS",
         ],

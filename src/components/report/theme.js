@@ -18,6 +18,13 @@ export const TICK = { fontSize: 12, fill: COLOR.inkMuted };
 export const signed = (v, digits = 1) => `${v > 0 ? "+" : ""}${v.toFixed(digits)}%`;
 export const pct = (v, digits = 1) => `${v.toFixed(digits)}%`;
 
+// "12.8%（281）" in zh, "12.8% (281)" in en: punctuation comes from content ui.punct
+export const paren = (ui, v, inner) => `${v}${ui.punct.open}${inner}${ui.punct.close}`;
+export const range = (ui, lo, hi) => `${signed(lo)}${ui.punct.range}${signed(hi)}`;
+
+// years present in a { 2025: n, 2026: n } object, ascending
+export const yearsOf = (total) => Object.keys(total).sort();
+
 // Recharts can hand a bar a negative width; normalize to left/right edges.
 export const edges = ({ x, width }) => ({
   left: Math.min(x, x + width),

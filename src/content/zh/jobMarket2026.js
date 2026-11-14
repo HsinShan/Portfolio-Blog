@@ -53,6 +53,10 @@ const JOB_MARKET_2026 = {
     premium: "薪資中位數溢價",
     count: "提到的職缺數",
     methodsTitle: "方法與限制",
+    q: "q",
+    z: "z",
+    // punctuation used when components join values: "12.8%（281）", "1,890／2,200", "+14.1% ～ +20.1%"
+    punct: { open: "（", close: "）", slash: "／", range: " ～ " },
   },
 
   // 0 overview: change of each share (2026 − 2025, in %) with 95% Newcombe CI

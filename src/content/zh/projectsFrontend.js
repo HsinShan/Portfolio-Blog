@@ -28,7 +28,7 @@ const PROJECTS_FRONTEND = [
         image: "/images/portfolio/ZpGwTvS.png",
         skills: [
           "Frontend: React + Sass",
-          "Backend: Javascript + Mysql",
+          "Backend: JavaScript + MySQL",
           "Run with: Docker",
         ],
         description: [],
@@ -112,12 +112,12 @@ const PROJECTS_FRONTEND = [
         subtitle: "2017.01-2018.06 畢業專案",
         image: "/images/portfolio/dqqFzO4.jpg",
         skills: [
-          "電腦版:php+html+css+jquery",
-          "手機版:php+Jquery mobile(html/css/jquery)",
+          "電腦版:PHP+HTML+CSS+jQuery",
+          "手機版:PHP+jQuery Mobile (HTML/CSS/jQuery)",
         ],
         description: [
-          "web/行動/平板前端開發(html/css/jquery)",
-          "資料庫規劃及建置(mysql)",
+          "web/行動/平板前端開發(HTML/CSS/jQuery)",
+          "資料庫規劃及建置(MySQL)",
           "協助PHP後端開發測試網站及串接前後端",
         ],
         links: {
@@ -134,7 +134,7 @@ const PROJECTS_FRONTEND = [
         title: "HappyTravel Club / 旅行社網站",
         subtitle: "自學 自製專案",
         image: "/images/portfolio/t4fVzPS.jpg",
-        skills: ["Html+CSS+Javascript+Bootstrap"],
+        skills: ["HTML+CSS+JavaScript+Bootstrap"],
         description: [],
         links: {
           demo: "https://hsinshan.github.io/Portfolio/HappyTravel%20Club/",
@@ -167,8 +167,8 @@ const PROJECTS_FRONTEND = [
   },
   {
     group: 2,
-    category: "Javascript",
-    title: "Javascript小遊戲",
+    category: "JavaScript",
+    title: "JavaScript小遊戲",
     subtitle: "自學 自製專案 : 一天一主題 in five days 挑戰",
     projects: [
       {
