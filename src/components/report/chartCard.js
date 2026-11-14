@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
 import { Button } from "antd";
 import Emph from "./emph";
 
@@ -7,10 +7,11 @@ import Emph from "./emph";
 // `measure` and `note` are arrays of short lines.
 const ChartCard = ({ title, measure = [], note = [], ui, table, wide = false, children }) => {
   const [showTable, setShowTable] = useState(false);
+  const titleId = useId();
   return (
     <section className={`chart-card${wide ? " chart-card-wide" : ""}`}>
       <div className="chart-card-head">
-        <h2>
+        <h2 id={titleId}>
           <Emph text={title} />
         </h2>
         {table && (
@@ -28,7 +29,9 @@ const ChartCard = ({ title, measure = [], note = [], ui, table, wide = false, ch
         </div>
       )}
       {showTable && table ? (
-        <div className="chart-table-wrap">
+        // Scrollable on narrow screens: tabIndex lets keyboard users scroll it,
+        // role + aria-labelledby names the region after the card title.
+        <div className="chart-table-wrap" tabIndex={0} role="region" aria-labelledby={titleId}>
           <table className="chart-table">
             <thead>
               <tr>

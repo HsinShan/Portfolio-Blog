@@ -256,6 +256,12 @@
 
   .chart-table-wrap {
     overflow-x: auto;
+
+    // same keyboard-focus look as the header buttons
+    &:focus-visible {
+      outline: 2px solid $font-brown-light;
+      outline-offset: 2px;
+    }
   }
 
   .chart-table {
@@ -276,6 +282,9 @@
     td:first-child {
       text-align: left;
       white-space: normal;
+      // the only wrapping column: without a floor, nowrap columns squeeze it to ~3 chars a line on phones
+      // (7em, not 8em: 8em made the 3-column table overflow by 3px at 320px)
+      min-width: 7em;
     }
 
     th {
