@@ -7,6 +7,10 @@ $font-brown: #4c3a19;
 $gray-light: #525251;
 $gray-dark: #282828;
 $font-highlight: #bf5125;
+$white: #ffffff;
+// report charts (keep in sync with components/report/theme.js)
+$chart-context: #8f8a86;
+$chart-grid: #ece6e2;
 // darker than $font-highlight so body-size links reach WCAG AA 4.5:1 on $page-background
 $link-color: #9c3f1b;
 // fixed header height; content padding and anchor offsets follow it

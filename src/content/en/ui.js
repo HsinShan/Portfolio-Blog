@@ -14,11 +14,14 @@ const UI = {
     resultsHeading: "Findings",
     seeMore: "See More",
     seeCode: "See Code",
+    seeReport: "Full report (interactive charts)",
     seeSlides: "See Slides",
     close: "Close",
     // labels for project link buttons, keyed like `links` in projectsFrontend.js
     links: { demo: "Demo", code: "Code", frontendCode: "Frontend Code", backendCode: "Backend Code", codepen: "CodePen", docs: "Docs" },
   },
+  // lazy page chunk failed to load (components/common/chunkErrorBoundary.js)
+  loadError: { message: "This page failed to load. Please refresh and try again.", reload: "Refresh" },
   nav: {
     title: "Menu",
     openMenu: "Open menu",

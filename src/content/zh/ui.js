@@ -16,10 +16,13 @@ const UI = {
     seeMore: "查看更多",
     seeCode: "查看程式碼",
     seeSlides: "查看簡報",
+    seeReport: "看完整報告（互動圖表）",
     close: "關閉",
     // labels for project link buttons, keyed like `links` in projectsFrontend.js
     links: { demo: "展示", code: "程式碼", frontendCode: "前端程式碼", backendCode: "後端程式碼", codepen: "CodePen", docs: "文件" },
   },
+  // lazy page chunk failed to load (components/common/chunkErrorBoundary.js)
+  loadError: { message: "頁面載入失敗，請重新整理再試一次", reload: "重新整理" },
   nav: {
     title: "導覽列",
     openMenu: "開啟選單",

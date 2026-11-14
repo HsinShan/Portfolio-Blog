@@ -57,7 +57,14 @@
             font-weight: bold;
             text-decoration: underline;
         }
-        
+
+        // footnotes inside a finding ("註：…"): small, light, not bold
+        .note {
+            font-size: 12px;
+            font-weight: normal;
+            color: $font-brown-light;
+        }
+
     }
 
     .tags {

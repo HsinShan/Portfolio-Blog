@@ -1,0 +1,335 @@
+@import "../base";
+
+// report page /portfolio-data/job-market-2026: pink page, white chart cards
+.report-page {
+  background-color: $page-background;
+}
+
+.report {
+  padding: 40px 40px 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 24px 16px 40px;
+  }
+
+  .report-back {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .page-title {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  // one-sentence conclusion: bold lead + one line per point
+  .report-conclusion {
+    max-width: 960px;
+    margin-bottom: 16px;
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .conclusion-lead {
+      font-weight: bold;
+    }
+  }
+
+  // data facts as bullets
+  .report-facts {
+    margin: 0 0 20px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: $font-brown-light;
+
+    li {
+      line-height: 1.8;
+      color: $font-brown-light;
+    }
+
+    strong {
+      color: $font-brown;
+      margin-right: 8px;
+    }
+  }
+
+  // KPI row: label → big 2026 value → 2025 + change
+  .report-kpis {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+
+    @include pad {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      background: $white;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .kpi-label {
+      font-size: 14px;
+      color: $font-brown-light;
+    }
+
+    .kpi-value {
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: $font-brown;
+
+      @include mobile {
+        font-size: 26px;
+      }
+    }
+
+    .kpi-sub {
+      font-size: 13px;
+      color: $font-brown-light;
+    }
+
+    // arrows + sign carry direction, color only reinforces it
+    .kpi-up,
+    .kpi-down {
+      font-weight: bold;
+      color: $link-color;
+    }
+  }
+
+  .report-legend,
+  .chart-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    font-size: 13px;
+    color: $font-brown-light;
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: $font-brown-light;
+    }
+  }
+
+  .report-legend {
+    margin-bottom: 20px;
+  }
+
+  .chart-key {
+    margin-bottom: 8px;
+  }
+
+  .key-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+
+    &.key-2025 {
+      background: $chart-context;
+      border-color: $chart-context;
+    }
+
+    &.key-2026 {
+      background: $font-highlight;
+      border-color: $font-highlight;
+    }
+
+    &.key-hollow {
+      background: $white;
+    }
+  }
+
+  .report-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    @include pad {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .chart-card {
+    background: $white;
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      padding: 16px 12px;
+    }
+
+    &.chart-card-wide {
+      grid-column: 1 / -1;
+    }
+
+    .chart-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+
+      h2 {
+        font-size: 17px;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .ant-btn {
+        flex-shrink: 0;
+      }
+    }
+
+    .chart-body {
+      flex: 1;
+    }
+
+    // what the numbers are, right under the title
+    .chart-measure {
+      margin: -4px 0 12px;
+      font-size: 13px;
+      line-height: 1.6;
+
+      .chart-measure-label {
+        display: inline-block;
+        font-size: 12px;
+        padding: 0 6px;
+        margin-bottom: 2px;
+        border-radius: 4px;
+        background: rgba($page-background, 0.5);
+        color: $font-brown;
+      }
+
+      p {
+        margin: 0;
+        color: $font-brown;
+      }
+    }
+
+    .chart-note {
+      margin: 12px 0 0;
+      padding-left: 16px;
+      font-size: 12px;
+      line-height: 1.6;
+
+      li {
+        color: $font-brown-light;
+      }
+    }
+  }
+
+  .chart-direction {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: $font-brown-light;
+    padding: 0 48px 4px 40px;
+
+    span {
+      color: $font-brown-light;
+    }
+  }
+
+  .chart-legend-text {
+    color: $font-brown;
+    font-size: 13px;
+  }
+
+  .chart-table-wrap {
+    overflow-x: auto;
+  }
+
+  .chart-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+
+    th,
+    td {
+      padding: 6px 8px;
+      border-bottom: 1px solid $chart-grid;
+      text-align: right;
+      white-space: nowrap;
+      color: $font-brown;
+    }
+
+    th:first-child,
+    td:first-child {
+      text-align: left;
+      white-space: normal;
+    }
+
+    th {
+      font-weight: bold;
+    }
+  }
+
+  .report-section-title {
+    margin: 32px 0 12px;
+  }
+
+  .report-methods {
+    background: $white;
+
+    li {
+      line-height: 1.8;
+      color: $font-brown;
+    }
+  }
+}
+
+// key phrases marked with ** in content: bold + brand color
+// ($link-color: 4.5:1+ on white and on the pink page)
+.report .hl {
+  color: $link-color;
+  font-weight: bold;
+}
+
+// recharts renders the tooltip inside the chart wrapper
+.chart-tooltip {
+  background: $white;
+  border: 1px solid $chart-grid;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px rgba($gray-dark, 0.12);
+  font-size: 13px;
+
+  .chart-tooltip-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: $font-brown;
+  }
+
+  .chart-tooltip-row {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+
+    strong {
+      color: $font-brown;
+    }
+
+    span {
+      color: $font-brown-light;
+    }
+  }
+}
