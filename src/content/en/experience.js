@@ -9,7 +9,7 @@
 
 const EXPERIENCE = [
   {
-    period: "2026.03-Now",
+    period: "2026.03-Present",
     color: "blue",
     title: "Independent Product Builder & Analyst | Self-employed",
     // stat cards under the title; every value also appears in a bullet below
@@ -69,8 +69,8 @@ const EXPERIENCE = [
       "◆ Designed budget allocation formulas, improving cost efficiency by 10%",
       "◆ Established a PLS-PM model to uncover both direct and indirect drivers of revenue fluctuation, providing actionable business recommendations",
       { heading: "CRM: Customer Journey Construction & Behavior Analysis" },
-      "◆ Integrated tens of millions of online/offline data to construct a complete customer journey and designed ETL flows to optimize queries",
-      "◆ Designed and implemented event tagging strategy across website and app to enhance visitor behavior tracking",
+      "◆ Integrated tens of millions of online/offline records to construct a complete customer journey and designed ETL flows to optimize queries",
+      "◆ Designed and implemented an event tagging strategy across website and app to enhance visitor behavior tracking",
       "◆ Built dashboards to monitor traffic trends and provide real-time optimization insights",
       "◆ Performed funnel analysis on the self-booking flow to identify drop-off points, raising completion rate by 2% (key steps +10% and +6%)",
       "◆ Optimized CRM automated email content at each journey stage, increasing lead rate by 2%",
@@ -84,7 +84,7 @@ const EXPERIENCE = [
       "◆ Developed a capacity threshold alert in BigQuery to prevent data import failures",
       { heading: "Data Governance & Cross-Functional Collaboration" },
       "◆ Ensured data accuracy and consistency across tracking infrastructure",
-      "◆ Provided data-driven insights to support marketing, sales, and RD teams",
+      "◆ Provided data-driven insights to support marketing, sales, and R&D teams",
       "◆ Participated in cross-functional projects to ensure timely delivery of analysis tasks",
     ],
   },
@@ -93,8 +93,8 @@ const EXPERIENCE = [
     color: "red",
     title: "Information Management | National Taiwan University",
     blocks: [
-      { heading: "Master Thesis" },
-      "Identify Most Valuable Customers: Examine the Influence of Customer Online Behaviors and the Application of LSTM Model",
+      { heading: "Master's Thesis" },
+      "Identifying High-Value Customers: The Impact of Online Behavior and an Application of LSTM",
       { to: "/portfolio-data", label: "See More" },
       { heading: "Project experience" },
       "Feature engineering, Machine learning, Deep learning, Statistical modeling",
@@ -105,7 +105,7 @@ const EXPERIENCE = [
     color: "blue",
     title: "Frontend Engineer | Rakuten",
     blocks: [
-      "Javascript, React, ROR, Graphql",
+      "JavaScript, React, ROR, GraphQL",
       { heading: "Main Project" },
       "1. New product review page project.",
       "2. New Shop Campaign page project.",
@@ -114,7 +114,7 @@ const EXPERIENCE = [
   {
     period: "2019.03-2019.06",
     color: "blue",
-    title: "RD intern | Advantech",
+    title: "R&D Intern | Advantech",
     blocks: [
       "Vue (Vuestic + echarts)",
       { heading: "Main Responsibility" },
@@ -125,18 +125,18 @@ const EXPERIENCE = [
   {
     period: "2018.09-2019.01",
     color: "blue",
-    title: "RD intern | 若水國際",
+    title: "R&D Intern | 若水國際",
     blocks: [
       "Vue (ElementUI + Axios)",
       { heading: "Main Responsibility" },
-      "1. Assist in frontend development of the new AI annotation platform.",
-      "2. Maintain the existing AI annotation platform.",
+      "1. Assisted in frontend development of the new AI annotation platform.",
+      "2. Maintained the existing AI annotation platform.",
     ],
   },
   {
     period: "2015.09-2019.06",
     color: "red",
-    title: "Management of Information Systems | National ChengChi University",
+    title: "Management of Information Systems | National Chengchi University",
     blocks: [
       { heading: "Graduation project" },
       "A Nail Art Information Integration System",

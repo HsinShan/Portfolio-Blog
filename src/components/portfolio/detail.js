@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, Button } from "antd";
+import { useNavigate } from "react-router-dom";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
 import useContent from "../../content";
 import StatCards from "../common/statCards";
@@ -10,7 +11,8 @@ const MODAL_WIDTH = { laptop: "65%", pad: "90%", mobile: "100%" };
 
 const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
   const { UI } = useContent();
-  const { title, subtitle, description, results, period, tags, url, urlType, stats } = project;
+  const { title, subtitle, description, results, period, tags, url, urlType, stats, reportPath } = project;
+  const navigate = useNavigate();
   const device = useDeviceDetect();
   const width = MODAL_WIDTH[device];
   return (
@@ -22,6 +24,20 @@ const Detail = ({ handleOk, handleCancel, isVisible, project }) => {
       onCancel={handleCancel}
       width={width}
       footer={[
+        // in-site report page (e.g. job-market-2026): close the modal, then route
+        reportPath ? (
+          <Button
+            key="report"
+            type="primary"
+            className="url"
+            onClick={() => {
+              handleOk();
+              navigate(reportPath);
+            }}
+          >
+            {UI.portfolio.seeReport}
+          </Button>
+        ) : null,
         // Projects without a public repo (e.g. url omitted) show only Close
         url ? (
           <Button

@@ -27,7 +27,8 @@ const Product = () => {
       <StatCards stats={PRODUCT.stats} className="product-stats" />
       <p className="product-stats-period">{PRODUCT.statsPeriod}</p>
 
-      <Reveal className="product-shot">
+      {/* above the fold and this page's LCP: a fade-in (opacity 0) would delay LCP, so no Reveal */}
+      <div className="product-shot">
         <img
           src={PRODUCT.image.src}
           alt={PRODUCT.image.alt}
@@ -35,8 +36,10 @@ const Product = () => {
           height={PRODUCT.image.height}
           loading="eager"
           decoding="async"
+          // measured LCP of this page; lowercase because React 18.2 has no fetchPriority prop
+          fetchpriority="high"
         />
-      </Reveal>
+      </div>
 
       {PRODUCT.sections.map((section) => {
         const List = section.ordered ? "ol" : "ul";

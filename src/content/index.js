@@ -15,6 +15,8 @@ import PROJECTS_FRONTEND_ZH from "./zh/projectsFrontend";
 import PROJECTS_FRONTEND_EN from "./en/projectsFrontend";
 import PRODUCT_ZH from "./zh/product";
 import PRODUCT_EN from "./en/product";
+import JOB_MARKET_2026_ZH from "./zh/jobMarket2026";
+import JOB_MARKET_2026_EN from "./en/jobMarket2026";
 
 export const CONTENT = {
   zh: {
@@ -25,6 +27,7 @@ export const CONTENT = {
     PROJECTS: PROJECTS_ZH,
     PROJECTS_FRONTEND: PROJECTS_FRONTEND_ZH,
     PRODUCT: PRODUCT_ZH,
+    JOB_MARKET_2026: JOB_MARKET_2026_ZH,
   },
   en: {
     UI: UI_EN,
@@ -34,6 +37,7 @@ export const CONTENT = {
     PROJECTS: PROJECTS_EN,
     PROJECTS_FRONTEND: PROJECTS_FRONTEND_EN,
     PRODUCT: PRODUCT_EN,
+    JOB_MARKET_2026: JOB_MARKET_2026_EN,
   },
 };
 

@@ -16,7 +16,7 @@ const PRODUCT = {
   },
   stats: [
     { value: "2,300+", label: "active users" },
-    { value: "21,000", label: "events" },
+    { value: "21K+", label: "events" },
     { value: "29", label: "GA4 events" },
     { value: "193", label: "automated tests" },
   ],

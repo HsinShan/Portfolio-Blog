@@ -1,5 +1,35 @@
 const PROJECTS = [
   {
+    category: "2026 Personal Research",
+    tags: ["Web Scraping", "NLP", "Topic Modeling", "Hypothesis Testing", "Quantile Regression", "Data Visualization"],
+    projects: [
+      {
+        title: "AI's Impact on Taiwan's Data Job Market: 2025 vs 2026 (2026/11)",
+        subtitle: "Personal Research",
+        stats: [
+          { value: "1,890 → 2,200", label: "job postings (2025 → 2026)" },
+          { value: "40.9% → 58.0%", label: "postings with AI in the title" },
+          { value: "~+14%", label: "AI-skill salary premium (median)" },
+        ],
+        period: "2026.11",
+        image: "/images/job-market-2026-en.png",
+        // numbers: Notion「收斂報告 v2」Step 1／2 (same source as content/zh/jobMarket2026.js)
+        description:
+          "Scraped 2026 data job postings from 104 Job Bank (Taiwan's largest job board) and compared them with the 2025 dataset under the same cleaning rules<br/>Goal: test whether job titles, responsibilities, skill requirements and salaries in data roles have changed as AI went mainstream<h3>Methods</h3>1. Scraping & cleaning: applied the same v2 cleaning rules to both years (1,890 postings in 2025, 2,200 in 2026)<br/>2. Topic modeling: applied the 2025 LDA model to both years, then retrained 50 models on 2026 data and kept only the topics most models agreed on<br/>3. Hypothesis testing: two-proportion z-tests with 95% CIs and BH-FDR correction for multiple comparisons (significant at q &lt; 0.05)<br/>4. Salary: median (quantile) regression with a year interaction term to test whether the AI-skill premium changed",
+        results:
+          "Data job postings shifted toward applied AI integration. DA/DE postings without AI in the title made up a smaller share, but SQL and statistics requirements showed no detectable change. Postings requiring AI skills carried a ~14% higher median salary in both years<br/><br/>"
+          + "<span class='highlight'>1. Postings with \"AI\" in the title surged, driven mainly by a different mix of postings in 2026 rather than by retitling existing jobs</span><br/>・Postings with AI in the title: 40.9% → 58.0%<br/>・Among the 364 postings that appeared in both snapshots, the AI-titled share rose only from 42.0% to 45.3%, so little retitling occurred<br/>→ Most of the increase comes from a change in which jobs were posted in 2026<br/><br/>"
+          + "<span class='highlight'>2. Content shifted from \"training models\" to \"building AI into products and processes\"</span><br/>・Topic shares (using the 2025 topic model): \"AI model development & training\" 12.0% → 8.9%; \"requirements & project management\" 9.8% → 15.0%; \"AI systems & software integration\" 8.5% → 14.3%<br/>・Postings requiring deep learning: 19.5% → 13.1%<br/>・Terms that became more common in descriptions: agent 1.8% → 11.0%, RAG 2.5% → 6.6%<br/><br/>"
+          + "<span class='highlight'>3. DA/DE postings without AI in the title made up a smaller share; DE appears to grow only because AI-titled postings are being classified as DE</span><br/>・Analyst postings (BA/DA/DS) without AI in the title: 36.1% → 25.7%<br/>・All DE: 21.5% → 25.6%. Broken down, DE without AI in the title fell (17.2% → 12.9%), while AI-titled DE rose (4.3% → 12.8%)<br/><span class='note'>Note: these are shares of all postings, not posting counts</span><br/><br/>"
+          + "<span class='highlight'>4. Analyst postings without AI in the title: SQL and statistics requirements held steady; process automation and generative AI are the new additions</span><br/>・Descriptions mentioning SQL: 9.4% → 9.7%; statistics: 14.2% → 12.2%; neither shows a detectable difference<br/>・Process automation (incl. RPA) 4.7% → 9.6%; generative AI 1.2% → 3.9% (mainly in DS postings)<br/>→ SQL and statistics remain table stakes; automation and GenAI tools are a plus<br/><br/>"
+          + "<span class='highlight'>5. Postings requiring AI skills have a ~14% higher median salary, and the premium held in 2026 even as AI became mainstream</span><br/>・Controlling for job category, experience, education, company size and remote work: +13.5% in 2025 and +14.3% in 2026; the year-to-year difference is not significant<br/>・Overall salaries showed no detectable change (nominal, not inflation-adjusted)<br/><span class='note'>Note: the ~+14% is estimated across all data postings; analyst roles alone show no detectable premium</span>",
+        tags: ["Web Scraping", "NLP", "LDA", "Hypothesis Testing", "Quantile Regression", "Recharts"],
+        // in-site report page; no repo link (private repo)
+        reportPath: "/portfolio-data/job-market-2026",
+      },
+    ],
+  },
+  {
     category: "2025 Personal Research",
     tags: [
       "NLP",
@@ -83,13 +113,13 @@ const PROJECTS = [
         description:
           "Two lines of research: <br/> A. <span class='bold'>Predictive</span>: forecast next-day rentals from the past year of data (Random Forest)<br/>B. <span class='bold'>Explanatory</span>: analysis of total rentals and of differences between registered and casual users",
         results:
-          "1. Forecasts captured upward and downward trends (adding the previous week's average gave the best results)<br/>2. <span class='highlight'>Casual users rent significantly more on weekends than weekdays; registered users show the opposite</span> (One-way Anova + Post Hoc)<br/>3. Rentals are affected by <span class='highlight'>weather</span> (PLS)",
+          "1. Forecasts captured upward and downward trends (adding the previous week's average gave the best results)<br/>2. <span class='highlight'>Casual users rent significantly more on weekends than weekdays; registered users show the opposite</span> (One-way ANOVA + Post Hoc)<br/>3. Rentals are affected by <span class='highlight'>weather</span> (PLS)",
 
         tags: [
           "Rolling Window Prediction",
           "Random Forest",
           "Statistical Modeling",
-          "One-way Anova",
+          "One-way ANOVA",
           "Post Hoc",
           "PLS",
         ],

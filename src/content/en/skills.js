@@ -34,10 +34,10 @@ const SKILLS = [
       "Python (Jupyter)",
       "SQL (T-SQL)",
       "Git",
-      "Javascript",
+      "JavaScript",
       "HTML/CSS",
       "React/Vue",
-      "Rest API",
+      "REST API",
     ],
   },
   {
