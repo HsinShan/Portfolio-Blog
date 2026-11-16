@@ -15,7 +15,7 @@ const PROFILE = {
       text: "Bringing my analytics and frontend experience together in one launched product",
       to: "/product",
     },
-    text: "More portfolios",
+    text: "More projects",
     links: [
       { to: "/portfolio-data", label: "Data Portfolio" },
       { to: "/portfolio-frontend", label: "Frontend Portfolio" },
@@ -47,7 +47,7 @@ const PROFILE = {
     title: "Language",
     score: "TOEIC: 875",
     date: "Date: 2021.09.26",
-    transcript: { label: "Transcript : ", linkText: "LINK", href: "https://reurl.cc/RrDOZD" },
+    transcript: { label: "Transcript: ", linkText: "LINK", href: "https://reurl.cc/RrDOZD" },
   },
 };
 

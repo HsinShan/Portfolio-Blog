@@ -101,7 +101,7 @@ const EXPERIENCE = [
     color: "blue",
     title: "前端應用開發工程師｜台灣樂天市場",
     blocks: [
-      "Javascript, React, ROR, Graphql",
+      "JavaScript, React, ROR, GraphQL",
       { heading: "主要專案" },
       "1. 全新商品評價頁",
       "2. 全新店家促銷活動頁",

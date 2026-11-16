@@ -28,7 +28,7 @@ const PROJECTS_FRONTEND = [
         image: "/images/portfolio/ZpGwTvS.png",
         skills: [
           "Frontend: React + Sass",
-          "Backend: Javascript + Mysql",
+          "Backend: JavaScript + MySQL",
           "Run with: Docker",
         ],
         description: [],
@@ -112,12 +112,12 @@ const PROJECTS_FRONTEND = [
         subtitle: "2017.01-2018.06 Capstone Project",
         image: "/images/portfolio/dqqFzO4.jpg",
         skills: [
-          "Desktop: php+html+css+jquery",
-          "Mobile: php+Jquery mobile(html/css/jquery)",
+          "Desktop: PHP+HTML+CSS+jQuery",
+          "Mobile: PHP+jQuery Mobile (HTML/CSS/jQuery)",
         ],
         description: [
-          "Frontend development for web, mobile, and tablet (html/css/jquery)",
-          "Database design and setup (mysql)",
+          "Frontend development for web, mobile, and tablet (HTML/CSS/jQuery)",
+          "Database design and setup (MySQL)",
           "Supported PHP backend development, site testing, and frontend-backend integration",
         ],
         links: {
@@ -134,7 +134,7 @@ const PROJECTS_FRONTEND = [
         title: "HappyTravel Club / Travel Agency Website",
         subtitle: "Self-taught Personal Project",
         image: "/images/portfolio/t4fVzPS.jpg",
-        skills: ["Html+CSS+Javascript+Bootstrap"],
+        skills: ["HTML+CSS+JavaScript+Bootstrap"],
         description: [],
         links: {
           demo: "https://hsinshan.github.io/Portfolio/HappyTravel%20Club/",
@@ -167,8 +167,8 @@ const PROJECTS_FRONTEND = [
   },
   {
     group: 2,
-    category: "Javascript",
-    title: "Javascript Mini Games",
+    category: "JavaScript",
+    title: "JavaScript Mini Games",
     subtitle: "Self-taught Personal Project: one theme a day, five-day challenge",
     projects: [
       {

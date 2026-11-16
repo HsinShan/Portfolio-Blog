@@ -53,7 +53,9 @@ const buildMenuItems = (UI, horizontal) => {
 const Navbar = ({ mode = "vertical", onClose }) => {
   const { UI } = useContent();
   const pathname = usePathname();
-  const selectedKeys = LINKS.some((link) => link.path === pathname) ? [pathname] : [];
+  // sub-pages (e.g. /portfolio-data/job-market-2026) keep their parent item selected
+  const match = LINKS.find((link) => link.path === pathname || pathname.startsWith(`${link.path}/`));
+  const selectedKeys = match ? [match.path] : [];
   const horizontal = mode === "horizontal";
 
   return (

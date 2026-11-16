@@ -1,5 +1,17 @@
 @import "./base";
 
+// lazy page placeholder / load error: keep the page height so the layout doesn't jump
+.page-loading,
+.page-error {
+  min-height: 60vh;
+  background-color: $page-background;
+}
+
+.page-error {
+  padding: 60px 16px;
+  text-align: center;
+}
+
 .content {
   // header is position: fixed, so push content below it
   padding-top: $header-height;

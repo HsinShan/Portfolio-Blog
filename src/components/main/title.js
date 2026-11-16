@@ -11,7 +11,8 @@ const Title = () => {
   return (
     <div className="title">
       <center>
-        <LoadingImg src={meImg} width="180" height="180" loading="eager" />
+        {/* home page LCP (measured); lowercase because React 18.2 has no fetchPriority prop */}
+        <LoadingImg src={meImg} width="180" height="180" loading="eager" fetchpriority="high" />
       </center>
       <h1>{name}</h1>
       <h3>{headline}</h3>
