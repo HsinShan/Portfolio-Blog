@@ -28,8 +28,8 @@ const StockTa = () => {
           <p className="conclusion-lead">
             <Emph text={S.meta.conclusion.lead} />
           </p>
-          {S.meta.conclusion.lines.map((t) => (
-            <p key={t}>
+          {S.meta.conclusion.lines.map((t, i) => (
+            <p key={i}>
               <Emph text={t} />
             </p>
           ))}
@@ -57,8 +57,8 @@ const StockTa = () => {
               <span className="kpi-label">{k.label}</span>
               {k.tags ? (
                 <ul className="kpi-tags">
-                  {k.tags.map((t) => (
-                    <li key={t}>{t}</li>
+                  {k.tags.map((t, i) => (
+                    <li key={i}>{t}</li>
                   ))}
                 </ul>
               ) : (
@@ -88,8 +88,8 @@ const StockTa = () => {
               <li key={r.title}>
                 <strong>{r.title}</strong>
                 <ul className="case-rule-points">
-                  {r.body.map((t) => (
-                    <li key={t}>{t}</li>
+                  {r.body.map((t, i) => (
+                    <li key={i}>{t}</li>
                   ))}
                 </ul>
               </li>
@@ -102,8 +102,8 @@ const StockTa = () => {
         <section className="chart-card case-card">
           <h2>{S.methods.title}</h2>
           <ul className="case-methods">
-            {S.methods.items.map((t) => (
-              <li key={[].concat(t).join()}>
+            {S.methods.items.map((t, i) => (
+              <li key={i}>
                 <Lines text={t} />
               </li>
             ))}

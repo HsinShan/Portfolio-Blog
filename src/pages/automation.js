@@ -58,13 +58,13 @@ const Automation = () => {
                   <div className="subtitle">{card.subtitle}</div>
                   <h2 className="title">{card.title}</h2>
                   <div className="card-skills">
-                    {card.skills.map((s) => (
-                      <p key={s}>{s}</p>
+                    {card.skills.map((s, i) => (
+                      <p key={i}>{s}</p>
                     ))}
                   </div>
                   <ul className="description">
-                    {card.description.map((d) => (
-                      <li key={d}>{d}</li>
+                    {card.description.map((d, i) => (
+                      <li key={i}>{d}</li>
                     ))}
                   </ul>
                   <div className="card-actions">

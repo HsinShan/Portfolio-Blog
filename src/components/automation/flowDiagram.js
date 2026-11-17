@@ -12,8 +12,8 @@ export const Arrow = () => (
 // Content text may be a string or an array of lines (the page never uses ；／。 inside a
 // field: each clause is its own line). Renders each line as a block-level span.
 export const Lines = ({ text }) =>
-  [].concat(text).map((t) => (
-    <span className="line" key={t}>
+  [].concat(text).map((t, i) => (
+    <span className="line" key={i}>
       {t}
     </span>
   ));
