@@ -17,6 +17,8 @@ import PRODUCT_ZH from "./zh/product";
 import PRODUCT_EN from "./en/product";
 import JOB_MARKET_2026_ZH from "./zh/jobMarket2026";
 import JOB_MARKET_2026_EN from "./en/jobMarket2026";
+import STOCK_TA_ZH from "./zh/stockTa";
+import STOCK_TA_EN from "./en/stockTa";
 
 export const CONTENT = {
   zh: {
@@ -28,6 +30,7 @@ export const CONTENT = {
     PROJECTS_FRONTEND: PROJECTS_FRONTEND_ZH,
     PRODUCT: PRODUCT_ZH,
     JOB_MARKET_2026: JOB_MARKET_2026_ZH,
+    STOCK_TA: STOCK_TA_ZH,
   },
   en: {
     UI: UI_EN,
@@ -38,6 +41,7 @@ export const CONTENT = {
     PROJECTS_FRONTEND: PROJECTS_FRONTEND_EN,
     PRODUCT: PRODUCT_EN,
     JOB_MARKET_2026: JOB_MARKET_2026_EN,
+    STOCK_TA: STOCK_TA_EN,
   },
 };
 
