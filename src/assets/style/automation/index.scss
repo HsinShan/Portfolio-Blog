@@ -1,0 +1,412 @@
+@import "../base";
+
+// /automation tab page: intro line + cards whose cover is an HTML mini diagram
+.automation {
+  // one card is shorter than the screen: keep the page background down to the bottom
+  // (same as .product)
+  min-height: calc(100vh - #{$header-height});
+
+  @include mobile {
+    min-height: calc(100vh - #{$header-height-mobile});
+  }
+
+  .automation-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+    color: $font-brown-light;
+  }
+
+  // one card: center it under the centered title instead of pinning it to the left
+  // column of the shared 2/3-column grid (auto-fit keeps working when cards are added)
+  .category-projects {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+    justify-content: center;
+
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  // card title is an <h2> for the outline; drop the browser margin so spacing
+  // matches the other portfolio cards (they use <div class="title">)
+  .automation-card .title {
+    margin: 0;
+  }
+
+  .automation-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+
+    .cover-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cover-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: $white;
+      box-shadow: 0 1px 3px rgba($gray-dark, 0.12);
+      line-height: 1.5;
+
+      strong {
+        font-size: 15px;
+        color: $font-brown;
+      }
+
+      span {
+        font-size: 12px;
+        color: $font-brown-light;
+      }
+    }
+
+    .cover-arrow {
+      display: flex;
+      color: $font-brown-light;
+    }
+  }
+}
+
+// case page /automation/stock-ta: builds on report/index.scss (.report, KPI row, facts)
+.report.case {
+  // a field given as several lines (content never uses ；／。 inside a field)
+  .line {
+    display: block;
+  }
+
+  // facts: label on the left, its lines stacked beside it
+  .report-facts .lines {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  // KPI whose point is the list itself (整合分析面向): tags instead of a big number
+  .kpi-tags {
+    list-style: none;
+    margin: 4px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+
+    li {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba($page-background, 0.5);
+      border: 1px solid $chart-grid;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.6;
+      color: $font-brown;
+    }
+  }
+
+  .case-card {
+    margin-top: 16px;
+
+    h2 {
+      font-size: 17px;
+      line-height: 1.5;
+      margin: 0 0 12px;
+    }
+  }
+
+  // arrows: right on wide screens, down on phones (stages stack)
+  .flow-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $chart-context;
+  }
+
+  // ---- 3 cloud routines + project facts (above the KPI row) ----
+  .case-sched {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    // facts sit under the diagram as supporting info, split off by a rule
+    .report-facts {
+      margin-top: 16px;
+      margin-bottom: 0;
+      padding-top: 12px;
+      border-top: 1px solid $chart-grid;
+    }
+  }
+
+  .sched {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+
+    @include pad {
+      grid-template-columns: minmax(0, 1fr);
+
+      .flow-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .sched-col {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sched-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: $chart-context;
+
+    @include pad {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .sched-link-label {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    color: $font-brown-light;
+  }
+
+  .flow-node .sched-name {
+    font-size: 12px;
+    font-family: monospace;
+  }
+
+  .flow-node .sched-when {
+    font-weight: bold;
+    color: $font-brown;
+  }
+
+  // ---- system data flow ----
+  .flow {
+    margin: 0;
+
+    figcaption {
+      margin-top: 12px;
+      font-size: 13px;
+      color: $font-brown-light;
+    }
+  }
+
+  .flow-stages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 8px;
+
+    @include pad {
+      grid-template-columns: minmax(0, 1fr);
+
+      .flow-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .flow-stage-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    margin: 0 0 8px;
+  }
+
+  .flow-stage-no,
+  .loop-no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: $font-brown-light;
+    color: $white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .flow-nodes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .flow-node {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid $chart-grid;
+    background: rgba($page-background, 0.25);
+    font-size: 13px;
+    line-height: 1.6;
+    color: $font-brown;
+
+    strong {
+      font-size: 14px;
+      color: $font-brown;
+    }
+
+    span {
+      color: $font-brown-light;
+    }
+
+  }
+
+  // ---- build loop ----
+  .loop {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 8px;
+
+    // laptop widths where 7 steps + 6 arrows (~1080px) don't fit in one row:
+    // wrap into a grid without arrows (the step numbers carry the order),
+    // so no arrow dangles at a row end
+    @media (min-width: 921px) and (max-width: 1215px) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      .flow-link {
+        display: none;
+      }
+    }
+
+    // tablet / phone: compact numbered list (number on the left), no arrows —
+    // 7 boxes with 6 arrows stacked vertically took ~2 screens
+    @include pad {
+      flex-direction: column;
+      gap: 6px;
+
+      .flow-link {
+        display: none;
+      }
+
+      .loop-step {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 10px;
+        row-gap: 0;
+        padding: 8px 12px;
+
+        .loop-no {
+          grid-row: span 2;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  .loop-step {
+    flex: 1 1 0;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: rgba($page-background, 0.25);
+    font-size: 13px;
+    line-height: 1.6;
+
+    strong {
+      font-size: 14px;
+      color: $font-brown;
+    }
+
+    span {
+      color: $font-brown-light;
+    }
+
+    // the step number is a span too: keep it white on the brown circle
+    .loop-no {
+      color: $white;
+    }
+  }
+
+  // ---- judgement rules ----
+  .case-rules {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    @include mobile {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    > li {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px;
+      border-radius: 8px;
+      background: rgba($page-background, 0.25);
+      font-size: 13px;
+      line-height: 1.7;
+
+      strong {
+        font-size: 14px;
+        color: $font-brown;
+      }
+
+    }
+  }
+
+  .case-rule-points {
+    margin: 0;
+    padding-left: 18px;
+    list-style: disc;
+    color: $font-brown;
+
+    li {
+      line-height: 1.7;
+    }
+  }
+
+  .case-example {
+    margin: 12px 0 0;
+    font-size: 12px;
+    color: $font-brown-light;
+  }
+
+  .case-methods {
+    margin: 0;
+    padding-left: 20px;
+
+    li {
+      line-height: 1.8;
+      color: $font-brown;
+    }
+  }
+}

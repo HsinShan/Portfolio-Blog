@@ -6,6 +6,8 @@ import Header from "./components/header";
 import DataPortfolio from "./pages/dataPortfolio";
 import FrontendPortfolio from "./pages/frontendPortfolio";
 import Product from "./pages/product";
+import Automation from "./pages/automation";
+import StockTa from "./pages/stockTa";
 import ChunkErrorBoundary from "./components/common/chunkErrorBoundary";
 
 // own chunk: recharts only loads when the report page is opened
@@ -23,6 +25,8 @@ function App() {
           <Route path="/portfolio-data" element={<DataPortfolio />} />
           <Route path="/portfolio-frontend" element={<FrontendPortfolio />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/automation" element={<Automation />} />
+          <Route path="/automation/stock-ta" element={<StockTa />} />
           <Route
             path="/portfolio-data/job-market-2026"
             element={

@@ -6,6 +6,7 @@ import {
   AppstoreOutlined,
   LineChartOutlined,
   LaptopOutlined,
+  RobotOutlined,
 } from "@ant-design/icons";
 import usePathname from "../../hooks/usePathname";
 import useContent from "../../content";
@@ -17,6 +18,7 @@ const LINKS = [
   { path: "/", label: "about", icon: <UserOutlined /> },
   { path: "/product", label: "product", icon: <AppstoreOutlined />, group: "portfolio" },
   { path: "/portfolio-data", label: "dataScience", icon: <LineChartOutlined />, group: "portfolio" },
+  { path: "/automation", label: "automation", icon: <RobotOutlined />, group: "portfolio" },
   { path: "/portfolio-frontend", label: "frontend", icon: <LaptopOutlined />, group: "portfolio" },
 ];
 

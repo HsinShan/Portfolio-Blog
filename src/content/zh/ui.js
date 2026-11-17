@@ -21,6 +21,12 @@ const UI = {
     // labels for project link buttons, keyed like `links` in projectsFrontend.js
     links: { demo: "展示", code: "程式碼", frontendCode: "前端程式碼", backendCode: "後端程式碼", codepen: "CodePen", docs: "文件" },
   },
+  // /automation tab page
+  automation: {
+    title: "AI 自動化作品集",
+    intro: "用 Claude Code 從需求、規則到雲端排程，搭建每天自己跑的自動化系統",
+    seeCase: "看搭建流程",
+  },
   // lazy page chunk failed to load (components/common/chunkErrorBoundary.js)
   loadError: { message: "頁面載入失敗，請重新整理再試一次", reload: "重新整理" },
   nav: {
@@ -31,6 +37,7 @@ const UI = {
     dataScience: "資料科學",
     frontend: "前端開發",
     product: "產品開發",
+    automation: "AI 自動化",
   },
 };
 
