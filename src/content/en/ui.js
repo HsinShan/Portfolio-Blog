@@ -20,6 +20,12 @@ const UI = {
     // labels for project link buttons, keyed like `links` in projectsFrontend.js
     links: { demo: "Demo", code: "Code", frontendCode: "Frontend Code", backendCode: "Backend Code", codepen: "CodePen", docs: "Docs" },
   },
+  // /automation tab page
+  automation: {
+    title: "AI Automation Portfolio",
+    intro: "Automation systems that run on their own every day, built with Claude Code from requirements and rules to cloud scheduling",
+    seeCase: "How it was built",
+  },
   // lazy page chunk failed to load (components/common/chunkErrorBoundary.js)
   loadError: { message: "This page failed to load. Please refresh and try again.", reload: "Refresh" },
   nav: {
@@ -30,6 +36,7 @@ const UI = {
     dataScience: "Data Science",
     frontend: "Frontend",
     product: "Product",
+    automation: "AI Automation",
   },
 };
 
