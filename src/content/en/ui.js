@@ -24,7 +24,7 @@ const UI = {
   automation: {
     title: "AI Automation Portfolio",
     intro: "Automation systems that run on their own every day, built with Claude Code from requirements and rules to cloud scheduling",
-    seeCase: "How it was built",
+    seeCase: "See More",
   },
   // lazy page chunk failed to load (components/common/chunkErrorBoundary.js)
   loadError: { message: "This page failed to load. Please refresh and try again.", reload: "Refresh" },

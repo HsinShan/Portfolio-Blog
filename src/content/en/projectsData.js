@@ -7,9 +7,10 @@ const PROJECTS = [
         title: "AI's Impact on Taiwan's Data Job Market: 2025 vs 2026 (2026/11)",
         subtitle: "Personal Research",
         stats: [
-          { value: "1,890 → 2,200", label: "job postings (2025 → 2026)" },
-          { value: "40.9% → 58.0%", label: "postings with AI in the title" },
-          { value: "~+14%", label: "AI-skill salary premium (median)" },
+          // same 3 figures as the report KPI row and the experience entry (contract #11)
+          { value: "40.9%\u00a0\u2060→ 58.0%", label: "AI-Titled Postings" },
+          { value: "36.1%\u00a0\u2060→ 25.7%", label: "Non-AI Analyst Share" },
+          { value: "~+14%", label: "AI-Skill Salary Premium (Median)" },
         ],
         period: "2026.11",
         image: "/images/job-market-2026-en.png",
@@ -43,12 +44,6 @@ const PROJECTS = [
         title:
           "Decoding Taiwan's Data Job Market (2025/04): Role Classification, Skill Trends, and Salary Insights",
         subtitle: "Personal Research",
-        // stat cards at the top of the detail modal; values also appear in the text below
-        stats: [
-          { value: "1,954", label: "data job postings" },
-          { value: "0.645", label: "salary model Adj.\u00a0R²" },
-          { value: "+53K", label: "master's + communication (max)" },
-        ],
         period: "2025.04",
         image: "/images/job-market-2025-en.png",
         description:
@@ -128,11 +123,6 @@ const PROJECTS = [
       {
         title: "Using AI and Social Data to Support Investment Decisions",
         subtitle: "Big Data & Business Analytics, Midterm Project",
-        // stat cards at the top of the detail modal; values also appear in the text below
-        stats: [
-          { value: "77%", label: "best model accuracy" },
-          { value: "700", label: "keywords per bullish / bearish side" },
-        ],
         period: "2021.03~2021.05",
         image: "/images/portfolio/F7708kK.png",
         description:

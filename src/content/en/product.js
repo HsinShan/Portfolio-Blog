@@ -7,7 +7,7 @@ const PRODUCT = {
   period: "2026",
   title: "Color Palette Tool",
   subtitle: "Extracting Representative Colors from Photos, with Funnel Analysis Driving Iterations",
-  lead: "A web tool I built and launched on my own, with the GA4 events and upgrade funnel designed myself",
+  lead: "A web tool I built and launched on my own, with the 29 GA4 events and upgrade funnel designed myself",
   image: {
     src: "/images/color-tool-workspace.jpg",
     width: 1600,
@@ -15,13 +15,14 @@ const PRODUCT = {
     alt: "The color palette tool's swatch library and manual palette screen",
   },
   stats: [
-    { value: "2,300+", label: "active users" },
-    { value: "21K+", label: "events" },
-    { value: "29", label: "GA4 events" },
-    { value: "193", label: "automated tests" },
+    // outcomes / insights only (contract #11); event and test counts stay in the text
+    { value: "2,300+", label: "Active Users" },
+    { value: "16%", label: "Landing → First Upload" },
+    { value: "105\u00a0\u2060→ 21", label: "Upgrade Funnel, First → Last" },
+    { value: "17/21", label: "Upgrade Clicks from Sample Data" },
   ],
   // shown under the stat cards; date range the stats cover
-  statsPeriod: "Data period: 2026/08/25 ~ 2026/11/04",
+  statsPeriod: "Data period: 2026/08/25 ~ 2026/11/04, 21K+ events",
   sections: [
     {
       heading: "Core Features",

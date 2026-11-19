@@ -41,6 +41,8 @@ const Block = ({ block }) => {
     );
   }
   if (block.heading) return <p className="block-title">{block.heading}</p>;
+  // per-project stat cards inside a sub-section (independent-projects entry)
+  if (block.stats) return <StatCards stats={block.stats} compact className="work-stats" />;
   if (block.to)
     return (
       <p>
@@ -60,13 +62,16 @@ const Block = ({ block }) => {
 // sub-section becomes a card; 2+ cards flow into two columns on laptop (see experience.scss).
 const ItemBody = ({ blocks }) => {
   const [intro, ...sections] = toGroups(blocks);
+  // stat cards need the full width (half-width columns wrap "2,300+" / "3 分鐘內"),
+  // so entries with per-project stats keep one card per row
+  const twoCols = sections.length > 1 && !sections.some((s) => s.items.some((b) => b.stats));
   return (
     <>
       {intro.items.map((block, i) => (
         <Block block={block} key={i} />
       ))}
       {sections.length > 0 && (
-        <div className={sections.length > 1 ? "sections multi" : "sections"}>
+        <div className={twoCols ? "sections multi" : "sections"}>
           {sections.map((section, i) => (
             <div className="section-card" key={i}>
               <Block block={section.heading} />

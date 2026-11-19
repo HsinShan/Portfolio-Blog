@@ -4,7 +4,8 @@ import React from "react";
 // Skips digits glued to letters (GA4, P&L-style codes) and list markers ("1. ").
 // No lookbehind on purpose: Safari < 16.4 can't parse it and the whole bundle
 // would fail, so the "not preceded by a letter/digit/dot" check is done in code.
-const NUMBER = /[-+]?\d(?:[\d,.]*\d)?(?:\+|%)?(?!\.\s)(?![A-Za-z\d])/g;
+// ":" between digits keeps clock times ("07:00") as one number
+const NUMBER = /[-+]?\d(?:[\d,.:]*\d)?(?:\+|%)?(?!\.\s)(?![A-Za-z\d])/g;
 const GLUED_BEFORE = /[A-Za-z\d.]/;
 
 const HighlightNumbers = ({ text }) => {

@@ -26,11 +26,12 @@ const JOB_MARKET_2026 = {
     ],
   },
 
-  // KPI row: big = 2026, small = 2025 and the change; premium is a single value
+  // KPI row: big = 2026, small = 2025 and the change; premium is a single value.
+  // Same 3 figures as the project card (projectsData.js) and the experience entry (contract #11);
+  // note = the insight line under the change (ai_impact 2.1, 9 / 1.1, 1.2)
   kpis: [
-    { label: "職稱掛 AI 的職缺", from: 40.9, to: 58.0 },
-    { label: "傳統分析師職缺占比", from: 36.1, to: 25.7 },
-    { label: "傳統 DE 職缺占比", from: 17.2, to: 12.9 },
+    { label: "職稱掛 AI 的職缺", from: 40.9, to: 58.0, note: "同一批職缺只 42.0% → 45.3%：是新職缺，不是改名" },
+    { label: "傳統分析師職缺占比", from: 36.1, to: 25.7, note: "傳統 DE 也從 17.2% 降到 12.9%" },
     { label: "AI 技能薪資溢價（中位數）", value: "約 +14%", sub: "2025 +13.5%／2026 +14.3%" },
   ],
 

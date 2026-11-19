@@ -85,7 +85,7 @@ const JobMarket2026 = () => {
         ))}
       </ul>
 
-      <ul className="report-kpis">
+      <ul className="report-kpis" style={{ "--kpi-cols": R.kpis.length }}>
         {R.kpis.map((k) => {
           const diff = k.to - k.from;
           return (
@@ -105,6 +105,7 @@ const JobMarket2026 = () => {
                   </>
                 )}
               </span>
+              {k.note && <span className="kpi-sub">{k.note}</span>}
             </li>
           );
         })}

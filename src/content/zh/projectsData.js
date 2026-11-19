@@ -7,8 +7,9 @@ const PROJECTS = [
         title: "AI 對台灣數據職缺的影響：2025 vs 2026 對照（2026/11）",
         subtitle: "自製研究",
         stats: [
-          { value: "1,890 → 2,200", label: "筆職缺（2025 → 2026）" },
-          { value: "40.9% → 58.0%", label: "職稱掛 AI 的職缺" },
+          // same 3 figures as the report KPI row and the experience entry (contract #11)
+          { value: "40.9%\u00a0\u2060→ 58.0%", label: "職稱掛 AI 的職缺" },
+          { value: "36.1%\u00a0\u2060→ 25.7%", label: "傳統分析師職缺占比" },
           { value: "約 +14%", label: "AI 技能薪資溢價（中位數）" },
         ],
         period: "2026.11",
@@ -43,12 +44,6 @@ const PROJECTS = [
         title:
           "台灣數據職缺市場解析（2025/04）：職務分類、技能趨勢與薪資洞察",
         subtitle: "自製研究",
-        // stat cards at the top of the detail modal; values also appear in the text below
-        stats: [
-          { value: "1,954", label: "筆數據職缺" },
-          { value: "0.645", label: "薪資模型 Adj.\u00a0R²" },
-          { value: "+53K", label: "碩士＋溝通能力（最高）" },
-        ],
         period: "2025.04",
         image: "/images/job-market-2025-zh.png",
         description:
@@ -127,11 +122,6 @@ const PROJECTS = [
       {
         title: "用AI及社群數據協助投資決策",
         subtitle: "大數據與商業分析期中專案",
-        // stat cards at the top of the detail modal; values also appear in the text below
-        stats: [
-          { value: "77%", label: "最佳模型準確度" },
-          { value: "700", label: "看漲、看跌各取關鍵字" },
-        ],
         period: "2021.03~2021.05",
         image: "/images/portfolio/F7708kK.png",
         description:

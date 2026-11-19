@@ -64,11 +64,12 @@
     padding: 0;
     margin: 0 0 12px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // one row whatever the KPI count (--kpi-cols set by the page), stacked on phones
+    grid-template-columns: repeat(var(--kpi-cols, 3), 1fr);
     gap: 12px;
 
-    @include pad {
-      grid-template-columns: repeat(2, 1fr);
+    @include mobile {
+      grid-template-columns: 1fr;
     }
 
     li {
