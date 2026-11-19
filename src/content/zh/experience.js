@@ -7,7 +7,7 @@ const EXPERIENCE = [
   {
     period: "2026.03-至今",
     color: "blue",
-    title: "獨立產品開發與分析｜Career Break（職涯空檔）",
+    title: "獨立產品開發與分析｜職涯空檔",
     // one sub-section per project; each project's { stats } block uses the same
     // numbers as its own page (product.js / stockTa.js kpis / jobMarket2026.js kpis)
     // and every value also appears in a bullet of the same sub-section
@@ -52,9 +52,14 @@ const EXPERIENCE = [
         ],
       },
       "◆ 方法：LDA 主題模型、兩比例 z 檢定＋BH-FDR 校正、分位數迴歸（2025 1,890 筆、2026 2,200 筆）",
-      "◆ 發現：職稱掛 AI 的職缺 40.9% → 58.0%，主要是 2026 換了一批職缺在徵，不是舊職缺改名",
-      "◆ 發現：傳統分析師職缺占比 36.1% → 25.7%，但 SQL、統計的要求看不出變化",
-      "◆ 發現：要求 AI 技能的職缺，薪資中位數高約 14%，兩年都在",
+      {
+        lead: "發現：",
+        items: [
+          "職稱：掛 AI 的職缺 40.9% → 58.0%，主要是 2026 換了一批職缺在徵，不是舊職缺改名",
+          "職缺組成：傳統分析師職缺占比 36.1% → 25.7%，但 SQL、統計的要求看不出變化",
+          "薪資：條件相近時，要求 AI 技能的職缺薪資中位數高約 14%，兩年都在",
+        ],
+      },
       { to: "/portfolio-data/job-market-2026", label: "研究報告" },
     ],
   },

@@ -14,7 +14,7 @@ const JOB_MARKET_2026 = {
       lines: [
         "Many postings **put AI in the job title**, and the content moved from \"training models\" to \"**building AI into products and processes**\"",
         "**DA/DE postings without AI in the title made up a smaller share**, but core requirements such as SQL and statistics **showed no detectable change**",
-        "Postings requiring AI skills carried a **~14% higher median salary** in both years",
+        "With other factors held similar, postings requiring AI skills carried a **~14% higher median salary** in both years",
       ],
     },
     facts: [
@@ -161,7 +161,7 @@ const JOB_MARKET_2026 = {
   },
 
   premium: {
-    title: "Postings requiring AI skills have a **~14% higher median salary**, **in both years**",
+    title: "With other factors held similar, postings requiring AI skills have a **~14% higher median salary**, **in both years**",
     measure: ["How much higher the median advertised maximum monthly salary is for postings requiring AI skills, holding other factors constant"],
     note: [
       "Median (quantile) regression controlling for job category, experience, education, company size and remote work",

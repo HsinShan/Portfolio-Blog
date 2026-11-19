@@ -9,6 +9,8 @@ import useContent from "../../content";
 const isBullet = (block) => typeof block === "string" && block.startsWith("◆");
 // short label before the first colon, e.g. "◆ Build:" / "◆ 開發："
 const LEAD_LABEL = /^◆\s*([^:：]{1,14}[:：])\s*/;
+// same label rule for second-level bullets, which carry no "◆"
+const SUB_LABEL = /^([^:：]{1,14}[:：])\s*/;
 
 // Split an entry into sub-sections: blocks before the first heading, then one
 // group per heading (heading + the blocks under it).
@@ -41,6 +43,27 @@ const Block = ({ block }) => {
     );
   }
   if (block.heading) return <p className="block-title">{block.heading}</p>;
+  // "◆ Findings:" with second-level bullets, each led by its own short label
+  if (block.lead)
+    return (
+      <>
+        <p>
+          ◆ <strong className="lead-label">{block.lead}</strong>
+        </p>
+        <ul className="sub-bullets">
+          {block.items.map((item, i) => {
+            const m = item.match(SUB_LABEL);
+            return (
+              <li key={i}>
+                {m && <strong className="lead-label">{m[1]}</strong>}
+                {m && " "}
+                <HighlightNumbers text={m ? item.slice(m[0].length) : item} />
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    );
   // per-project stat cards inside a sub-section (independent-projects entry)
   if (block.stats) return <StatCards stats={block.stats} compact className="work-stats" />;
   if (block.to)

@@ -5,6 +5,7 @@
 //   { to: "/path", label }      -> in-site link (react-router)
 //   { href: "https://...", label } -> external link
 //   { stats: [{ value, label }] }   -> stat cards inside a sub-section (one per project)
+//   { lead: "Findings:", items: ["Label: text", ...] } -> "◆ lead" + second-level bullets
 // stats (optional): [{ value, label }] -> stat cards under the title
 // color: "blue" = work, "red" = education
 
@@ -57,9 +58,14 @@ const EXPERIENCE = [
         ],
       },
       "◆ Methods: LDA topic modeling, two-proportion z-tests with BH-FDR correction, quantile regression (2025 1,890 postings, 2026 2,200)",
-      "◆ Finding: postings with AI in the title rose from 40.9% to 58.0%, mostly because 2026 brought a different set of postings, not renamed old ones",
-      "◆ Finding: analyst postings without AI in the title fell from 36.1% to 25.7%, yet SQL and statistics requirements showed no detectable change",
-      "◆ Finding: postings requiring AI skills carried a ~14% higher median salary in both years",
+      {
+        lead: "Findings:",
+        items: [
+          "Job titles: postings with AI in the title rose from 40.9% to 58.0%, mostly because 2026 brought a different set of postings, not renamed old ones",
+          "Job mix: analyst postings without AI in the title fell from 36.1% to 25.7%, yet SQL and statistics requirements showed no detectable change",
+          "Salary: with other factors held similar, postings requiring AI skills carried a ~14% higher median salary in both years",
+        ],
+      },
       { to: "/portfolio-data/job-market-2026", label: "Research Report" },
     ],
   },
