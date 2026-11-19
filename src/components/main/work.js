@@ -9,6 +9,8 @@ import useContent from "../../content";
 const isBullet = (block) => typeof block === "string" && block.startsWith("◆");
 // short label before the first colon, e.g. "◆ Build:" / "◆ 開發："
 const LEAD_LABEL = /^◆\s*([^:：]{1,14}[:：])\s*/;
+// same label rule for second-level bullets, which carry no "◆"
+const SUB_LABEL = /^([^:：]{1,14}[:：])\s*/;
 
 // Split an entry into sub-sections: blocks before the first heading, then one
 // group per heading (heading + the blocks under it).
@@ -41,6 +43,29 @@ const Block = ({ block }) => {
     );
   }
   if (block.heading) return <p className="block-title">{block.heading}</p>;
+  // "◆ Findings:" with second-level bullets, each led by its own short label
+  if (block.lead)
+    return (
+      <>
+        <p>
+          ◆ <strong className="lead-label">{block.lead}</strong>
+        </p>
+        <ul className="sub-bullets">
+          {block.items.map((item, i) => {
+            const m = item.match(SUB_LABEL);
+            return (
+              <li key={i}>
+                {m && <strong className="lead-label">{m[1]}</strong>}
+                {m && " "}
+                <HighlightNumbers text={m ? item.slice(m[0].length) : item} />
+              </li>
+            );
+          })}
+        </ul>
+      </>
+    );
+  // per-project stat cards inside a sub-section (independent-projects entry)
+  if (block.stats) return <StatCards stats={block.stats} compact className="work-stats" />;
   if (block.to)
     return (
       <p>
@@ -60,13 +85,16 @@ const Block = ({ block }) => {
 // sub-section becomes a card; 2+ cards flow into two columns on laptop (see experience.scss).
 const ItemBody = ({ blocks }) => {
   const [intro, ...sections] = toGroups(blocks);
+  // stat cards need the full width (half-width columns wrap "2,300+" / "3 分鐘內"),
+  // so entries with per-project stats keep one card per row
+  const twoCols = sections.length > 1 && !sections.some((s) => s.items.some((b) => b.stats));
   return (
     <>
       {intro.items.map((block, i) => (
         <Block block={block} key={i} />
       ))}
       {sections.length > 0 && (
-        <div className={sections.length > 1 ? "sections multi" : "sections"}>
+        <div className={twoCols ? "sections multi" : "sections"}>
           {sections.map((section, i) => (
             <div className="section-card" key={i}>
               <Block block={section.heading} />

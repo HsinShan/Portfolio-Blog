@@ -12,7 +12,7 @@ const expandUnits = (s) =>
 const numbersIn = (value) =>
   expandUnits(JSON.stringify(value))
     .replace(/https?:\/\/[^"'\s)]+/g, "")
-    .replace(/\b(src|href|class)=\\?['"][^'"]*\\?['"]/g, "")
+    .replace(/\b(src|href|class|width|height|loading)=\\?['"][^'"]*\\?['"]/g, "")
     .match(/\d[\d,.]*/g)
     ?.map((n) => n.replace(/[,.]$/, "").replace(/,/g, ""))
     .sort() || [];

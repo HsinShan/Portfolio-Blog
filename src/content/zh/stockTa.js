@@ -84,8 +84,7 @@ const STOCK_TA = {
     },
     // the facets themselves are the point, not the count (Shirley 2026-11-17)
     { label: "整合分析面向", tags: ["技術面", "籌碼面", "基本面", "新聞"], sub: "合併為單一份報告" },
-    // 37 = 39 commits up to 4c9760e minus 2 holdings/watchlist-only commits
-    { label: "開發週期", value: "11 天", sub: ["v3.1 → v4.15、37 個 commit", "pytest 38 項測試"] },
+    // 開發週期 card removed (contract #11: effort, not outcome; the period is already in facts)
   ],
 
   // main diagram: system data flow, 4 stages left → right (stacked top → bottom on phones)

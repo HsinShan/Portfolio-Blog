@@ -18,6 +18,7 @@ const PROFILE = {
     text: "More projects",
     links: [
       { to: "/portfolio-data", label: "Data Portfolio" },
+      { to: "/automation", label: "AI Automation Portfolio" },
       { to: "/portfolio-frontend", label: "Frontend Portfolio" },
     ],
   },

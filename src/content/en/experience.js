@@ -4,6 +4,8 @@
 //   { heading: "..." }          -> bold section title
 //   { to: "/path", label }      -> in-site link (react-router)
 //   { href: "https://...", label } -> external link
+//   { stats: [{ value, label }] }   -> stat cards inside a sub-section (one per project)
+//   { lead: "Findings:", items: ["Label: text", ...] } -> "◆ lead" + second-level bullets
 // stats (optional): [{ value, label }] -> stat cards under the title
 // color: "blue" = work, "red" = education
 
@@ -11,33 +13,66 @@ const EXPERIENCE = [
   {
     period: "2026.03-Present",
     color: "blue",
-    title: "Independent Product Builder & Analyst | Self-employed",
-    // stat cards under the title; every value also appears in a bullet below
-    stats: [
-      { value: "2,300+", label: "active users" },
-      { value: "29", label: "GA4 events" },
-      { value: "193", label: "automated tests" },
-    ],
+    title: "Independent Product Builder & Analyst | Career Break",
+    // one sub-section per project; each project's { stats } block uses the same
+    // numbers as its own page (product.js / stockTa.js kpis / jobMarket2026.js kpis)
+    // and every value also appears in a bullet of the same sub-section
     blocks: [
-      "Initiated, built, and analyzed my own web product with Claude Code, reaching 2,300+ active users.",
+      "Built 3 projects on my own with Claude Code: a color palette tool, a Taiwan-stock daily report automation, and a study of AI's impact on data jobs.",
+      { heading: "Color Palette Tool" },
+      "A web tool that extracts representative colors from photos; I designed its GA4 events and upgrade funnel and used funnel analysis to drive iterations.",
+      {
+        stats: [
+          { value: "2,300+", label: "Active Users" },
+          { value: "16%", label: "Landing → First Upload" },
+          { value: "17/21", label: "Upgrade Clicks from Sample Data" },
+        ],
+      },
       "◆ Build: k-means clustering in CIELAB color space extracts true colors from photos, separating highlights and shadows",
-      "◆ Launch: shipped with a 29-event GA4 tracking plan covering activation and upgrade funnels",
+      "◆ Launch: shipped with a 29-event GA4 tracking plan covering activation and upgrade funnels, reaching 2,300+ active users",
       "◆ Measure: landing-to-upload was only 16%, so added a sample-data entry point to lower the barrier",
       "◆ Validate: caught sample data inflating upgrade clicks (17 of 21) and fixed the tracking logic before pricing decisions",
       "◆ Engineering: React, modular architecture, graphify impact analysis, code review, and 193 automated tests",
       { to: "/product", label: "Project Detail" },
+      { heading: "Taiwan Stock Daily Report Automation" },
+      "Automated daily Taiwan-stock data collection and interpretation with Claude Code cloud routines; reports go out automatically on trading days.",
+      {
+        stats: [
+          { value: "≤\u00a03\u00a0min", label: "Market-Open Brief Run Time" },
+          { value: "≤\u00a06\u00a0min", label: "After-Close Report Run Time" },
+          { value: "4", label: "Dimensions in One Report" },
+        ],
+      },
+      "◆ Combine: technicals, institutional flows, fundamentals and news, 4 dimensions merged into one report",
+      "◆ Schedule: after-close report at 07:00 (done within 6 minutes) and market-open brief at 09:05 (done within 3 minutes) on trading days",
+      "◆ Architecture: cloud IPs were blocked by data sources, so Google Apps Script serves as the proxy layer for data fetching and e-mail",
+      "◆ Quality: every version followed a task contract and shipped only after pytest, code review and a cloud acceptance run",
+      { to: "/automation/stock-ta", label: "Project Detail" },
+      { heading: "AI's Impact on Taiwan's Data Job Market: 2025 vs 2026" },
+      "Re-scraped 104 data job postings and compared both years under the same cleaning rules to test how job content and pay changed as AI spread.",
+      {
+        stats: [
+          { value: "40.9%\u00a0\u2060→ 58.0%", label: "AI-Titled Postings" },
+          { value: "36.1%\u00a0\u2060→ 25.7%", label: "Non-AI Analyst Share" },
+          { value: "~+14%", label: "AI-Skill Salary Premium (Median)" },
+        ],
+      },
+      "◆ Methods: LDA topic modeling, two-proportion z-tests with BH-FDR correction, quantile regression (2025 1,890 postings, 2026 2,200)",
+      {
+        lead: "Findings:",
+        items: [
+          "Job titles: postings with AI in the title rose from 40.9% to 58.0%, mostly because 2026 brought a different set of postings, not renamed old ones",
+          "Job mix: analyst postings without AI in the title fell from 36.1% to 25.7%, yet SQL and statistics requirements showed no detectable change",
+          "Salary: with other factors held similar, postings requiring AI skills carried a ~14% higher median salary in both years",
+        ],
+      },
+      { to: "/portfolio-data/job-market-2026", label: "Research Report" },
     ],
   },
   {
     period: "2025.06-2026.02",
     color: "blue",
     title: "Data Analyst | Hytech",
-    // stat cards under the title; every value also appears in a bullet below
-    stats: [
-      { value: "160+", label: "analysis requests" },
-      { value: "15+", label: "stakeholders" },
-      { value: "65%", label: "ad-hoc requests turned into metrics" },
-    ],
     blocks: [
       "Product analytics for copy-trading products, partnering with PMs and engineers on metrics, reporting, and product decisions.",
       { heading: "Metric Framework & BI Dashboards" },
@@ -59,9 +94,9 @@ const EXPERIENCE = [
     title: "Data Analyst | TutorABC",
     // stat cards under the title; every value also appears in a bullet below
     stats: [
-      { value: "20+", label: "dashboards" },
-      { value: "+80%", label: "tracking efficiency" },
-      { value: "+10%", label: "cost efficiency" },
+      { value: "+10%", label: "Cost Efficiency" },
+      { value: "3.03%\u00a0\u2060→ 3.7%", label: "Site-Wide CTR" },
+      { value: "+2%", label: "Self-Booking Completion Rate" },
     ],
     blocks: [
       { heading: "Performance & Marketing Analysis" },

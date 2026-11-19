@@ -50,46 +50,9 @@
         }
     }
 
-    // featured product card: the whole card is the button (no inner CTA)
-    // a.explore-featured beats `.content a` (underline + link color) incl. :hover
-    a.explore-featured {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        max-width: 460px;
-        margin: 0 auto 28px;
-        padding: 14px 20px;
-        background-color: rgba(255, 255, 255, 0.55);
-        border: 1px solid $font-brown-light;
-        border-radius: 10px;
-        color: $font-brown;
-        text-decoration: none;
-        transition: background-color 0.2s, border-color 0.2s;
-
-        &:hover,
-        &:focus {
-            background-color: white;
-            border-color: $font-brown;
-            color: $font-brown;
-        }
-
-        .featured-meta {
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: $font-brown-light;
-        }
-
-        .featured-title {
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        .featured-lead {
-            font-size: 14px;
-            line-height: 1.6;
-            color: $font-brown-light;
-        }
+    // featured product: a single centered button above "其他作品集"
+    .explore-links.explore-featured {
+        margin-bottom: 28px;
     }
 
     .explore-links {
@@ -119,6 +82,19 @@
                 background-color: $font-brown;
                 border-color: $font-brown;
                 color: white;
+            }
+        }
+
+        // featured product: filled, so it reads as the primary action
+        a.explore-btn.explore-btn-primary {
+            background-color: $font-brown;
+            border-color: $font-brown;
+            color: white;
+
+            &:hover,
+            &:focus {
+                background-color: white;
+                color: $font-brown;
             }
         }
 

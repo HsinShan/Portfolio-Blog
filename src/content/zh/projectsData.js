@@ -7,22 +7,23 @@ const PROJECTS = [
         title: "AI 對台灣數據職缺的影響：2025 vs 2026 對照（2026/11）",
         subtitle: "自製研究",
         stats: [
-          { value: "1,890 → 2,200", label: "筆職缺（2025 → 2026）" },
-          { value: "40.9% → 58.0%", label: "職稱掛 AI 的職缺" },
+          // same 3 figures as the report KPI row and the experience entry (contract #11)
+          { value: "40.9%\u00a0\u2060→ 58.0%", label: "職稱掛 AI 的職缺" },
+          { value: "36.1%\u00a0\u2060→ 25.7%", label: "傳統分析師職缺占比" },
           { value: "約 +14%", label: "AI 技能薪資溢價（中位數）" },
         ],
         period: "2026.11",
-        image: "/images/job-market-2026-zh.png",
+        image: "/images/job-market-2026-zh.jpg",
         // numbers: Notion「收斂報告 v2」Step 1／2 (same source as content/zh/jobMarket2026.js)
         description:
           "重新爬取 2026 年 104 數據職缺，用同一套清洗規則和 2025 年的資料對照，回答「AI 普及後，數據職缺的職稱、內容、技能和薪資有沒有變」<h3>分析方法</h3>1. 爬蟲＋清洗：兩年套同一套 v2 清洗規則，2025 1,890 筆、2026 2,200 筆<br/>2. 主題模型：LDA 套用 2025 模型比較兩年，再用 2026 資料重訓 50 個模型，只採多數模型都出現的主題<br/>3. 檢定：兩比例 z 檢定＋95% 信賴區間，多重比較用 BH-FDR 校正（q &lt; 0.05 才算顯著）<br/>4. 薪資：分位數迴歸（中位數）＋年份交互項，檢驗 AI 技能溢價有沒有變",
         results:
-          "數據職缺轉向 AI 應用整合，傳統 DA／DE 職缺的占比縮小，但 SQL、統計的要求看不出變化；要求 AI 技能的職缺薪資較高約 14%，兩年都在<br/><br/>"
+          "數據職缺轉向 AI 應用整合，傳統 DA／DE 職缺的占比縮小，但 SQL、統計的要求看不出變化；條件相近時，要求 AI 技能的職缺薪資中位數高約 14%，兩年都在<br/><br/>"
           + "<span class='highlight'>1. 職稱掛「AI」的職缺大增，主要是 2026 換了一批職缺在徵，不是舊職缺改名</span><br/>・職稱有 AI 字的職缺：40.9% → 58.0%<br/>・兩年都在徵的同一批職缺（364 個）裡，職稱有 AI 的只從 42.0% 變成 45.3%，幾乎沒有改名<br/>→ 增加的部分主要來自 2026 換了一批職缺在徵<br/><br/>"
           + "<span class='highlight'>2. 職缺內容從「訓練模型」轉向「把 AI 接進產品和流程」</span><br/>・主題模型分類（沿用 2025 的分類）：「AI 模型開發與訓練」12.0% → 8.9%；「系統需求與專案管理」9.8% → 15.0%、「智慧系統與軟體整合」8.5% → 14.3%<br/>・要求深度學習的職缺：19.5% → 13.1%<br/>・描述常見用詞：agent 1.8% → 11.0%、RAG 2.5% → 6.6%<br/><br/>"
           + "<span class='highlight'>3. 傳統 DA／DE 職缺的占比縮小；DE 看起來變多，其實是 AI 職缺被分進 DE</span><br/>・職稱沒掛 AI 的分析師類（BA／DA／DS）：36.1% → 25.7%<br/>・DE 整體 21.5% → 25.6%，拆開看：傳統 DE（職稱沒有 AI）17.2% → 12.9%，減少；職稱有 AI 的 DE 4.3% → 12.8%，增加<br/><span class='note'>註：比的是占全部職缺的比例，不是職缺數量</span><br/><br/>"
           + "<span class='highlight'>4. 傳統分析師職缺：SQL、統計的要求兩年差不多，新增的是自動化和生成式 AI</span><br/>・描述提到 SQL：9.4% → 9.7%、統計：14.2% → 12.2%，兩項都看不出差異<br/>・流程自動化 4.7% → 9.6%、生成式 AI 1.2% → 3.9%（增加主要在 DS 職缺）<br/>→ SQL、統計還是基本門票，自動化和 GenAI 工具是加分項<br/><br/>"
-          + "<span class='highlight'>5. 要求 AI 技能的職缺，薪資中位數高約 14%，2026 也沒有因為 AI 普及而變少</span><br/>・在職務類別、年資、學歷、公司規模、能否遠端相近的條件下：2025 高 13.5%、2026 高 14.3%，兩年差異不顯著<br/>・整體薪資兩年看不出變化（未扣通膨）<br/><span class='note'>註：約 +14% 是全部數據職缺合併計算；單看分析師類時看不出溢價</span>",
+          + "<span class='highlight'>5. 條件相近時，要求 AI 技能的職缺薪資中位數高約 14%，2026 也沒有因為 AI 普及而變少</span><br/>・在職務類別、年資、學歷、公司規模、能否遠端相近的條件下：2025 高 13.5%、2026 高 14.3%，兩年差異不顯著<br/>・整體薪資兩年看不出變化（未扣通膨）<br/><span class='note'>註：約 +14% 是全部數據職缺合併計算；單看分析師類時看不出溢價</span>",
         tags: ["Web Scraping", "NLP", "LDA", "Hypothesis Testing", "Quantile Regression", "Recharts"],
         // in-site report page; no repo link (private repo)
         reportPath: "/portfolio-data/job-market-2026",
@@ -43,12 +44,6 @@ const PROJECTS = [
         title:
           "台灣數據職缺市場解析（2025/04）：職務分類、技能趨勢與薪資洞察",
         subtitle: "自製研究",
-        // stat cards at the top of the detail modal; values also appear in the text below
-        stats: [
-          { value: "1,954", label: "筆數據職缺" },
-          { value: "0.645", label: "薪資模型 Adj.\u00a0R²" },
-          { value: "+53K", label: "碩士＋溝通能力（最高）" },
-        ],
         period: "2025.04",
         image: "/images/job-market-2025-zh.png",
         description:
@@ -76,9 +71,9 @@ const PROJECTS = [
         period: "2021~2022",
         image: "/images/portfolio/bgtC3nu.png",
         description:
-          "使用 91APP 提供的店家網站資料，進行<span class='highlight'>顧客價值</span>的研究<br/>提出 2 種行為資料前處理方式(event-based & session-based) + 5 個實驗模型(Random Forest / LSTM) <br/>期望找出未來一年的高價值顧客<br/>VIP 定義: 80-20 法則<h3>研究架構</h3><img src='/images/portfolio/VOs8izP.png' alt='Thesis Structure'/>",
+          "使用 91APP 提供的店家網站資料，進行<span class='highlight'>顧客價值</span>的研究<br/>提出 2 種行為資料前處理方式(event-based & session-based) + 5 個實驗模型(Random Forest / LSTM) <br/>期望找出未來一年的高價值顧客<br/>VIP 定義: 80-20 法則<h3>研究架構</h3><img src='/images/portfolio/VOs8izP.png' width='1147' height='501' loading='lazy' alt='Thesis Structure'/>",
         results:
-          "1. <span class='highlight'>顧客的線上行為具有前瞻性價值</span><br/>線上行為模式(尚未購買時的「瀏覽、加入購物車、造訪頻率」) 可展現成為高價值顧客的潛力 <br/> Event-based + 行為特徵模型的 F1/AUC 高達 0.95<br/>2. <span class='highlight'>高活躍度 ≠ 立即下單</span>，但有潛力成為 VIP <br/> 部分尚未轉換的活躍顧客，其行為模式與現有 VIP 相近，值得及早鎖定與培養<br/>3. <span class='highlight'>意圖型行為比單純曝光更具預測力</span><br/>加入購物車、點擊商品詳情等「高意圖」行為，是識別未來 VIP 的關鍵信號，遠勝於純曝光或進站次數<br/>4. <span class='highlight'>分群策略與行銷建議</span><br/><img src='/images/portfolio/xjzDHg8.png' alt='Thesis result'/>",
+          "1. <span class='highlight'>顧客的線上行為具有前瞻性價值</span><br/>線上行為模式(尚未購買時的「瀏覽、加入購物車、造訪頻率」) 可展現成為高價值顧客的潛力 <br/> Event-based + 行為特徵模型的 F1/AUC 高達 0.95<br/>2. <span class='highlight'>高活躍度 ≠ 立即下單</span>，但有潛力成為 VIP <br/> 部分尚未轉換的活躍顧客，其行為模式與現有 VIP 相近，值得及早鎖定與培養<br/>3. <span class='highlight'>意圖型行為比單純曝光更具預測力</span><br/>加入購物車、點擊商品詳情等「高意圖」行為，是識別未來 VIP 的關鍵信號，遠勝於純曝光或進站次數<br/>4. <span class='highlight'>分群策略與行銷建議</span><br/><img src='/images/portfolio/xjzDHg8.png' width='940' height='412' loading='lazy' alt='Thesis result'/>",
         tags: [
           "LSTM",
           "Random Forest",
@@ -127,17 +122,12 @@ const PROJECTS = [
       {
         title: "用AI及社群數據協助投資決策",
         subtitle: "大數據與商業分析期中專案",
-        // stat cards at the top of the detail modal; values also appear in the text below
-        stats: [
-          { value: "77%", label: "最佳模型準確度" },
-          { value: "700", label: "看漲、看跌各取關鍵字" },
-        ],
         period: "2021.03~2021.05",
         image: "/images/portfolio/F7708kK.png",
         description:
           "主要針對個股: 玉晶光<br/>社群數據資料庫中挑選出看漲及看跌的一批 YAHOO 股市新聞文章<br/>提取出關鍵字並建構文本向量空間<br/>使用 5 種不同分類演算法建立預測模型(Naive Bayes, KNN, SVM, Decision Tree, Random Forest)",
         results:
-          "1. 以 <span class='highlight'>TF*DF 卡方指標</span>提取看漲看跌各 700 個關鍵字<br/><img src='/images/portfolio/paObsOb.png' alt='keywords' class='img-min'/><br/>2. 最佳模型預測準確度: <span class='highlight'>77%</span> (Naive Bayes)",
+          "1. 以 <span class='highlight'>TF*DF 卡方指標</span>提取看漲看跌各 700 個關鍵字<br/><img src='/images/portfolio/paObsOb.png' width='633' height='538' loading='lazy' alt='keywords' class='img-min'/><br/>2. 最佳模型預測準確度: <span class='highlight'>77%</span> (Naive Bayes)",
         tags: [
           "Text Mining",
           "N-gram",
@@ -158,7 +148,7 @@ const PROJECTS = [
         description:
           "使用 91APP 提供的女鞋店家資料<br/>探討<span class='highlight'>受廣告影響不同程度的客群</span>之間的差異,以優化廣告投放的成效<br/>Step1: EDA 檢視分群差異<br/>Step2: 模型預測(使用 Decision Tree)，找出兩群人的重要特徵及分群依據",
         results:
-          "<img src='/images/portfolio/urxSWtf.png' alt='ad impact result'/><h3>行銷策略</h3><img src='/images/portfolio/eGTDG3v.png' alt='strategy'/>",
+          "<img src='/images/portfolio/urxSWtf.png' width='1042' height='523' loading='lazy' alt='ad impact result'/><h3>行銷策略</h3><img src='/images/portfolio/eGTDG3v.png' width='1036' height='484' loading='lazy' alt='strategy'/>",
         tags: ["Data EDA", "AD Impact Analysis", "Decision Tree", "Clustering"],
         url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/AD%20Impact%20Analysis",
       },
@@ -199,7 +189,7 @@ const PROJECTS = [
         description:
           "使用信用卡公司的數據，將現有顧客分成 4 群，以分別依照各群差異進行精準行銷<br/>採用五種指標及分析方法，來將現有客戶進行分群，並提出各群相應的行銷決策建議<h3>分析方法</h3>Step 1: 使用 RFM、CAI、CRI指標對客戶進行靜態及動態的價值分析<br/>Step 2: 透過購物籃分析了解合適的刷卡產品類別組合，以便於做行銷決策的推薦<br/>Step 3: 藉由 Kmeans將現有客戶分為四群，了解各群間的差異性，以利於後續的行銷決策擬定。",
         results:
-          "<img src='/images/portfolio/cqRZaqK.png' alt='Clustering Result'/> <h3>行銷策略</h3><img src='/images/portfolio/Vgg6G7d.png' alt='marketing strategies'/>",
+          "<img src='/images/portfolio/cqRZaqK.png' width='1087' height='737' loading='lazy' alt='Clustering Result'/> <h3>行銷策略</h3><img src='/images/portfolio/Vgg6G7d.png' width='1008' height='775' loading='lazy' alt='marketing strategies'/>",
         tags: [
           "SPSS",
           "K-means",
@@ -220,7 +210,7 @@ const PROJECTS = [
         description:
           "主要針對 Kaggle 上的 data-scientist-jobs, data-engineer-jobs, data-analyst-jobs 及 business-analyst-jobs 進行分析 <br/> 分析一 : 哪些因素會影響 Data Science Job 的平均薪資?<br/>分析二 : 企業分群 - 透過企業概況欄位分群,將企業分類<br/>→ 透過兩項分析提供企業推薦<br/><br/>P.S. 整體推薦方向是以平均薪資的角度做推薦",
         results:
-          "<img src='/images/portfolio/46DnuEh.png' alt='result1'/><img src='/images/portfolio/3hKVGLz.png' alt='result2'/><img src='/images/portfolio/uzs83hi.png' alt='result3'/><img src='/images/portfolio/6p9ECy7.png' alt='result4'/>",
+          "<img src='/images/portfolio/46DnuEh.png' width='1066' height='517' loading='lazy' alt='result1'/><img src='/images/portfolio/3hKVGLz.png' width='1056' height='513' loading='lazy' alt='result2'/><img src='/images/portfolio/uzs83hi.png' width='1056' height='499' loading='lazy' alt='result3'/><img src='/images/portfolio/6p9ECy7.png' width='1063' height='508' loading='lazy' alt='result4'/>",
         tags: [
           "EDA",
           "Data Visualization",

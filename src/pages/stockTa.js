@@ -51,7 +51,7 @@ const StockTa = () => {
           </ul>
         </section>
 
-        <ul className="report-kpis">
+        <ul className="report-kpis" style={{ "--kpi-cols": S.kpis.length }}>
           {S.kpis.map((k) => (
             <li key={k.label}>
               <span className="kpi-label">{k.label}</span>

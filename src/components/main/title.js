@@ -25,16 +25,14 @@ const Title = () => {
         ))}
       </div>
       <div className="explore">
-        {/* featured product: whole card is one link; text reused from PRODUCT */}
+        {/* featured product: same size as the portfolio buttons, filled so it reads as the primary one;
+            label reused from PRODUCT */}
         <p className="explore-heading">{explore.featured.text}</p>
-        <Link to={explore.featured.to} className="explore-featured">
-          {/* {" "} keeps the link's accessible name readable (flex hides the spaces) */}
-          <span className="featured-meta">
-            {PRODUCT.label} · {PRODUCT.period}
-          </span>{" "}
-          <span className="featured-title">{PRODUCT.title}</span>{" "}
-          <span className="featured-lead">{PRODUCT.lead}</span>
-        </Link>
+        <div className="explore-links explore-featured">
+          <Link to={explore.featured.to} className="explore-btn explore-btn-primary">
+            {PRODUCT.title}
+          </Link>
+        </div>
         <p className="explore-heading">{explore.text}</p>
         <div className="explore-links">
           {explore.links.map((link) => (

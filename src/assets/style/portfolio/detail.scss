@@ -30,6 +30,8 @@
 
         img {
             width: 100%;
+            // width/height attributes reserve the box; keep the real aspect ratio
+            height: auto;
             margin: 8px auto;
         }
 
