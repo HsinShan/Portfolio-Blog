@@ -13,7 +13,7 @@ const PROJECTS = [
           { value: "~+14%", label: "AI-Skill Salary Premium (Median)" },
         ],
         period: "2026.11",
-        image: "/images/job-market-2026-en.png",
+        image: "/images/job-market-2026-en.jpg",
         // numbers: Notion「收斂報告 v2」Step 1／2 (same source as content/zh/jobMarket2026.js)
         description:
           "Scraped 2026 data job postings from 104 Job Bank (Taiwan's largest job board) and compared them with the 2025 dataset under the same cleaning rules<br/>Goal: test whether job titles, responsibilities, skill requirements and salaries in data roles have changed as AI went mainstream<h3>Methods</h3>1. Scraping & cleaning: applied the same v2 cleaning rules to both years (1,890 postings in 2025, 2,200 in 2026)<br/>2. Topic modeling: applied the 2025 LDA model to both years, then retrained 50 models on 2026 data and kept only the topics most models agreed on<br/>3. Hypothesis testing: two-proportion z-tests with 95% CIs and BH-FDR correction for multiple comparisons (significant at q &lt; 0.05)<br/>4. Salary: median (quantile) regression with a year interaction term to test whether the AI-skill premium changed",
@@ -72,9 +72,9 @@ const PROJECTS = [
         period: "2021~2022",
         image: "/images/portfolio/bgtC3nu.png",
         description:
-          "Studied <span class='highlight'>customer value</span> using e-commerce store data provided by 91APP<br/>Proposed 2 ways to preprocess behavioral data (event-based & session-based) and 5 experimental models (Random Forest / LSTM)<br/>Goal: identify customers who will become high-value in the next year<br/>VIP definition: the 80-20 rule<h3>Research Framework</h3><img src='/images/portfolio/VOs8izP.png' alt='Thesis Structure'/>",
+          "Studied <span class='highlight'>customer value</span> using e-commerce store data provided by 91APP<br/>Proposed 2 ways to preprocess behavioral data (event-based & session-based) and 5 experimental models (Random Forest / LSTM)<br/>Goal: identify customers who will become high-value in the next year<br/>VIP definition: the 80-20 rule<h3>Research Framework</h3><img src='/images/portfolio/VOs8izP.png' width='1147' height='501' loading='lazy' alt='Thesis Structure'/>",
         results:
-          "1. <span class='highlight'>Online behavior has forward-looking value</span><br/>Behavior before a purchase (browsing, adding to cart, visit frequency) reveals the potential to become a high-value customer<br/>The event-based model with behavioral features reached an F1/AUC of 0.95<br/>2. <span class='highlight'>High activity ≠ immediate purchase</span>, but these customers can become VIPs<br/>Some active customers who haven't converted yet behave much like existing VIPs and are worth targeting and nurturing early<br/>3. <span class='highlight'>Intent-driven actions predict better than exposure alone</span><br/>High-intent actions such as adding to cart and viewing product details are key signals of future VIPs, far stronger than impressions or visit counts<br/>4. <span class='highlight'>Segmentation and marketing recommendations</span><br/><img src='/images/portfolio/xjzDHg8.png' alt='Thesis result'/>",
+          "1. <span class='highlight'>Online behavior has forward-looking value</span><br/>Behavior before a purchase (browsing, adding to cart, visit frequency) reveals the potential to become a high-value customer<br/>The event-based model with behavioral features reached an F1/AUC of 0.95<br/>2. <span class='highlight'>High activity ≠ immediate purchase</span>, but these customers can become VIPs<br/>Some active customers who haven't converted yet behave much like existing VIPs and are worth targeting and nurturing early<br/>3. <span class='highlight'>Intent-driven actions predict better than exposure alone</span><br/>High-intent actions such as adding to cart and viewing product details are key signals of future VIPs, far stronger than impressions or visit counts<br/>4. <span class='highlight'>Segmentation and marketing recommendations</span><br/><img src='/images/portfolio/xjzDHg8.png' width='940' height='412' loading='lazy' alt='Thesis result'/>",
         tags: [
           "LSTM",
           "Random Forest",
@@ -128,7 +128,7 @@ const PROJECTS = [
         description:
           "Focused on one stock: Genius Electronic Optical<br/>Selected bullish and bearish Yahoo Finance news articles from a social data database<br/>Extracted keywords and built a text vector space<br/>Built prediction models with 5 classification algorithms (Naive Bayes, KNN, SVM, Decision Tree, Random Forest)",
         results:
-          "1. Extracted 700 keywords each for bullish and bearish news with the <span class='highlight'>TF*DF chi-square metric</span><br/><img src='/images/portfolio/paObsOb.png' alt='keywords' class='img-min'/><br/>2. Best model accuracy: <span class='highlight'>77%</span> (Naive Bayes)",
+          "1. Extracted 700 keywords each for bullish and bearish news with the <span class='highlight'>TF*DF chi-square metric</span><br/><img src='/images/portfolio/paObsOb.png' width='633' height='538' loading='lazy' alt='keywords' class='img-min'/><br/>2. Best model accuracy: <span class='highlight'>77%</span> (Naive Bayes)",
         tags: [
           "Text Mining",
           "N-gram",
@@ -149,7 +149,7 @@ const PROJECTS = [
         description:
           "Used data from a women's shoe store provided by 91APP<br/>Compared <span class='highlight'>customer groups influenced by ads to different degrees</span> to improve ad performance<br/>Step1: EDA to examine differences between groups<br/>Step2: Decision Tree model to find the key features that separate the two groups",
         results:
-          "<img src='/images/portfolio/urxSWtf.png' alt='ad impact result'/><h3>Marketing Strategy</h3><img src='/images/portfolio/eGTDG3v.png' alt='strategy'/>",
+          "<img src='/images/portfolio/urxSWtf.png' width='1042' height='523' loading='lazy' alt='ad impact result'/><h3>Marketing Strategy</h3><img src='/images/portfolio/eGTDG3v.png' width='1036' height='484' loading='lazy' alt='strategy'/>",
         tags: ["Data EDA", "AD Impact Analysis", "Decision Tree", "Clustering"],
         url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/AD%20Impact%20Analysis",
       },
@@ -190,7 +190,7 @@ const PROJECTS = [
         description:
           "Used a credit card company's data to split existing customers into 4 segments for targeted marketing<br/>Segmented customers with five metrics and analysis methods, then proposed marketing recommendations for each segment<h3>Methods</h3>Step 1: Static and dynamic customer value analysis with RFM, CAI, and CRI<br/>Step 2: Basket analysis to find suitable card spending category combinations for marketing recommendations<br/>Step 3: K-means to divide customers into four segments and understand how they differ, to inform marketing decisions",
         results:
-          "<img src='/images/portfolio/cqRZaqK.png' alt='Clustering Result'/> <h3>Marketing Strategy</h3><img src='/images/portfolio/Vgg6G7d.png' alt='marketing strategies'/>",
+          "<img src='/images/portfolio/cqRZaqK.png' width='1087' height='737' loading='lazy' alt='Clustering Result'/> <h3>Marketing Strategy</h3><img src='/images/portfolio/Vgg6G7d.png' width='1008' height='775' loading='lazy' alt='marketing strategies'/>",
         tags: [
           "SPSS",
           "K-means",
@@ -211,7 +211,7 @@ const PROJECTS = [
         description:
           "Analyzed the Kaggle datasets data-scientist-jobs, data-engineer-jobs, data-analyst-jobs, and business-analyst-jobs<br/>First analysis: which factors affect the average salary of data science jobs?<br/>Second analysis: company clustering based on company profile fields<br/>→ Combined both analyses to recommend companies<br/><br/>P.S. Recommendations are made from the perspective of average salary",
         results:
-          "<img src='/images/portfolio/46DnuEh.png' alt='result1'/><img src='/images/portfolio/3hKVGLz.png' alt='result2'/><img src='/images/portfolio/uzs83hi.png' alt='result3'/><img src='/images/portfolio/6p9ECy7.png' alt='result4'/>",
+          "<img src='/images/portfolio/46DnuEh.png' width='1066' height='517' loading='lazy' alt='result1'/><img src='/images/portfolio/3hKVGLz.png' width='1056' height='513' loading='lazy' alt='result2'/><img src='/images/portfolio/uzs83hi.png' width='1056' height='499' loading='lazy' alt='result3'/><img src='/images/portfolio/6p9ECy7.png' width='1063' height='508' loading='lazy' alt='result4'/>",
         tags: [
           "EDA",
           "Data Visualization",

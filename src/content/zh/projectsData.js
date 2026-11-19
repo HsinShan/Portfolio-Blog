@@ -13,7 +13,7 @@ const PROJECTS = [
           { value: "約 +14%", label: "AI 技能薪資溢價（中位數）" },
         ],
         period: "2026.11",
-        image: "/images/job-market-2026-zh.png",
+        image: "/images/job-market-2026-zh.jpg",
         // numbers: Notion「收斂報告 v2」Step 1／2 (same source as content/zh/jobMarket2026.js)
         description:
           "重新爬取 2026 年 104 數據職缺，用同一套清洗規則和 2025 年的資料對照，回答「AI 普及後，數據職缺的職稱、內容、技能和薪資有沒有變」<h3>分析方法</h3>1. 爬蟲＋清洗：兩年套同一套 v2 清洗規則，2025 1,890 筆、2026 2,200 筆<br/>2. 主題模型：LDA 套用 2025 模型比較兩年，再用 2026 資料重訓 50 個模型，只採多數模型都出現的主題<br/>3. 檢定：兩比例 z 檢定＋95% 信賴區間，多重比較用 BH-FDR 校正（q &lt; 0.05 才算顯著）<br/>4. 薪資：分位數迴歸（中位數）＋年份交互項，檢驗 AI 技能溢價有沒有變",
@@ -71,9 +71,9 @@ const PROJECTS = [
         period: "2021~2022",
         image: "/images/portfolio/bgtC3nu.png",
         description:
-          "使用 91APP 提供的店家網站資料，進行<span class='highlight'>顧客價值</span>的研究<br/>提出 2 種行為資料前處理方式(event-based & session-based) + 5 個實驗模型(Random Forest / LSTM) <br/>期望找出未來一年的高價值顧客<br/>VIP 定義: 80-20 法則<h3>研究架構</h3><img src='/images/portfolio/VOs8izP.png' alt='Thesis Structure'/>",
+          "使用 91APP 提供的店家網站資料，進行<span class='highlight'>顧客價值</span>的研究<br/>提出 2 種行為資料前處理方式(event-based & session-based) + 5 個實驗模型(Random Forest / LSTM) <br/>期望找出未來一年的高價值顧客<br/>VIP 定義: 80-20 法則<h3>研究架構</h3><img src='/images/portfolio/VOs8izP.png' width='1147' height='501' loading='lazy' alt='Thesis Structure'/>",
         results:
-          "1. <span class='highlight'>顧客的線上行為具有前瞻性價值</span><br/>線上行為模式(尚未購買時的「瀏覽、加入購物車、造訪頻率」) 可展現成為高價值顧客的潛力 <br/> Event-based + 行為特徵模型的 F1/AUC 高達 0.95<br/>2. <span class='highlight'>高活躍度 ≠ 立即下單</span>，但有潛力成為 VIP <br/> 部分尚未轉換的活躍顧客，其行為模式與現有 VIP 相近，值得及早鎖定與培養<br/>3. <span class='highlight'>意圖型行為比單純曝光更具預測力</span><br/>加入購物車、點擊商品詳情等「高意圖」行為，是識別未來 VIP 的關鍵信號，遠勝於純曝光或進站次數<br/>4. <span class='highlight'>分群策略與行銷建議</span><br/><img src='/images/portfolio/xjzDHg8.png' alt='Thesis result'/>",
+          "1. <span class='highlight'>顧客的線上行為具有前瞻性價值</span><br/>線上行為模式(尚未購買時的「瀏覽、加入購物車、造訪頻率」) 可展現成為高價值顧客的潛力 <br/> Event-based + 行為特徵模型的 F1/AUC 高達 0.95<br/>2. <span class='highlight'>高活躍度 ≠ 立即下單</span>，但有潛力成為 VIP <br/> 部分尚未轉換的活躍顧客，其行為模式與現有 VIP 相近，值得及早鎖定與培養<br/>3. <span class='highlight'>意圖型行為比單純曝光更具預測力</span><br/>加入購物車、點擊商品詳情等「高意圖」行為，是識別未來 VIP 的關鍵信號，遠勝於純曝光或進站次數<br/>4. <span class='highlight'>分群策略與行銷建議</span><br/><img src='/images/portfolio/xjzDHg8.png' width='940' height='412' loading='lazy' alt='Thesis result'/>",
         tags: [
           "LSTM",
           "Random Forest",
@@ -127,7 +127,7 @@ const PROJECTS = [
         description:
           "主要針對個股: 玉晶光<br/>社群數據資料庫中挑選出看漲及看跌的一批 YAHOO 股市新聞文章<br/>提取出關鍵字並建構文本向量空間<br/>使用 5 種不同分類演算法建立預測模型(Naive Bayes, KNN, SVM, Decision Tree, Random Forest)",
         results:
-          "1. 以 <span class='highlight'>TF*DF 卡方指標</span>提取看漲看跌各 700 個關鍵字<br/><img src='/images/portfolio/paObsOb.png' alt='keywords' class='img-min'/><br/>2. 最佳模型預測準確度: <span class='highlight'>77%</span> (Naive Bayes)",
+          "1. 以 <span class='highlight'>TF*DF 卡方指標</span>提取看漲看跌各 700 個關鍵字<br/><img src='/images/portfolio/paObsOb.png' width='633' height='538' loading='lazy' alt='keywords' class='img-min'/><br/>2. 最佳模型預測準確度: <span class='highlight'>77%</span> (Naive Bayes)",
         tags: [
           "Text Mining",
           "N-gram",
@@ -148,7 +148,7 @@ const PROJECTS = [
         description:
           "使用 91APP 提供的女鞋店家資料<br/>探討<span class='highlight'>受廣告影響不同程度的客群</span>之間的差異,以優化廣告投放的成效<br/>Step1: EDA 檢視分群差異<br/>Step2: 模型預測(使用 Decision Tree)，找出兩群人的重要特徵及分群依據",
         results:
-          "<img src='/images/portfolio/urxSWtf.png' alt='ad impact result'/><h3>行銷策略</h3><img src='/images/portfolio/eGTDG3v.png' alt='strategy'/>",
+          "<img src='/images/portfolio/urxSWtf.png' width='1042' height='523' loading='lazy' alt='ad impact result'/><h3>行銷策略</h3><img src='/images/portfolio/eGTDG3v.png' width='1036' height='484' loading='lazy' alt='strategy'/>",
         tags: ["Data EDA", "AD Impact Analysis", "Decision Tree", "Clustering"],
         url: "https://github.com/HsinShan/Data-Anaylsis-Portfolio/tree/main/AD%20Impact%20Analysis",
       },
@@ -189,7 +189,7 @@ const PROJECTS = [
         description:
           "使用信用卡公司的數據，將現有顧客分成 4 群，以分別依照各群差異進行精準行銷<br/>採用五種指標及分析方法，來將現有客戶進行分群，並提出各群相應的行銷決策建議<h3>分析方法</h3>Step 1: 使用 RFM、CAI、CRI指標對客戶進行靜態及動態的價值分析<br/>Step 2: 透過購物籃分析了解合適的刷卡產品類別組合，以便於做行銷決策的推薦<br/>Step 3: 藉由 Kmeans將現有客戶分為四群，了解各群間的差異性，以利於後續的行銷決策擬定。",
         results:
-          "<img src='/images/portfolio/cqRZaqK.png' alt='Clustering Result'/> <h3>行銷策略</h3><img src='/images/portfolio/Vgg6G7d.png' alt='marketing strategies'/>",
+          "<img src='/images/portfolio/cqRZaqK.png' width='1087' height='737' loading='lazy' alt='Clustering Result'/> <h3>行銷策略</h3><img src='/images/portfolio/Vgg6G7d.png' width='1008' height='775' loading='lazy' alt='marketing strategies'/>",
         tags: [
           "SPSS",
           "K-means",
@@ -210,7 +210,7 @@ const PROJECTS = [
         description:
           "主要針對 Kaggle 上的 data-scientist-jobs, data-engineer-jobs, data-analyst-jobs 及 business-analyst-jobs 進行分析 <br/> 分析一 : 哪些因素會影響 Data Science Job 的平均薪資?<br/>分析二 : 企業分群 - 透過企業概況欄位分群,將企業分類<br/>→ 透過兩項分析提供企業推薦<br/><br/>P.S. 整體推薦方向是以平均薪資的角度做推薦",
         results:
-          "<img src='/images/portfolio/46DnuEh.png' alt='result1'/><img src='/images/portfolio/3hKVGLz.png' alt='result2'/><img src='/images/portfolio/uzs83hi.png' alt='result3'/><img src='/images/portfolio/6p9ECy7.png' alt='result4'/>",
+          "<img src='/images/portfolio/46DnuEh.png' width='1066' height='517' loading='lazy' alt='result1'/><img src='/images/portfolio/3hKVGLz.png' width='1056' height='513' loading='lazy' alt='result2'/><img src='/images/portfolio/uzs83hi.png' width='1056' height='499' loading='lazy' alt='result3'/><img src='/images/portfolio/6p9ECy7.png' width='1063' height='508' loading='lazy' alt='result4'/>",
         tags: [
           "EDA",
           "Data Visualization",
