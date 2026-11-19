@@ -18,6 +18,7 @@ const PROFILE = {
     text: "其他作品集",
     links: [
       { to: "/portfolio-data", label: "資料科學作品集" },
+      { to: "/automation", label: "AI 自動化作品集" },
       { to: "/portfolio-frontend", label: "前端開發作品集" },
     ],
   },

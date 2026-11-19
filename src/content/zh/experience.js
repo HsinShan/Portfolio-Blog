@@ -7,33 +7,66 @@ const EXPERIENCE = [
   {
     period: "2026.03-至今",
     color: "blue",
-    title: "獨立產品開發與分析｜自僱",
-    // stat cards under the title; every value also appears in a bullet below
-    stats: [
-      { value: "2,300+", label: "活躍使用者" },
-      { value: "29", label: "個 GA4 事件" },
-      { value: "193", label: "項自動化測試" },
-    ],
+    title: "獨立產品開發與分析｜職涯空檔",
+    // one sub-section per project; each project's { stats } block uses the same
+    // numbers as its own page (product.js / stockTa.js kpis / jobMarket2026.js kpis)
+    // and every value also appears in a bullet of the same sub-section
     blocks: [
-      "以 Claude Code 獨立發起、開發並分析自己的網頁產品，累計 2,300+ 活躍使用者。",
+      "以 Claude Code AI 協作開發，獨立完成 3 個專案：配色工具網站、台股每日報告自動化、AI 對數據職缺影響研究。",
+      { heading: "配色工具網站" },
+      "從照片抽取代表色的網頁工具，自行規劃 GA4 事件與升級漏斗，用漏斗分析驅動改版。",
+      {
+        stats: [
+          { value: "2,300+", label: "活躍使用者" },
+          { value: "16%", label: "進站 → 首次上傳" },
+          { value: "17/21", label: "升級點擊來自範例資料" },
+        ],
+      },
       "◆ 開發：以 k-means 在 CIELAB 色彩空間分群，從照片抽取物品本色，並分離高光與陰影",
-      "◆ 上線：同步規劃 29 個 GA4 事件，涵蓋啟用與升級漏斗",
+      "◆ 上線：同步規劃 29 個 GA4 事件，涵蓋啟用與升級漏斗，累計 2,300+ 活躍使用者",
       "◆ 衡量：進站 → 首次上傳僅 16%，新增「載入範例」入口降低使用門檻",
       "◆ 驗證：發現範例資料灌高升級點擊（21 次中 17 次），在做定價判斷前修正事件邏輯",
       "◆ 工程：React、模組化架構、graphify 影響範圍分析、Code Review 與 193 項自動化測試",
       { to: "/product", label: "專案詳情" },
+      { heading: "台股每日報告自動化" },
+      "以 Claude Code 雲端排程，自動化每日台股資訊蒐集與判讀，開市日自動寄出報告。",
+      {
+        stats: [
+          { value: "3 分鐘內", label: "開盤快報產出" },
+          { value: "6 分鐘內", label: "盤後報告產出" },
+          { value: "4 面向", label: "技術、籌碼、基本面、新聞" },
+        ],
+      },
+      "◆ 整合：技術面、籌碼面、基本面與新聞 4 個面向合併為單一份報告",
+      "◆ 排程：開市日 07:00 寄出盤後分析（6 分鐘內完成）、09:05 寄出開盤快報（3 分鐘內完成）",
+      "◆ 架構：雲端共用 IP 被資料源封鎖，以 Google Apps Script 作為資料擷取與寄信的代理層",
+      "◆ 品質：每版依任務契約開發，通過 pytest、Code Review 與雲端驗收後才上線",
+      { to: "/automation/stock-ta", label: "專案詳情" },
+      { heading: "AI 對台灣數據職缺的影響：2025 vs 2026" },
+      "重新爬取 104 數據職缺，用同一套清洗規則對照兩年，檢驗 AI 普及後職缺內容與薪資的變化。",
+      {
+        stats: [
+          { value: "40.9%\u00a0\u2060→ 58.0%", label: "職稱掛 AI 的職缺" },
+          { value: "36.1%\u00a0\u2060→ 25.7%", label: "傳統分析師職缺占比" },
+          { value: "約 +14%", label: "AI 技能薪資溢價（中位數）" },
+        ],
+      },
+      "◆ 方法：LDA 主題模型、兩比例 z 檢定＋BH-FDR 校正、分位數迴歸（2025 1,890 筆、2026 2,200 筆）",
+      {
+        lead: "發現：",
+        items: [
+          "職稱：掛 AI 的職缺 40.9% → 58.0%，主要是 2026 換了一批職缺在徵，不是舊職缺改名",
+          "職缺組成：傳統分析師職缺占比 36.1% → 25.7%，但 SQL、統計的要求看不出變化",
+          "薪資：條件相近時，要求 AI 技能的職缺薪資中位數高約 14%，兩年都在",
+        ],
+      },
+      { to: "/portfolio-data/job-market-2026", label: "研究報告" },
     ],
   },
   {
     period: "2025.06-2026.02",
     color: "blue",
     title: "數據分析師｜海科科技",
-    // stat cards under the title; every value also appears in a bullet below
-    stats: [
-      { value: "160+", label: "件分析需求" },
-      { value: "15+", label: "位需求方" },
-      { value: "65%", label: "一次性提數轉成指標" },
-    ],
     blocks: [
       "負責跟單產品數據分析，與 PM、RD 協作指標設計、報表建置與產品決策。",
       { heading: "跟單指標定義與 BI Dashboard" },
@@ -55,9 +88,9 @@ const EXPERIENCE = [
     title: "大數據分析師｜麥奇數位（TutorABC）",
     // stat cards under the title; every value also appears in a bullet below
     stats: [
-      { value: "20+", label: "個 Dashboard" },
-      { value: "+80%", label: "追蹤效率" },
       { value: "+10%", label: "成本效益" },
+      { value: "3.03%\u00a0\u2060→ 3.7%", label: "官網點擊率" },
+      { value: "+2%", label: "預約完成率" },
     ],
     blocks: [
       { heading: "業績與行銷分析" },

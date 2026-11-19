@@ -48,13 +48,18 @@
     li {
       padding: 12px 6px;
       background-color: rgba($page-background, 0.3);
+
+      @include mobile {
+        padding: 12px 4px;
+      }
     }
 
     .stat-value {
       font-size: 24px;
 
+      // 16px + 4px side padding: "40.9% →" (then "58.0%") fits a 3-column row at 375px
       @include mobile {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
 

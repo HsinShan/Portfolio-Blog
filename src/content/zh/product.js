@@ -7,7 +7,7 @@ const PRODUCT = {
   period: "2026",
   title: "配色工具網站",
   subtitle: "從照片抽取代表色，並用漏斗分析驅動改版",
-  lead: "獨立開發並上線的網頁工具，自行規劃 GA4 事件與升級漏斗",
+  lead: "獨立開發並上線的網頁工具，自行規劃 29 個 GA4 事件與升級漏斗",
   image: {
     src: "/images/color-tool-workspace.jpg",
     width: 1600,
@@ -15,13 +15,14 @@ const PRODUCT = {
     alt: "配色工具網站的色票庫與手動配色畫面",
   },
   stats: [
+    // outcomes / insights only (contract #11); event and test counts stay in the sections below
     { value: "2,300+", label: "活躍使用者" },
-    { value: "2.1+ 萬", label: "次事件" },
-    { value: "29", label: "個 GA4 事件" },
-    { value: "193", label: "項自動化測試" },
+    { value: "16%", label: "進站 → 首次上傳" },
+    { value: "105\u00a0\u2060→ 21", label: "升級漏斗首尾" },
+    { value: "17/21", label: "升級點擊來自範例資料" },
   ],
   // shown under the stat cards; date range the stats cover
-  statsPeriod: "數據統計期間 2026/08/25 ~ 2026/11/04",
+  statsPeriod: "數據統計期間 2026/08/25 ~ 2026/11/04，共 2.1+ 萬次事件",
   sections: [
     {
       heading: "核心功能",

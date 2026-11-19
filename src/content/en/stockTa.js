@@ -69,14 +69,14 @@ const STOCK_TA = {
   },
 
   kpis: [
-    { label: "Market-open brief run time", value: "≤\u00a03\u00a0min", sub: "Longest: 2\u00a0min\u00a056\u00a0s" },
+    { label: "Market-Open Brief Run Time", value: "≤\u00a03\u00a0min", sub: "Longest: 2\u00a0min\u00a056\u00a0s" },
     {
-      label: "After-close report run time",
+      label: "After-Close Report Run Time",
       value: "≤\u00a06\u00a0min",
       sub: ["Longest: 5\u00a0min\u00a031\u00a0s", "Includes news search and Claude analysis"],
     },
-    { label: "Analysis dimensions", tags: ["Technicals", "Inst. flows", "Fundamentals", "News"], sub: "Merged into one report" },
-    { label: "Development cycle", value: "11\u00a0days", sub: ["v3.1 → v4.15, 37 commits", "38 pytest tests"] },
+    { label: "Analysis Dimensions", tags: ["Technicals", "Inst. flows", "Fundamentals", "News"], sub: "Merged into one report" },
+    // Development cycle card removed (contract #11: effort, not outcome; the period is already in facts)
   ],
 
   // main diagram: system data flow, 4 stages left → right (stacked top → bottom on phones)

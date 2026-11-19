@@ -129,6 +129,19 @@ h3 {
         color: $font-brown;
     }
 
+    // second-level bullets under a "◆ Findings:" line; li spacing matches the
+    // card's `p` margin (6px) so the list keeps the same rhythm as other bullets
+    .sub-bullets {
+        margin: 0;
+        padding-left: 2.2em;
+        list-style: disc;
+
+        li {
+            line-height: 1.7;
+            margin-bottom: 6px;
+        }
+    }
+
     // sub-sections (one per heading) as cards: 2 columns on laptop, stacked below.
     // CSS columns (not grid) so cards of different heights pack without row gaps.
     .sections {

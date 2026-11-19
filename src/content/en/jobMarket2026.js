@@ -14,7 +14,7 @@ const JOB_MARKET_2026 = {
       lines: [
         "Many postings **put AI in the job title**, and the content moved from \"training models\" to \"**building AI into products and processes**\"",
         "**DA/DE postings without AI in the title made up a smaller share**, but core requirements such as SQL and statistics **showed no detectable change**",
-        "Postings requiring AI skills carried a **~14% higher median salary** in both years",
+        "With other factors held similar, postings requiring AI skills carried a **~14% higher median salary** in both years",
       ],
     },
     facts: [
@@ -26,10 +26,10 @@ const JOB_MARKET_2026 = {
   },
 
   kpis: [
-    { label: "Postings with AI in the title", from: 40.9, to: 58.0 },
-    { label: "Share of analyst postings without AI in the title", from: 36.1, to: 25.7 },
-    { label: "Share of DE postings without AI in the title", from: 17.2, to: 12.9 },
-    { label: "AI-skill salary premium (median)", value: "~+14%", sub: "2025 +13.5% / 2026 +14.3%" },
+    // same 3 figures as the project card and the experience entry (contract #11)
+    { label: "Postings with AI in the Title", from: 40.9, to: 58.0, note: "Same postings only 42.0% → 45.3%: new postings, not renamed ones" },
+    { label: "Share of Analyst Postings without AI in the Title", from: 36.1, to: 25.7, note: "DE postings without AI also fell from 17.2% to 12.9%" },
+    { label: "AI-Skill Salary Premium (Median)", value: "~+14%", sub: "2025 +13.5% / 2026 +14.3%" },
   ],
 
   ui: {
@@ -49,7 +49,7 @@ const JOB_MARKET_2026 = {
     ci: "95% CI",
     premium: "Median salary premium",
     count: "Postings mentioning",
-    methodsTitle: "Methods & limitations",
+    methodsTitle: "Methods & Limitations",
     q: "q",
     z: "z",
     punct: { open: " (", close: ")", slash: " / ", range: " to " },
@@ -161,7 +161,7 @@ const JOB_MARKET_2026 = {
   },
 
   premium: {
-    title: "Postings requiring AI skills have a **~14% higher median salary**, **in both years**",
+    title: "With other factors held similar, postings requiring AI skills have a **~14% higher median salary**, **in both years**",
     measure: ["How much higher the median advertised maximum monthly salary is for postings requiring AI skills, holding other factors constant"],
     note: [
       "Median (quantile) regression controlling for job category, experience, education, company size and remote work",
@@ -178,7 +178,7 @@ const JOB_MARKET_2026 = {
 
   methods: [
     {
-      title: "Pipeline",
+      title: "Methodology",
       items: [
         "Scraping: collected postings through the 104 Job Bank listing API at two points in time, keeping the top relevance-ranked pages for each of 12 keywords",
         "Cleaning: the same v2 rules for both years (word-boundary matching for job titles, \"negotiable\" salaries treated as missing, chemistry/clinical analyst roles excluded)",

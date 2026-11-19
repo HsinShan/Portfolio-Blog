@@ -14,7 +14,7 @@ const JOB_MARKET_2026 = {
       lines: [
         "大量職缺**掛上 AI 職稱**，內容從「訓練模型」轉向「**把 AI 接進產品和流程**」",
         "**傳統 DA／DE 職缺的占比縮小**，但 SQL、統計等**核心要求看不出變化**",
-        "要求 AI 技能的職缺，**薪資中位數高約 14%**，兩年都在",
+        "條件相近時，要求 AI 技能的職缺**薪資中位數高約 14%**，兩年都在",
       ],
     },
     // header bullets: what the data is
@@ -26,11 +26,12 @@ const JOB_MARKET_2026 = {
     ],
   },
 
-  // KPI row: big = 2026, small = 2025 and the change; premium is a single value
+  // KPI row: big = 2026, small = 2025 and the change; premium is a single value.
+  // Same 3 figures as the project card (projectsData.js) and the experience entry (contract #11);
+  // note = the insight line under the change (ai_impact 2.1, 9 / 1.1, 1.2)
   kpis: [
-    { label: "職稱掛 AI 的職缺", from: 40.9, to: 58.0 },
-    { label: "傳統分析師職缺占比", from: 36.1, to: 25.7 },
-    { label: "傳統 DE 職缺占比", from: 17.2, to: 12.9 },
+    { label: "職稱掛 AI 的職缺", from: 40.9, to: 58.0, note: "同一批職缺只 42.0% → 45.3%：是新職缺，不是改名" },
+    { label: "傳統分析師職缺占比", from: 36.1, to: 25.7, note: "傳統 DE 也從 17.2% 降到 12.9%" },
     { label: "AI 技能薪資溢價（中位數）", value: "約 +14%", sub: "2025 +13.5%／2026 +14.3%" },
   ],
 
@@ -170,7 +171,7 @@ const JOB_MARKET_2026 = {
 
   // 5: median (Q50) premium of ML/AI skills, five categories + category model (ai_impact 4)
   premium: {
-    title: "要求 AI 技能的職缺，**薪資中位數高約 14%**，**兩年都在**",
+    title: "條件相近時，要求 AI 技能的職缺**薪資中位數高約 14%**，**兩年都在**",
     measure: ["條件相近時，要求 AI 技能的職缺比沒要求的，最高月薪中位數高多少"],
     note: [
       "分位數迴歸（中位數），控制職務類別、年資、學歷、公司規模、能否遠端",
